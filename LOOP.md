@@ -23,4 +23,5 @@ epic-outreach-scripts, koby-ventures-playbooks, epic-deal templates).
 
 ## Iteration log
 - v1 (2026-07-02): initial page. Score 4.5/12.
-- v2: target = criteria 3, 5, 6, 7, 10, 11 (the depth core).
+- v2 (2026-07-02): shipped. Sidebar nav (18 numbered sections), 5 full skill demos w/ literal run-prompts, prompt vault (6 of 40+), week-one playbook, video-series section (8+12+weekly), numbers band w/ Frasier funnel specifics (100→10→5→1-3, 70% Rule, 2.4x→10.8x), community section, troubleshooting appendix. Score ~10.5/12.
+- v3 targets: (a) write setup guides 02-08 as real files, (b) build the 12 SKILL.md files in /skills, (c) fill the prompt vault to 40+ in /prompts, (d) wire download links to repo paths, (e) video scripts per section.
