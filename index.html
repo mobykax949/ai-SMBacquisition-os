@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMB Wealth Builder — The AI Acquisition Playbook | Buy, Modernize & Roll Up Small Businesses with AI</title>
+<meta name="description" content="The complete AI acquisition system: buy, modernize, and roll up small businesses using Claude. Downloadable skills, prompts, and loops built on the EPIC acquisition method. ai.smbwealthbuilder.com">
+<style>
+  :root{
+    --paper:#FAF8F5; --ink:#2D2926; --gold:#C4A35A; --copper:#B87333;
+    --line:#E4DDD2; --muted:#6B6459; --card:#FFFFFF; --dark:#211E1B;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .mono{font-family:var(--mono)}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
+  /* layout: fixed sidebar + main */
+  .shell{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+  @media(max-width:960px){.shell{grid-template-columns:1fr}.sidebar{display:none}}
+  .sidebar{border-right:1px solid var(--line);padding:28px 20px;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper)}
+  .sidebar .brand{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+  .sidebar .brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+  .sidebar .group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+  .sidebar a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+  .sidebar a.nav:hover{background:rgba(196,163,90,.1)}
+  .sidebar a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:18px}
+  main{min-width:0}
+  .wrap{max-width:980px;margin:0 auto;padding:0 32px}
+  /* hero */
+  header.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  header.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px;opacity:.4;mask-image:radial-gradient(ellipse at 30% 20%,#000 30%,transparent 75%)}
+  .hero .wrap{position:relative;padding:60px 32px 66px}
+  .kicker{display:inline-block;border:1px solid var(--gold);border-radius:2px;padding:6px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);background:rgba(196,163,90,.08)}
+  h1{font-size:clamp(32px,5.4vw,58px);line-height:1.03;letter-spacing:-.02em;margin:22px 0 16px;font-weight:800}
+  h1 em{font-style:normal;color:var(--copper)}
+  .lead{font-size:clamp(16px,2vw,20px);max-width:640px;color:#443f38}
+  .meta-row{display:flex;flex-wrap:wrap;gap:26px;margin-top:30px;padding-top:20px;border-top:1px solid var(--line)}
+  .meta-row .k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .meta-row .v{font-weight:700;margin-top:3px;font-size:14px}
+  .cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;background:var(--ink);color:var(--paper);padding:13px 24px;border-radius:3px;font-weight:700;text-decoration:none;font-size:15px}
+  .cta:hover{transform:translateY(-2px)}
+  .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:10px}
+  section{padding:60px 0;border-bottom:1px solid var(--line)}
+  .sec-head{margin-bottom:32px}
+  .sec-head .secno{font-family:var(--mono);font-size:12px;color:var(--copper);letter-spacing:.14em}
+  h2{font-size:clamp(23px,3.2vw,36px);letter-spacing:-.01em;font-weight:800;margin-top:6px}
+  h2 em{font-style:normal;color:var(--copper)}
+  .sec-head p{color:var(--muted);max-width:560px;font-size:15px;margin-top:8px}
+  .grid{display:grid;gap:14px}
+  .g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.g4,.g3{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.g4,.g3,.g2{grid-template-columns:1fr}}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:18px;transition:border-color .15s,transform .12s}
+  .tile:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .tile .num{font-family:var(--mono);font-size:11px;color:var(--copper)}
+  .tile h3{font-size:15.5px;margin:7px 0 5px;font-weight:700}
+  .tile p{font-size:13px;color:var(--muted)}
+  /* phases */
+  .phase{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px 22px;display:grid;grid-template-columns:60px 1fr auto;gap:18px;align-items:center;margin-bottom:10px}
+  .phase:hover{border-color:var(--gold)}
+  .phase .wk{font-family:var(--mono);font-weight:700;color:var(--copper);font-size:13px}
+  .phase .wk small{display:block;color:var(--muted);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+  .phase h3{font-size:16px;font-weight:700}
+  .phase p{font-size:13px;color:var(--muted);margin-top:2px}
+  .phase .skill{font-family:var(--mono);font-size:11.5px;background:rgba(184,115,51,.08);border:1px solid var(--line);border-radius:3px;padding:5px 9px;white-space:nowrap}
+  .phase .vid{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:5px}
+  .phase .vid::before{content:"▶ ";color:var(--copper)}
+  @media(max-width:680px){.phase{grid-template-columns:1fr}.phase .skill{justify-self:start}}
+  /* skill demo blocks */
+  .demo{background:var(--card);border:1px solid var(--line);border-radius:5px;margin-bottom:26px;overflow:hidden}
+  .demo .head{padding:22px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .demo .head h3{font-size:19px;font-weight:800}
+  .demo .head .file{font-family:var(--mono);font-size:11.5px;color:var(--copper)}
+  .demo .body{padding:22px 26px;display:grid;grid-template-columns:1.3fr 1fr;gap:26px}
+  @media(max-width:760px){.demo .body{grid-template-columns:1fr}}
+  .demo .body p{font-size:14px;color:#443f38}
+  .demo ul.feat{list-style:none;margin-top:12px}
+  .demo ul.feat li{font-size:13px;padding:5px 0;border-top:1px solid var(--line);color:#443f38}
+  .demo ul.feat li::before{content:"· ";color:var(--gold);font-weight:800}
+  .promptbox{background:var(--dark);color:#EDE7DC;border-radius:4px;padding:16px 18px;font-family:var(--mono);font-size:12.5px;line-height:1.65;position:relative}
+  .promptbox .lbl{position:absolute;top:-9px;left:14px;background:var(--gold);color:var(--ink);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;padding:2px 8px;border-radius:2px;font-weight:700}
+  .runline{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:12px}
+  .runline b{color:var(--copper)}
+  /* lanes */
+  .lane{border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin-bottom:20px}
+  .lane h3{font-size:16px}.lane p{color:var(--muted);font-size:14px;margin-top:3px}
+  .lane .tag{font-family:var(--mono);font-size:10.5px;color:var(--copper);letter-spacing:.1em;text-transform:uppercase}
+  /* numbers band */
+  .band{background:var(--dark);color:var(--paper);border-radius:6px;padding:34px 30px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;text-align:center}
+  @media(max-width:760px){.band{grid-template-columns:repeat(2,1fr)}}
+  .band .n{font-family:var(--mono);font-size:26px;font-weight:700;color:var(--gold)}
+  .band .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#B7AE9F;margin-top:4px}
+  .band-note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:12px;text-align:center}
+  /* week one */
+  .day{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:15px 0;border-top:1px solid var(--line)}
+  .day .d{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--copper)}
+  .day p{font-size:14px;color:#443f38}
+  .day p b{color:var(--ink)}
+  /* prompt vault */
+  .vault{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:820px){.vault{grid-template-columns:1fr}}
+  .vaultcard{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:18px}
+  .vaultcard .cat{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
+  .vaultcard h4{font-size:14.5px;margin:6px 0 10px}
+  .vaultcard .pb{background:var(--dark);color:#EDE7DC;border-radius:3px;padding:12px 14px;font-family:var(--mono);font-size:11.5px;line-height:1.6}
+  /* tiers */
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:800px){.tiers{grid-template-columns:1fr}}
+  .tier{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:24px;display:flex;flex-direction:column}
+  .tier.feature{border-color:var(--gold);box-shadow:0 8px 30px rgba(196,163,90,.12)}
+  .tier .name{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
+  .tier .price{font-size:26px;font-weight:800;margin:8px 0}
+  .tier ul{list-style:none;margin:12px 0;flex:1}
+  .tier li{font-size:13.5px;padding:6px 0;border-top:1px solid var(--line);color:#443f38}
+  .tier li::before{content:"→ ";color:var(--gold);font-family:var(--mono)}
+  /* appendix */
+  details{background:var(--card);border:1px solid var(--line);border-radius:4px;margin-bottom:10px;padding:0 20px}
+  details summary{cursor:pointer;padding:16px 0;font-weight:700;font-size:14.5px;list-style:none;display:flex;justify-content:space-between}
+  details summary::after{content:"+";font-family:var(--mono);color:var(--copper)}
+  details[open] summary::after{content:"–"}
+  details .inner{padding:0 0 18px;font-size:13.5px;color:#443f38}
+  details .inner code{font-family:var(--mono);font-size:12px;background:rgba(184,115,51,.08);padding:1px 5px;border-radius:2px}
+  .note{font-family:var(--mono);font-size:12px;color:var(--muted);background:rgba(184,115,51,.05);border:1px dashed var(--line);border-radius:4px;padding:13px 15px;margin-top:22px}
+  footer{padding:52px 0;text-align:center;color:var(--muted);font-size:13px}
+  .foot-brand{font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:700}
+  .pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:4px 10px;border:1px solid var(--line);border-radius:20px;color:var(--muted);margin:2px}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<!-- ══ SIDEBAR NAV ══ -->
+<nav class="sidebar">
+  <div class="brand">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></div>
+  <div class="group">Start Here</div>
+  <a class="nav" href="#start"><span class="n">01</span>Getting Started</a>
+  <a class="nav" href="#start"><span class="n">02</span>Projects Setup</a>
+  <a class="nav" href="#start"><span class="n">03</span>The Vocabulary</a>
+  <a class="nav" href="#start"><span class="n">04</span>Why Claude</a>
+  <a class="nav" href="#start"><span class="n">05</span>Bring Your Memory</a>
+  <a class="nav" href="#start"><span class="n">06</span>The Three Modes</a>
+  <a class="nav" href="#start"><span class="n">07</span>Prompt Like a Buyer</a>
+  <a class="nav" href="#start"><span class="n">08</span>Models &amp; Plans</a>
+  <div class="group">The System</div>
+  <a class="nav" href="#numbers"><span class="n">09</span>The Numbers Game</a>
+  <a class="nav" href="#system"><span class="n">10</span>12-Part Deal Engine</a>
+  <a class="nav" href="#lanes"><span class="n">11</span>Three Sourcing Lanes</a>
+  <a class="nav" href="#demos"><span class="n">12</span>Skill Demos</a>
+  <div class="group">Execute</div>
+  <a class="nav" href="#weekone"><span class="n">13</span>Week-One Playbook</a>
+  <a class="nav" href="#vault"><span class="n">14</span>The Prompt Vault</a>
+  <a class="nav" href="#videos"><span class="n">15</span>The Video Series</a>
+  <div class="group">Go Deeper</div>
+  <a class="nav" href="#community"><span class="n">16</span>The Community</a>
+  <a class="nav" href="#offers"><span class="n">17</span>Ways In</a>
+  <a class="nav" href="#appendix"><span class="n">18</span>Appendix</a>
+</nav>
+
+<main>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">SMB Wealth Builder · The AI Acquisition Playbook</span>
+    <h1>Buy, modernize, and <em>roll up</em> small businesses with AI.</h1>
+    <p class="lead">A working system, not a webinar. The exact skills, prompts, and loops used to source real off-market deals, qualify them in minutes, and modernize what you buy — built on the proven EPIC acquisition method, running in the Claude you already have.</p>
+    <div>
+      <a class="cta" href="#system">See the 12-part system</a>
+      <a class="cta ghost" href="#demos">Watch the skills run</a>
+    </div>
+    <div class="meta-row">
+      <div><div class="k">Method</div><div class="v">EPIC + AI modernization</div></div>
+      <div><div class="k">Tool</div><div class="v">Claude Desktop (Pro, $20/mo)</div></div>
+      <div><div class="k">Target</div><div class="v">$1–5M boomer-owned SMBs</div></div>
+      <div><div class="k">Format</div><div class="v">Skills · prompts · loops · live seminar</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ 01-08 START HERE ══ -->
+<section id="start">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTIONS 01–08</span><h2>Set up your <em>acquisition workspace</em>.</h2>
+    <p>Coming from ChatGPT or starting fresh, eight short guides get Claude configured to run deal work. Each ships as a full written guide plus a walkthrough video.</p></div>
+    <div class="grid g4">
+      <div class="tile"><div class="num">01</div><h3>Getting Started</h3><p>Claude Desktop + Pro. One subscription, three settings, and your workspace is live.</p></div>
+      <div class="tile"><div class="num">02</div><h3>Projects Setup</h3><p>Load your buy box, method, and target notes into a persistent Project so Claude never loses context.</p></div>
+      <div class="tile"><div class="num">03</div><h3>The Vocabulary</h3><p>Skills, prompts, loops, agents, connectors — the ten words you need before the room.</p></div>
+      <div class="tile"><div class="num">04</div><h3>Why Claude</h3><p>Skills that travel across machines, files that persist, agents that run long jobs. The buyer's stack.</p></div>
+      <div class="tile"><div class="num">05</div><h3>Bring Your Memory</h3><p>Files survive, chat memory doesn't. Save as you go so the deal work compounds.</p></div>
+      <div class="tile"><div class="num">06</div><h3>The Three Modes</h3><p>Quick answers, deep analysis, long-running agent jobs — and when each one is the right call.</p></div>
+      <div class="tile"><div class="num">07</div><h3>Prompt Like a Buyer</h3><p>Role, Context, Task, Format. One owner-level instruction beats ten vague asks.</p></div>
+      <div class="tile"><div class="num">08</div><h3>Models &amp; Plans</h3><p>Build in the model you run. Pick the right tier so nothing breaks mid-deal.</p></div>
+    </div>
+    <div class="note">// Deliberately Claude-native. No developer tools, no command line. If you can use ChatGPT, you can run this entire system.</div>
+  </div>
+</section>
+
+<!-- ══ 09 NUMBERS ══ -->
+<section id="numbers">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 09</span><h2>The numbers the method runs on.</h2>
+    <p>This system is built on a proven acquisition framework refined across thousands of real deals — and the funnel math is honest.</p></div>
+    <div class="band">
+      <div><div class="n">100</div><div class="l">Outreaches</div></div>
+      <div><div class="n">10</div><div class="l">Conversations</div></div>
+      <div><div class="n">5</div><div class="l">Offers</div></div>
+      <div><div class="n">1–3</div><div class="l">Deals</div></div>
+      <div><div class="n">70%</div><div class="l">Killed on first call</div></div>
+    </div>
+    <div class="band-note">// The 70% Rule: most deals should die fast. The AI's job is making the funnel wide and the kill quick.</div>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="tile"><div class="num">MULTIPLE LANDSCAPE</div><h3>2.4x → 4.0x → 10.8x</h3><p>Owner-operated SDE → professionally managed EBITDA → PE roll-up. Buy at the low multiple, modernize, exit at the high one. AI accelerates the middle step.</p></div>
+      <div class="tile"><div class="num">THE TARGET</div><h3>Boomer succession wave</h3><p>Retiring owners of profitable $1–5M businesses, no succession plan, business running out of their head. The largest ownership transfer in history.</p></div>
+      <div class="tile"><div class="num">THE EDGE</div><h3>Machine-speed deal flow</h3><p>One operator + AI runs the sourcing, screening, and outreach volume of a small PE team. The playbook is known; the speed is new.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 10 THE SYSTEM ══ -->
+<section id="system">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 10</span><h2>Twelve parts. <em>One deal engine.</em></h2>
+    <p>Each part fuses a phase of the acquisition method with the AI skill that runs it — and ships with an original step-by-step video. Build one a week, run it on real targets as you go.</p></div>
+    <div class="phase"><div class="wk">01<small>Foundation</small></div><div><h3>The AI Acquisition Mindset</h3><p>Set up the Claude workspace, the buy-box concept, and the prompting frame the whole system runs on.</p><div class="vid">Video 01 · Workspace setup, live</div></div><div class="skill">claude-acquisition-setup</div></div>
+    <div class="phase"><div class="wk">02<small>Buy Box</small></div><div><h3>Define Your Target Box</h3><p>Score verticals across three lanes — conservative, target, aggressive — and lock the criteria the engine hunts against.</p><div class="vid">Video 02 · Building a real buy box from scratch</div></div><div class="skill">buy-box-builder</div></div>
+    <div class="phase"><div class="wk">03<small>Sourcing</small></div><div><h3>The Off-Market Deal Finder</h3><p>Pull, enrich, screen, and rank real businesses. Find the retiring owner who hasn't listed — before anyone else.</p><div class="vid">Video 03 · Live pull: 12 real targets in 44 seconds</div></div><div class="skill">deal-finder</div></div>
+    <div class="phase"><div class="wk">04<small>Qualify</small></div><div><h3>The AQ Score Analyzer</h3><p>Run the thirteen-criterion qualification screen with parallel sub-agents. Go or no-go in under a minute.</p><div class="vid">Video 04 · Scoring a real target</div></div><div class="skill">aq-analyzer</div></div>
+    <div class="phase"><div class="wk">05<small>Market</small></div><div><h3>On-Market Monitor &amp; Comps</h3><p>Web-search live listings inside your buy box, grade the market, and pull the comps that anchor valuation.</p><div class="vid">Video 05 · The weekly market scan</div></div><div class="skill">market-monitor</div></div>
+    <div class="phase"><div class="wk">06<small>Brokers</small></div><div><h3>The Broker Finder</h3><p>Find and profile the brokers holding pocket listings, and draft the outreach that gets you shown deals pre-market.</p><div class="vid">Video 06 · Getting on the pocket-listing list</div></div><div class="skill">broker-finder</div></div>
+    <div class="phase"><div class="wk">07<small>Outreach</small></div><div><h3>The Outreach Engine</h3><p>Five channels, three seller archetypes, AI-personalized per target. Move every conversation toward a call.</p><div class="vid">Video 07 · 100 outreaches, personalized</div></div><div class="skill">outreach-engine</div></div>
+    <div class="phase"><div class="wk">08<small>Discovery</small></div><div><h3>The Discovery Interviewer</h3><p>The fifty-question deep dive plus a seller-conversation simulator to rehearse before you dial.</p><div class="vid">Video 08 · Rehearsing the seller call</div></div><div class="skill">discovery-interviewer</div></div>
+    <div class="phase"><div class="wk">09<small>Valuation</small></div><div><h3>Valuation &amp; Add-Backs</h3><p>SDE versus EBITDA, the multiple landscape, and the add-back discipline that keeps you from overpaying.</p><div class="vid">Video 09 · Valuing a real business</div></div><div class="skill">valuation</div></div>
+    <div class="phase"><div class="wk">10<small>Structure</small></div><div><h3>LOI &amp; Deal Structuring</h3><p>Walk-away, realistic, and dream before the room. Draft the LOI and the creative structure from template.</p><div class="vid">Video 10 · The LOI, drafted live</div></div><div class="skill">loi-drafter</div></div>
+    <div class="phase"><div class="wk">11<small>Diligence</small></div><div><h3>The Due-Diligence Engine</h3><p>A sequential DD-phase runner that tracks findings and flags concentration and liability risk.</p><div class="vid">Video 11 · Running diligence phases</div></div><div class="skill">dd-engine</div></div>
+    <div class="phase"><div class="wk">12<small>Modernize</small></div><div><h3>The Modernization Audit</h3><p>Point the AI stack at the business you just bought. A thirty-day plan to lift margin and remove owner-dependency.</p><div class="vid">Video 12 · The first 30 days, systematized</div></div><div class="skill">modernization-audit</div></div>
+  </div>
+</section>
+
+<!-- ══ 11 LANES ══ -->
+<section id="lanes">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 11</span><h2>Three lanes. <em>One funnel.</em></h2>
+    <p>Where deals actually come from, in priority order.</p></div>
+    <div class="lane"><span class="tag">Lane 1 · Pre-market</span><h3>Brokers &amp; pocket listings</h3><p>The premium deals sell quietly to known, financed buyers before they list. The broker-finder gets you on that call sheet.</p></div>
+    <div class="lane"><span class="tag">Lane 2 · Off-market</span><h3>The owner who hasn't listed</h3><p>Best margin, most work. The deal-finder surfaces the succession-age owner running an analog business — the strongest single signal is a great business with no website.</p></div>
+    <div class="lane"><span class="tag">Lane 3 · On-market</span><h3>The safety net</h3><p>Web search monitors listings inside your buy box so a good deal never slips past. Weighted last, never the main hunt.</p></div>
+  </div>
+</section>
+
+<!-- ══ 12 SKILL DEMOS ══ -->
+<section id="demos">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 12</span><h2>The skills, <em>demonstrated</em>.</h2>
+    <p>Not demo-ware. Each skill below is used on real deal flow, ships in the download pack, and installs into Claude Desktop in one step.</p></div>
+
+    <div class="demo">
+      <div class="head"><h3>SKILL ONE · The Buy-Box Builder</h3><span class="file">skills/buy-box-builder</span></div>
+      <div class="body">
+        <div>
+          <p>Tell Claude your capital, your skills, and your geography, and it builds your acquisition criteria across three lanes — conservative, target, and aggressive — then stress-tests the box against ten sample businesses so you know it's tight enough to kill bad deals and wide enough to feed the funnel.</p>
+          <ul class="feat">
+            <li>Three-lane buy box (conservative / target / aggressive)</li>
+            <li>Vertical scorecard: recurring revenue, fragmentation, owner age, AI upside, entry multiple</li>
+            <li>Revenue, SDE, employee, and business-age screens</li>
+            <li>Stress-test loop against sample targets</li>
+            <li>Saves the box to your Project as the engine's ground truth</li>
+          </ul>
+        </div>
+        <div>
+          <div class="promptbox"><span class="lbl">Run it</span>Build my acquisition buy box. Capital available: $[X] plus SBA 7(a). Geography: [Orange County, CA]. My background: [operations / marketing / trades]. Target: cash-flowing service businesses with retiring owners. Score these verticals against the box: [hood cleaning, laundromats, landscape maintenance, pool service].</div>
+          <div class="runline"><b>Output:</b> scored vertical table + a saved buy-box file your deal-finder hunts against.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="head"><h3>SKILL TWO · The Off-Market Deal Finder</h3><span class="file">skills/deal-finder</span></div>
+      <div class="body">
+        <div>
+          <p>The keystone. Point it at a vertical and a city and it pulls every operating business in range, flags the off-market signals — no website, long tenure, succession-age owner — screens against your buy box, and ranks the survivors by who's most likely to sell. Six of the thirteen qualification criteria are pre-scored before you ever pick up the phone.</p>
+          <ul class="feat">
+            <li>Pull → enrich → screen → rank, one command</li>
+            <li>The no-website signal: analog operators are the lead</li>
+            <li>Owner tenure and business age from public records</li>
+            <li>Pre-scores 6 of 13 AQ criteria at list time</li>
+            <li>Every list doubles as agency-lead flow — no outreach wasted</li>
+          </ul>
+        </div>
+        <div>
+          <div class="promptbox"><span class="lbl">Run it</span>Run the deal finder: [kitchen hood cleaning] in [Orange County, CA]. Pull up to 20 operating businesses, flag every off-market signal, screen against my buy box, and rank by succession likelihood. Return the top 5 with a one-line reason to call each.</div>
+          <div class="runline"><b>Real run:</b> 12 live targets pulled in 44 seconds; 3 flagged prime off-market. Video 03 shows the whole pull.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="head"><h3>SKILL THREE · The AQ Score Analyzer</h3><span class="file">skills/aq-analyzer</span></div>
+      <div class="body">
+        <div>
+          <p>The thirteen-criterion qualification scoreboard, run by parallel sub-agents — one per criterion: location, seller financing, broker status, time on market, margin, history, FF&amp;E, multiple, lease, real estate, staff, inventory, and transition support. Red, yellow, green on each, with a go / pass / dig-deeper verdict.</p>
+          <ul class="feat">
+            <li>13 criteria scored in parallel, under a minute</li>
+            <li>Red/yellow/green per criterion with reasoning</li>
+            <li>Flags the two questions to ask first on the call</li>
+            <li>Repeatable — re-score after every new fact</li>
+          </ul>
+        </div>
+        <div>
+          <div class="promptbox"><span class="lbl">Run it</span>AQ-score this target: [business name / what you know]. Score all 13 criteria red-yellow-green, tell me the go / pass / dig-deeper verdict, and give me the two highest-leverage questions for the first seller call.</div>
+          <div class="runline"><b>Output:</b> the scoreboard + verdict, saved to the target's deal file.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="head"><h3>SKILL FOUR · The Outreach Engine</h3><span class="file">skills/outreach-engine</span></div>
+      <div class="body">
+        <div>
+          <p>Five channels — warm intro, phone, letter, LinkedIn, DM — across three seller archetypes: the cold investor approach, the related-business angle, and the distressed-capital angle. Claude personalizes each message per target from the deal file, and every draft is staged for your approval before anything sends.</p>
+          <ul class="feat">
+            <li>Five channels, three archetypes, one sequence</li>
+            <li>Per-target personalization from the deal file</li>
+            <li>The 3-step sequence: bulk touch → rapport call → data gathering</li>
+            <li>Human approval gate before any send</li>
+          </ul>
+        </div>
+        <div>
+          <div class="promptbox"><span class="lbl">Run it</span>Draft outreach for [target] using the related-business angle. Channel: letter first, phone follow-up in 5 days. Personalize from the deal file, keep it under 150 words, and stage it for my review.</div>
+          <div class="runline"><b>The funnel:</b> 100 outreaches → 10 conversations → 5 offers → 1–3 deals. The engine makes the 100 painless.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="head"><h3>SKILL FIVE · The Deal Dashboard Builder</h3><span class="file">skills/dashboard-builder</span></div>
+      <div class="body">
+        <div>
+          <p>Ask Claude for your pipeline and it builds a one-file HTML dashboard: every target by stage — sourced, contacted, conversation, scored, LOI, diligence — with next actions, AQ scores, and days-in-stage. Save it locally, or deploy it to a live URL that refreshes daily. Fully customizable by chatting: add a 1031 clock, a funnel chart, whatever you run by.</p>
+          <ul class="feat">
+            <li>One self-contained HTML file — no software, no login</li>
+            <li>Pipeline by stage with next actions per target</li>
+            <li>Customizable by conversation, not configuration</li>
+            <li>Optional live deploy with daily refresh</li>
+          </ul>
+        </div>
+        <div>
+          <div class="promptbox"><span class="lbl">Run it</span>Build my deal dashboard from the pipeline file. Stages across the top, targets as cards with AQ score and days-in-stage, a next-action list at the right, and my 100-outreach counter at the top. One HTML file.</div>
+          <div class="runline"><b>Output:</b> your acquisition command center, built in one pass.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 13 WEEK ONE ══ -->
+<section id="weekone">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 13</span><h2>The <em>week-one</em> playbook.</h2>
+    <p>Seven days from zero to a ranked target list and your first outreach staged. Do these in order.</p></div>
+    <div class="day"><div class="d">DAY 1</div><p><b>Set up the workspace.</b> Claude Pro, desktop app, one Project named for your acquisition initiative. Load guides 01–02.</p></div>
+    <div class="day"><div class="d">DAY 2</div><p><b>Build your buy box.</b> Run the buy-box builder. Three lanes, scored verticals, saved to the Project. This is the engine's ground truth.</p></div>
+    <div class="day"><div class="d">DAY 3</div><p><b>First sourcing run.</b> Run the deal finder on your #1 vertical. Expect 10–20 real businesses; flag the no-website operators.</p></div>
+    <div class="day"><div class="d">DAY 4</div><p><b>Qualify the top five.</b> AQ-score them. Kill fast — the 70% Rule says most should die. Two or three survive.</p></div>
+    <div class="day"><div class="d">DAY 5</div><p><b>Find three brokers.</b> Run the broker finder for your vertical + geography. Draft the buyer-intro outreach; you want pocket listings flowing.</p></div>
+    <div class="day"><div class="d">DAY 6</div><p><b>Stage your first outreach.</b> Outreach engine, related-business angle, your two best targets. Review every word before it moves.</p></div>
+    <div class="day"><div class="d">DAY 7</div><p><b>Build the dashboard.</b> One HTML file, your whole pipeline. Then rest — the engine doesn't need you to scroll listings anymore.</p></div>
+  </div>
+</section>
+
+<!-- ══ 14 PROMPT VAULT ══ -->
+<section id="vault">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 14</span><h2>The <em>prompt vault</em>.</h2>
+    <p>Copy-paste prompts for the moves between the skills. Every prompt follows Role · Context · Task · Format. The full vault ships in /prompts.</p></div>
+    <div class="vault">
+      <div class="vaultcard"><div class="cat">Sourcing</div><h4>The vertical stress-test</h4><div class="pb">Act as a skeptical PE analyst. Here is my buy box: [paste]. Argue AGAINST [vertical] as an acquisition target — labor, regulation, customer concentration, hidden capex. Then tell me what evidence would change your mind.</div></div>
+      <div class="vaultcard"><div class="cat">Qualification</div><h4>The first-call kill list</h4><div class="pb">From this target's deal file, list the 5 facts most likely to kill this deal, ranked by probability. For each: the exact question that surfaces it on a first call, phrased so a retiring owner answers honestly.</div></div>
+      <div class="vaultcard"><div class="cat">Valuation</div><h4>The add-back audit</h4><div class="pb">Here is the seller's SDE calculation: [paste]. Audit every add-back. Flag any that a lender or buyer would reject, compute SDE after subtracting the true cost of replacing the owner's role, and give me the defensible number.</div></div>
+      <div class="vaultcard"><div class="cat">Negotiation</div><h4>Walk-away / realistic / dream</h4><div class="pb">Before my negotiation on [target]: set my walk-away, realistic, and dream outcomes on price AND terms. Remember: I can have my price or my terms, not both. Draft the seller-financing frame that trades their price for my terms.</div></div>
+      <div class="vaultcard"><div class="cat">Discovery</div><h4>The seller simulator</h4><div class="pb">Role-play the owner of [target]: 62, built it over 25 years, proud, private about numbers, worried about his crew. I'll practice my first call. Push back like he would. Afterward, score me on rapport, information gathered, and next-step commitment.</div></div>
+      <div class="vaultcard"><div class="cat">Modernization</div><h4>The 30-day lift map</h4><div class="pb">I just acquired [business type, size]. Owner ran everything by phone and paper. Map the first 30 days of AI modernization: quick wins first, ranked by margin impact vs. disruption risk. Nothing that touches customer relationships in week one.</div></div>
+    </div>
+    <div class="note">// The moves between the skills are where deals are won. The vault holds 40+ of these across every phase — sourcing to close.</div>
+  </div>
+</section>
+
+<!-- ══ 15 VIDEOS ══ -->
+<section id="videos">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 15</span><h2>The <em>video series</em>.</h2>
+    <p>Original, purpose-recorded walkthroughs — one per system part, five minutes each, screen-recorded on a clean student-identical workspace. No repurposed webinar footage.</p></div>
+    <div class="grid g3">
+      <div class="tile"><div class="num">SETUP · 8 VIDEOS</div><h3>The Workspace Series</h3><p>Guides 01–08 on screen: account, Project, settings, first prompts. Watch once, set up alongside.</p></div>
+      <div class="tile"><div class="num">SYSTEM · 12 VIDEOS</div><h3>The Deal Engine Series</h3><p>Each phase executed live on real targets — the same pulls, scores, and drafts shown in the demos above.</p></div>
+      <div class="tile"><div class="num">JOURNEY · WEEKLY</div><h3>Build-in-Public</h3><p>The documented journey: what we sourced, what we killed, what we learned, every week. The honest version, misses included.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 16 COMMUNITY ══ -->
+<section id="community">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 16</span><h2>The <em>community</em>.</h2>
+    <p>Where the system gets practiced. Hosted on Skool.</p></div>
+    <div class="grid g2">
+      <div class="tile"><div class="num">WEEKLY</div><h3>Build sessions &amp; deal reviews</h3><p>Bring your buy box, your target list, your stuck deal. We run the skills live on member deals and fix what's stuck, together.</p></div>
+      <div class="tile"><div class="num">MONTHLY</div><h3>Build days</h3><p>New skills get built with the group, on real member use-cases. Members vote on what gets built next.</p></div>
+      <div class="tile"><div class="num">ALWAYS</div><h3>The full pack, current</h3><p>Every skill, prompt, and template — updated as the live deal flow teaches us. You get the newest version, always.</p></div>
+      <div class="tile"><div class="num">FIRST</div><h3>The journey, unfiltered</h3><p>Members see the real pipeline: the deals we're chasing, the numbers, the outreach that worked and the calls that flopped.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 17 OFFERS ══ -->
+<section id="offers">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 17</span><h2>From free playbook to <em>done-with-you</em>.</h2>
+    <p>Start with the download. Grow into the community, the course, and the room.</p></div>
+    <div class="tiers">
+      <div class="tier"><div class="name">Playbook</div><div class="price">Free</div><ul><li>The buy box + outreach quick-start</li><li>The white paper</li><li>Two starter skills + starter prompts</li><li>The weekly newsletter</li></ul></div>
+      <div class="tier feature"><div class="name">Community</div><div class="price">Skool</div><ul><li>All 12 skills + the full prompt vault</li><li>The complete video series</li><li>Weekly build sessions &amp; deal reviews</li><li>The documented journey, live</li></ul></div>
+      <div class="tier"><div class="name">Seminar &amp; Done-With-You</div><div class="price">Live</div><ul><li>Full-day AI acquisition boot camp</li><li>Your workspace + buy box built in the room</li><li>The done-with-you deal engine</li><li>Local &amp; private cohorts</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 18 APPENDIX ══ -->
+<section id="appendix">
+  <div class="wrap">
+    <div class="sec-head"><span class="secno">SECTION 18</span><h2>Appendix: <em>troubleshooting &amp; care</em>.</h2></div>
+    <details><summary>Claude forgot my buy box mid-conversation</summary><div class="inner">Long chats compact and lose their middle. The fix is structural: your buy box lives in the <code>Project</code>, not the chat. If it's only in chat history, save it to the Project now and reference it by name. Rule: <b>files survive, chat memory doesn't.</b></div></details>
+    <details><summary>My skill runs differently than the demo</summary><div class="inner">Check the model picker first — <b>build in the model you run.</b> A skill authored against the top-tier model behaves differently on the fast tier. Match the model named in the skill's header, then re-run.</div></details>
+    <details><summary>I'm hitting usage limits mid-analysis</summary><div class="inner">Big runs (a 20-target pull, a 13-criterion score) are token-heavy. Run them early in your session, not after hours of chat. Save outputs to files immediately so a re-run is never needed. If limits bite weekly, that's the signal to move up a plan tier.</div></details>
+    <details><summary>The deal finder returned junk categories</summary><div class="inner">Category bleed is real — "hood cleaning" pulls pressure washers. Add the category-match line from the skill's pitfalls section: <code>only include businesses whose primary service is [X]; list excluded near-misses separately.</code></div></details>
+    <details><summary>Can outreach send without me?</summary><div class="inner">No — by design. Every message the engine drafts stages for your review. You are the send button. An acquisition is a relationship; the AI does the volume, you do the trust.</div></details>
+    <details><summary>Where do downloads live?</summary><div class="inner">Everything ships from the repo: <code>/skills</code> (drop into Claude Desktop), <code>/prompts</code> (the vault), <code>/setup</code> (guides 01–08). Star it — updates land there first.</div></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">SMB Wealth Builder</div>
+    <p style="margin:12px 0">Buy · Modernize · Roll Up · Repeat</p>
+    <div>
+      <span class="pill">ai.smbwealthbuilder.com</span>
+      <span class="pill">EPIC method</span>
+      <span class="pill">Claude-native</span>
+      <span class="pill">Documented in public</span>
+    </div>
+    <p style="margin-top:18px;font-size:12px">An original system built on the EPIC acquisition framework. All content original.</p>
+  </div>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
