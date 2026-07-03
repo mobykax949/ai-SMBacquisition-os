@@ -1,0 +1,14 @@
+{
+  "name": "smb-wealth-builder",
+  "owner": {
+    "name": "Max Koby",
+    "url": "https://maxkoby.com"
+  },
+  "plugins": [
+    {
+      "name": "smb-wealth-builder",
+      "source": "./",
+      "description": "The AI Acquisition Playbook — 20 skills to find, qualify, finance, buy, and modernize small businesses using Claude."
+    }
+  ]
+}
