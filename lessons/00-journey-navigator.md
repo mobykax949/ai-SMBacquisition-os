@@ -14,14 +14,18 @@ Not every buyer should run the same play. An owner modernizing their existing bu
 
 ---
 
-## Step 1 — Install the skill (one click)
+## Step 1 — Install the plugin (one time, gets you all 20 skills)
 
-1. Download the skill: **[journey-navigator.zip](../downloads/journey-navigator.zip)**
-2. Unzip it. You get a folder named `journey-navigator` containing `SKILL.md`.
-3. In Finder press `Cmd+Shift+G`, type `~/.claude/skills/`, press Enter (create the `skills` folder if it isn't there), and drop the `journey-navigator` folder inside.
-4. In Claude Desktop, click the **Cowork** tab and type `/` — you should see `journey-navigator` in the list.
+You do not download this skill by itself. It ships in the SMB Wealth Builder plugin with the other 19. Install the plugin once and journey-navigator is there.
 
-**Done when:** typing `/journey-navigator` shows the skill.
+1. In Claude Desktop, open **Settings → Plugins** (or the Plugins panel in Cowork).
+2. **Add marketplace** and paste: `mobykax949/ai-SMBacquisition-os`
+3. Install **smb-wealth-builder**.
+4. Start a NEW Cowork conversation and type `/` — you should see `journey-navigator` (and the rest) in the list.
+
+Already installed the plugin? Skip straight to Step 3.
+
+**Done when:** typing `/journey-navigator` in a fresh Cowork chat shows the skill.
 
 ---
 
