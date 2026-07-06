@@ -32,16 +32,16 @@ CSS = """
 :root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
-.layout{display:grid;grid-template-columns:270px 1fr;max-width:1180px;margin:0 auto}
-.sidebar{border-right:1px solid var(--line);padding:26px 20px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{border-right:1px solid var(--line);padding:28px 20px;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper)}
 .brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
 .brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
 .group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
 a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
 a.nav:hover{background:rgba(196,163,90,.1)}
 a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
-a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:24px}
-.content{padding:40px 52px 80px;max-width:840px}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:18px}
+.content{padding:40px 52px 80px;max-width:900px;margin:0 auto}
 .crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
 .crumb a{text-decoration:none;color:var(--muted)}
 article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
