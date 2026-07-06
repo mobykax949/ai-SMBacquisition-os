@@ -1,10 +1,10 @@
 # Setup Guide 01b — Turn On Cowork & Install the Plugin
 
-*Reading time: ~8 min. Outcome: Cowork mode active, the SMB Wealth Builder plugin installed, all 20 skills available.*
+*Reading time: ~8 min. Outcome: Cowork mode active, the SMB Wealth Builder plugin installed, the full skill pack available.*
 
 Cowork is the mode that turns Claude from a chat window into something that does the work on your own machine. It reads your files, runs the skills, and hands you finished documents (a deal dashboard, an investor report, a valuation) instead of text you copy out. This is where you run the acquisition system.
 
-You do **not** download skills one by one. All 20 skills ship as a single **plugin**. You install it once, and every skill becomes available in your next Cowork conversation. No per-skill downloads, no dragging files into folders.
+You do **not** download skills one by one. Every skill ships as a single **plugin**. You install it once, and every skill becomes available in your next Cowork conversation. No per-skill downloads, no dragging files into folders.
 
 ## What you need
 - **Claude Pro ($20/mo) or higher.** Cowork is included.
@@ -20,15 +20,18 @@ You do **not** download skills one by one. All 20 skills ship as a single **plug
 **What good looks like:** Cowork is selected, permission mode is "Ask before acting," and you have a dedicated folder Claude can use.
 
 ## Step 2 — Install the SMB Wealth Builder plugin (one time)
-The plugin bundles all 20 skills. Install it once.
+The plugin bundles the whole skill pack. Install it once — no terminal, all point-and-click.
 
-1. In Claude Desktop, open **Settings → Plugins** (or the Plugins panel in Cowork).
-2. Choose **Add marketplace** and paste the repository:
+Two pieces: a **marketplace** (the store) and the **plugin** (the app inside it). You add the store, then install the app.
+
+1. In Claude Desktop, open the **Directory** — the panel with **Skills · Connectors · Plugins** tabs — and click the **Plugins** tab.
+2. Click the **+** in the **top-right corner**, choose **Add marketplace**, and paste the repository:
    ```
    mobykax949/ai-SMBacquisition-os
    ```
-3. Find **smb-wealth-builder** in the list and click **Install**.
-4. Start a new Cowork conversation. Type `/` and you will see the skills (journey-navigator, buy-box-builder, deal-stacker, and the rest).
+   > ⚠️ Don't type "marketplace" into the search box — it searches plugin *names* and finds nothing. The marketplace is a source you *add* with the **+** button.
+3. Open **smb-wealth-builder** in the list and click **Install**. Choose **User** scope so the skills work in every chat. (Not showing yet? Click the **↻ refresh** icon, top-right.)
+4. Start a new Cowork conversation. Type `/` and you will see the skills (`/journey-navigator`, `/setup-my-workspace`, and the rest).
 
 **What good looks like:** typing `/` in a fresh Cowork chat lists the acquisition skills.
 
@@ -54,6 +57,6 @@ Answer honestly. When it finishes, it writes `my-profile.md` into your folder �
 ## Troubleshooting
 - **Skills do not appear after installing:** start a NEW Cowork conversation. The skill list loads when a conversation begins.
 - **Cannot add the marketplace:** the plugin installs from a public GitHub repo. If the repo is private, you will not see it until it is published.
-- **"Command not found" in Terminal:** the CLI path is for people who have Claude Code installed; use the Settings → Plugins path instead.
+- **"Command not found" in Terminal:** the CLI path is for people who have Claude Code installed; use the **Directory → Plugins → +** path instead.
 
 Next: **02 — Projects Setup**, where your buy box and profile become permanent context every skill reads.

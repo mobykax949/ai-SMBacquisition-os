@@ -8,7 +8,7 @@ version: 1.0.0
 
 ## Overview
 
-This is the front door. You just installed the plugin and you have 20 skills, but Claude does not yet know anything about you. This skill fixes that in one sitting. It interviews you, then writes three files that make every other skill smarter: your acquirer profile, your buy box, and a set of Project instructions you paste once so Claude remembers you in every conversation. Run this before any other skill.
+This is the front door. You just installed the plugin and you have the full skill pack, but Claude does not yet know anything about you. This skill fixes that in one sitting. It interviews you, then writes three files that make every other skill smarter: your acquirer profile, your buy box, and a set of Project instructions you paste once so Claude remembers you in every conversation. Run this before any other skill.
 
 ## When to Use
 
