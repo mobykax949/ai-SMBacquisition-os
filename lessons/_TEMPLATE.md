@@ -18,7 +18,7 @@ just works" line — what the user no longer has to do by hand.*
 ## Step 1 — Install the plugin (one time — gets you every skill)
 You do not install skills one at a time. They all ship in a single plugin. Install it once and every skill is available. *(Already installed the plugin? Skip to Step 2.)*
 
-1. In Claude Desktop, open the plugin **Directory** and select the **Plugins** tab.
+1. In Claude Desktop, click **Customize** in the left sidebar and open the **Plugins** tab.
 2. Click the **+** (top-right) → **Add marketplace**, and paste: `mobykax949/ai-SMBacquisition-os`
 3. Find **smb-wealth-builder** in the list, click **Install**, and choose **User** scope.
 4. Start a **new** Cowork chat and type `/` — the skills appear (e.g. `/skill-name`).

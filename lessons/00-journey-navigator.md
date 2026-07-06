@@ -18,7 +18,7 @@ Not every buyer should run the same play. An owner modernizing their existing bu
 
 You do not download this skill by itself. It ships in the SMB Wealth Builder plugin with all the others. Install the plugin once and journey-navigator is there. No terminal — it is all point-and-click.
 
-1. In Claude Desktop, open the **Directory** (the **Skills · Connectors · Plugins** panel) and click the **Plugins** tab.
+1. In Claude Desktop, click **Customize** in the left sidebar and open the **Plugins** tab.
 2. Click the **+** (top-right) → **Add marketplace**, and paste: `mobykax949/ai-SMBacquisition-os`
    > Don't search "marketplace" in the search box — it's a source you *add* with the **+** button, not a plugin you search for.
 3. Open **smb-wealth-builder** in the list, click **Install**, and choose **User** scope. (Not showing yet? Hit the **↻ refresh** icon.)

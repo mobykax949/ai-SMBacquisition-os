@@ -24,7 +24,7 @@ The plugin bundles the whole skill pack. Install it once — no terminal, all po
 
 Two pieces: a **marketplace** (the store) and the **plugin** (the app inside it). You add the store, then install the app.
 
-1. In Claude Desktop, open the **Directory** — the panel with **Skills · Connectors · Plugins** tabs — and click the **Plugins** tab.
+1. In Claude Desktop, click **Customize** in the left sidebar, then open the **Plugins** tab.
 2. Click the **+** in the **top-right corner**, choose **Add marketplace**, and paste the repository:
    ```
    mobykax949/ai-SMBacquisition-os
@@ -57,6 +57,6 @@ Answer honestly. When it finishes, it writes `my-profile.md` into your folder �
 ## Troubleshooting
 - **Skills do not appear after installing:** start a NEW Cowork conversation. The skill list loads when a conversation begins.
 - **Cannot add the marketplace:** the plugin installs from a public GitHub repo. If the repo is private, you will not see it until it is published.
-- **"Command not found" in Terminal:** the CLI path is for people who have Claude Code installed; use the **Directory → Plugins → +** path instead.
+- **"Command not found" in Terminal:** the CLI path is for people who have Claude Code installed; use the **Customize → Plugins → +** path instead.
 
 Next: **02 — Projects Setup**, where your buy box and profile become permanent context every skill reads.

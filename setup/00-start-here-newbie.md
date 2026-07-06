@@ -35,7 +35,7 @@ This step gives you all the skills at once. You do NOT download them one by one,
 
 Think of it as two pieces: a **marketplace** (the store) and the **plugin** (the app inside the store). You add the store, then install the app. Every skill comes inside that one app.
 
-1. In Claude Desktop, open the **Directory** — the panel with **Skills · Connectors · Plugins** tabs down the left — and click the **Plugins** tab.
+1. In Claude Desktop, click **Customize** in the left sidebar, then open the **Plugins** tab.
 2. Click the **+** button in the **top-right corner**, then choose **Add marketplace**.
    > ⚠️ Do NOT type "marketplace" into the search box — that only searches plugin *names* and finds nothing. The marketplace is a source you *add* with the **+** button, not something you search for.
 3. In the box, paste this exactly and confirm:
