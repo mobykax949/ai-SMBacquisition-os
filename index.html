@@ -54,7 +54,7 @@
   .g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
   @media(max-width:860px){.g4,.g3{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.g4,.g3,.g2{grid-template-columns:1fr}}
-  .tile{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:18px;transition:border-color .15s,transform .12s}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:18px;transition:border-color .15s,transform .12s;text-decoration:none;color:inherit;display:block}
   .tile:hover{border-color:var(--gold);transform:translateY(-2px)}
   .tile .num{font-family:var(--mono);font-size:11px;color:var(--copper)}
   .tile h3{font-size:15.5px;margin:7px 0 5px;font-weight:700}
@@ -194,15 +194,15 @@
     <div class="sec-head"><span class="secno">SECTIONS 01–08</span><h2>Set up your <em>acquisition workspace</em>.</h2>
     <p>Coming from ChatGPT or starting fresh, eight short guides get Claude configured to run deal work. Each ships as a full written guide plus a walkthrough video.</p></div>
     <div class="grid g4">
-      <div class="tile"><div class="num">01</div><h3>Getting Started</h3><p>Claude Desktop + Pro. One subscription, three settings, and your workspace is live.</p></div>
-      <div class="tile" style="border-color:var(--gold)"><div class="num">01b</div><h3>Turn On Cowork</h3><p>The mode that runs the skills for you and outputs real files. The 10-minute setup, once.</p></div>
-      <div class="tile"><div class="num">02</div><h3>Projects Setup</h3><p>Load your buy box, method, and target notes into a persistent Project so Claude never loses context.</p></div>
-      <div class="tile"><div class="num">03</div><h3>The Vocabulary</h3><p>Skills, prompts, loops, agents, connectors — the ten words you need before the room.</p></div>
-      <div class="tile"><div class="num">04</div><h3>Why Claude</h3><p>Skills that travel across machines, files that persist, agents that run long jobs. The buyer's stack.</p></div>
-      <div class="tile"><div class="num">05</div><h3>Bring Your Memory</h3><p>Files survive, chat memory doesn't. Save as you go so the deal work compounds.</p></div>
-      <div class="tile"><div class="num">06</div><h3>The Three Modes</h3><p>Quick answers, deep analysis, long-running agent jobs — and when each one is the right call.</p></div>
-      <div class="tile"><div class="num">07</div><h3>Prompt Like a Buyer</h3><p>Role, Context, Task, Format. One owner-level instruction beats ten vague asks.</p></div>
-      <div class="tile"><div class="num">08</div><h3>Models &amp; Plans</h3><p>Build in the model you run. Pick the right tier so nothing breaks mid-deal.</p></div>
+      <a class="tile" href="setup/01-getting-started.html"><div class="num">01</div><h3>Getting Started</h3><p>Claude Desktop + Pro. One subscription, three settings, and your workspace is live.</p></a>
+      <a class="tile" href="setup/01b-turn-on-cowork.html" style="border-color:var(--gold)"><div class="num">01b</div><h3>Turn On Cowork</h3><p>The mode that runs the skills for you and outputs real files. The 10-minute setup, once.</p></a>
+      <a class="tile" href="setup/02-projects-setup.html"><div class="num">02</div><h3>Projects Setup</h3><p>Load your buy box, method, and target notes into a persistent Project so Claude never loses context.</p></a>
+      <a class="tile" href="setup/03-the-vocabulary.html"><div class="num">03</div><h3>The Vocabulary</h3><p>Skills, prompts, loops, agents, connectors — the ten words you need before the room.</p></a>
+      <a class="tile" href="setup/04-why-claude.html"><div class="num">04</div><h3>Why Claude</h3><p>Skills that travel across machines, files that persist, agents that run long jobs. The buyer's stack.</p></a>
+      <a class="tile" href="setup/05-bring-your-memory.html"><div class="num">05</div><h3>Bring Your Memory</h3><p>Files survive, chat memory doesn't. Save as you go so the deal work compounds.</p></a>
+      <a class="tile" href="setup/06-the-three-modes.html"><div class="num">06</div><h3>The Three Modes</h3><p>Quick answers, deep analysis, long-running agent jobs — and when each one is the right call.</p></a>
+      <a class="tile" href="setup/07-prompt-like-a-buyer.html"><div class="num">07</div><h3>Prompt Like a Buyer</h3><p>Role, Context, Task, Format. One owner-level instruction beats ten vague asks.</p></a>
+      <a class="tile" href="setup/08-models-and-plans.html"><div class="num">08</div><h3>Models &amp; Plans</h3><p>Build in the model you run. Pick the right tier so nothing breaks mid-deal.</p></a>
     </div>
     <div class="note">// RUN IT IN COWORK. Claude Desktop's Cowork mode (included in Pro, $20/mo) runs these skills on your own machine and hands you finished files: the deal dashboard, the investor report, your buy box. No command line. Needs an Apple Silicon Mac or Windows. Guide 01b walks the 10-minute setup.</div>
   </div>

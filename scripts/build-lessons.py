@@ -76,7 +76,7 @@ TPL = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>__TITLE__ · AI Acquisition OS</title>
+<title>__TITLE__ · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -85,7 +85,7 @@ TPL = """<!doctype html>
 <body>
 <div class="layout">
 <aside class="sidebar">
-<a class="brand" href="../index.html">AI ACQUISITION OS<small>THE SMB WEALTH BUILDER</small></a>
+<a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 __SIDEBAR__
 </aside>
 <main class="content">
@@ -100,19 +100,47 @@ __CONTENT__
 </html>
 """
 
+# Mirrors the landing-page sidebar exactly so lessons feel like the same site.
+# Setup items link to lesson pages; everything else back to index.html anchors.
+NAV = [
+    ("group", "Start Here", None),
+    ("00",  "Start Here (Newbie)",   "setup/00-start-here-newbie.html"),
+    ("01",  "Getting Started",       "setup/01-getting-started.html"),
+    ("01b", "Cowork &amp; Install",  "setup/01b-turn-on-cowork.html"),
+    ("02",  "Projects Setup",        "setup/02-projects-setup.html"),
+    ("03",  "The Vocabulary",        "setup/03-the-vocabulary.html"),
+    ("04",  "Why Claude",            "setup/04-why-claude.html"),
+    ("05",  "Bring Your Memory",     "setup/05-bring-your-memory.html"),
+    ("06",  "The Three Modes",       "setup/06-the-three-modes.html"),
+    ("07",  "Prompt Like a Buyer",   "setup/07-prompt-like-a-buyer.html"),
+    ("08",  "Models &amp; Plans",    "setup/08-models-and-plans.html"),
+    ("→",   "Install the Plugin",    "index.html#install"),
+    ("group", "The System", None),
+    ("09", "Find Your Starting Point", "index.html#journey"),
+    ("10", "The Numbers Game",         "index.html#numbers"),
+    ("11", "12-Part Deal Engine",      "index.html#system"),
+    ("12", "Three Sourcing Lanes",     "index.html#lanes"),
+    ("13", "Skill Demos",              "index.html#demos"),
+    ("group", "Execute", None),
+    ("14", "Week-One Playbook",  "index.html#weekone"),
+    ("15", "216 Ways to Fund It","index.html#financing"),
+    ("16", "The Deal Advisor",   "index.html#advisor"),
+    ("17", "The Prompt Vault",   "index.html#vault"),
+    ("18", "The Video Series",   "index.html#videos"),
+    ("group", "Go Deeper", None),
+    ("19", "The Community", "index.html#community"),
+    ("20", "Ways In",       "index.html#offers"),
+    ("21", "Appendix",      "index.html#appendix"),
+]
+
 def sidebar_for(cur):
-    out = ['<div class="group">Setup</div>']
-    for p in pages:
-        if p["d"] != "setup":
+    out = []
+    for num, label, href in NAV:
+        if num == "group":
+            out.append(f'<div class="group">{label}</div>')
             continue
-        cls = "nav active" if p["out"] == cur else "nav"
-        out.append(f'<a class="{cls}" href="../{p["out"]}"><span class="n">{p["num"]}</span>{p["short"]}</a>')
-    out.append('<div class="group">Skill lessons</div>')
-    for p in pages:
-        if p["d"] != "lessons":
-            continue
-        cls = "nav active" if p["out"] == cur else "nav"
-        out.append(f'<a class="{cls}" href="../{p["out"]}"><span class="n">{p["num"]}</span>{p["short"]}</a>')
+        cls = "nav active" if href == cur else "nav"
+        out.append(f'<a class="{cls}" href="../{href}"><span class="n">{num}</span>{label}</a>')
     return "\n".join(out)
 
 def pager_for(i):
