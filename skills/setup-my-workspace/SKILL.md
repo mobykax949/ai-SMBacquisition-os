@@ -20,7 +20,7 @@ This is the front door. You just installed the plugin and you have the full skil
 
 1. **Make a home for your work.** Create a folder on your computer called `Acquisitions` (in Cowork, you can just ask Claude to make it). This is where your files live. Done when the folder exists and Claude has permission to use it.
 
-2. **Run the interview (Prompt 1).** Claude asks you one question at a time about who you are, what you have, and what you want. Answer honestly with real numbers. Done when Claude has your ownership status, capital, financing readiness, background, geography, hours, risk tolerance, and 5-year goal.
+2. **Run the interview (Prompt 1).** Claude asks you one question at a time about who you are, what you have, and what you want. Answer honestly with real numbers. Done when Claude has your ownership status, capital, financing readiness, **required income/SDE target**, background, **industries of interest**, geography, hours, risk tolerance, and 5-year goal.
 
 3. **Get your three files.** Claude writes `my-profile.md` (who you are), `buy-box.md` (what you are hunting), and `project-instructions.md` (the paste-once memory). Done when all three files are in your Acquisitions folder.
 
@@ -37,15 +37,17 @@ Run the setup-my-workspace skill. Interview me one question at a time, wait for 
 
 1. Do I already own a business? (What is it, rough revenue, does it run without me?)
 2. Cash I can actually invest right now, and am I able to get an SBA loan?
-3. My work background and the skills I bring
-4. Where I live and how far I am willing to operate
-5. Hours per week I can give this
-6. Do I want steady income or a bigger swing?
-7. What I want in 5 years — income, a business to run, or something to sell?
+3. How much annual income (owner cashflow / SDE) do I need this business to pay me — now, and what is my 5-year net-worth or income goal? (We size the buy box from this number.)
+4. My work background and the skills I bring
+5. Which industries or business types am I drawn to, already understand, or have an edge in — and any I would never buy?
+6. Where I live and how far I am willing to operate
+7. Hours per week I can give this
+8. Do I want steady income or a bigger swing?
+9. What I want in 5 years — income, a business to run, or something to sell?
 
 When you have my answers, write three files to my Acquisitions folder:
 - my-profile.md: my acquirer profile and my journey stage
-- buy-box.md: a first-draft buy box (industry, size, geography, deal structure, red flags) based on my answers
+- buy-box.md: a first-draft buy box anchored on my required income/SDE (reverse-engineer the revenue range from that number), plus my industries of interest, size, geography, deal structure, and red flags
 - project-instructions.md: a short set of custom instructions I can paste into a Claude Project so you remember all of this in every future chat
 
 Then tell me my journey stage and which skill to run next.

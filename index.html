@@ -306,7 +306,7 @@ claude plugin install smb-wealth-builder@smb-wealth-builder</div>
     <div class="sec-head"><span class="secno">SECTION 11</span><h2>Twelve parts. <em>One deal engine.</em></h2>
     <p>Each part fuses a phase of the acquisition method with the AI skill that runs it — and ships with an original step-by-step video. Build one a week, run it on real targets as you go.</p></div>
     <div class="phase"><div class="wk">01<small>Foundation</small></div><div><h3>The AI Acquisition Mindset</h3><p>Set up the Claude workspace, the buy-box concept, and the prompting frame the whole system runs on.</p><div class="vid">Video 01 · Workspace setup, live</div></div><div class="skill">claude-acquisition-setup</div></div>
-    <div class="phase"><div class="wk">02<small>Buy Box</small></div><div><h3>Define Your Target Box</h3><p>Score verticals across three lanes — conservative, target, aggressive — and lock the criteria the engine hunts against.</p><div class="vid">Video 02 · Building a real buy box from scratch</div></div><div class="skill">buy-box-builder</div></div>
+    <div class="phase"><div class="wk">02<small>Buy Box</small></div><div><h3>Define Your Target Box</h3><p>Anchor on the income (SDE) you need and reverse-engineer the size from it — the EPIC move — then score verticals across three lanes (conservative, target, aggressive) and lock the criteria the engine hunts against.</p><div class="vid">Video 02 · Building a real buy box from scratch</div></div><div class="skill">buy-box-builder</div></div>
     <div class="phase"><div class="wk">03<small>Sourcing</small></div><div><h3>The Off-Market Deal Finder</h3><p>Pull, enrich, screen, and rank real businesses. Find the retiring owner who hasn't listed — before anyone else.</p><div class="vid">Video 03 · Live pull: 12 real targets in 44 seconds</div></div><div class="skill">deal-finder</div></div>
     <div class="phase"><div class="wk">04<small>Qualify</small></div><div><h3>The AQ Score Analyzer</h3><p>Run the thirteen-criterion qualification screen with parallel sub-agents. Go or no-go in under a minute.</p><div class="vid">Video 04 · Scoring a real target</div></div><div class="skill">aq-analyzer</div></div>
     <div class="phase"><div class="wk">05<small>Market</small></div><div><h3>On-Market Monitor &amp; Comps</h3><p>Web-search live listings inside your buy box, grade the market, and pull the comps that anchor valuation.</p><div class="vid">Video 05 · The weekly market scan</div></div><div class="skill">market-monitor</div></div>
@@ -341,17 +341,18 @@ claude plugin install smb-wealth-builder@smb-wealth-builder</div>
       <div class="head"><h3>SKILL ONE · The Buy-Box Builder</h3><span class="file">skills/buy-box-builder</span></div>
       <div class="body">
         <div>
-          <p>Tell Claude your capital, your skills, and your geography, and it builds your acquisition criteria across three lanes — conservative, target, and aggressive — then stress-tests the box against ten sample businesses so you know it's tight enough to kill bad deals and wide enough to feed the funnel.</p>
+          <p>It starts from the income you need — the SDE that pays you — and reverse-engineers the business size from it, then builds your criteria across three lanes (conservative, target, aggressive), factors in the industries you actually want, and stress-tests the box against ten sample businesses so you know it's tight enough to kill bad deals and wide enough to feed the funnel.</p>
           <ul class="feat">
+            <li>Income anchor: reverse-engineers revenue &amp; SDE floor from the cashflow you need</li>
             <li>Three-lane buy box (conservative / target / aggressive)</li>
             <li>Vertical scorecard: recurring revenue, fragmentation, owner age, AI upside, entry multiple</li>
-            <li>Revenue, SDE, employee, and business-age screens</li>
+            <li>Industries-of-interest weighting + auto-pass list</li>
             <li>Stress-test loop against sample targets</li>
             <li>Saves the box to your Project as the engine's ground truth</li>
           </ul>
         </div>
         <div>
-          <div class="promptbox"><span class="lbl">Run it</span>Build my acquisition buy box. Capital available: $[X] plus SBA 7(a). Geography: [Orange County, CA]. My background: [operations / marketing / trades]. Target: cash-flowing service businesses with retiring owners. Score these verticals against the box: [hood cleaning, laundromats, landscape maintenance, pool service].</div>
+          <div class="promptbox"><span class="lbl">Run it</span>Build my acquisition buy box. Income I need it to pay me: $[X] SDE/year, 5-year net-worth goal $[Y]. Capital available: $[Z] plus SBA 7(a). Geography: [Orange County, CA]. My background: [operations / marketing / trades]. Industries I'm drawn to: [pool service, landscape]; would never buy: [restaurants]. Anchor the size on my income number, then score these verticals against the box: [hood cleaning, laundromats, landscape maintenance, pool service].</div>
           <div class="runline"><b>Output:</b> scored vertical table + a saved buy-box file your deal-finder hunts against.</div>
         </div>
       </div>

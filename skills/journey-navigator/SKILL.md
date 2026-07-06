@@ -33,7 +33,7 @@ The interview places you in one of five stages. Each has a different best move.
 
 ## Steps
 
-1. **Run the interview.** Paste Prompt 1. Claude asks one question at a time; answer honestly. Done when Claude has: ownership status, capital picture, financing readiness, skills/background, geography, hours available, and risk tolerance.
+1. **Run the interview.** Paste Prompt 1. Claude asks one question at a time; answer honestly. Done when Claude has: ownership status, capital picture, financing readiness, **required income/SDE target**, skills/background, **industries of interest**, geography, hours available, and risk tolerance.
 
 2. **Review your profile.** Claude writes `my-profile.md`. Read it and correct anything wrong. Done when the profile says something true about you in every section.
 
@@ -52,11 +52,13 @@ Act as an acquisition strategist running an intake interview. Ask me ONE questio
 
 1. Do I currently own a business? (What, revenue, does it run without me?)
 2. Capital available to invest, and am I SBA-eligible / financing ready?
-3. My professional background and operating skills
-4. Geography: where I live, how far I'll operate
-5. Hours per week I can give this
-6. Risk tolerance: steady cash flow vs. bigger swing
-7. What I actually want in 5 years: income, an empire, a sellable asset?
+3. How much annual income (owner cashflow / SDE) do I need this business to produce — now, and my 5-year net-worth goal? (This sizes the buy box.)
+4. My professional background and operating skills
+5. Which industries or business types am I drawn to, already understand, or have an edge in — and any I'd never buy?
+6. Geography: where I live, how far I'll operate
+7. Hours per week I can give this
+8. Risk tolerance: steady cash flow vs. bigger swing
+9. What I actually want in 5 years: income, an empire, a sellable asset?
 
 Then: write my acquirer profile as a document I can save (my-profile.md), place me in one of these journey stages — Owner-Operator, Owner-Acquirer, First-Time Searcher (building), Platform Searcher, Roll-Up Operator — and recommend my strategy: modernize first, bolt-on hunting, $0-traffic asset building, platform search, or roll-up consolidation. Name the strongest ALTERNATIVE strategy too and the trade-off between them.
 ```
