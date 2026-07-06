@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Models & Plans · AI Acquisition OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:270px 1fr;max-width:1180px;margin:0 auto}
+.sidebar{border-right:1px solid var(--line);padding:26px 20px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:24px}
+.content{padding:40px 52px 80px;max-width:840px}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">AI ACQUISITION OS<small>THE SMB WEALTH BUILDER</small></a>
+<div class="group">Setup</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork & Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav active" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models & Plans</a>
+<div class="group">Skill lessons</div>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="models-and-plans">Models and Plans</h1>
+<p><em>Reading time: ~8 min. Outcome: Know which Claude model to use,
+when limits matter, and when to upgrade your plan.</em></p>
+<p>Claude offers multiple model tiers and subscription plans. For
+acquisition work, the right combination is: <strong>build your prompts
+and skills in the model you will actually run</strong>, and
+<strong>upgrade when you hit limits that block real work</strong>.</p>
+<h2 id="the-model-tiers-what-they-mean">The model tiers (what they
+mean)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Model tier</th>
+<th>What it is</th>
+<th>When to use it for deal work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Haiku</strong></td>
+<td>Fastest, cheapest, lightweight reasoning.</td>
+<td>Quick lookups, simple calculations, reformatting data. Not
+recommended for full deal analysis.</td>
+</tr>
+<tr>
+<td><strong>Sonnet</strong></td>
+<td>Balanced speed and reasoning. The default for most tasks.</td>
+<td>Target scoring, valuation models, comp research, deal memos. This is
+the workhorse for acquisitions.</td>
+</tr>
+<tr>
+<td><strong>Opus</strong></td>
+<td>Deepest reasoning, slowest, most expensive.</td>
+<td>Complex multi-business analysis, vertical research, large-dataset
+work. Use when Sonnet is not enough.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The rule for acquisition work:</strong> Default to
+<strong>Sonnet</strong>. Upgrade to <strong>Opus</strong> only when a
+task is too complex for Sonnet (rare). Do not use Haiku for anything
+that requires real reasoning.</p>
+<h2 id="the-subscription-plans-pro-vs-higher-tiers">The subscription
+plans (Pro vs. higher tiers)</h2>
+<p>| Plan | Cost | What you get | When it is enough | When to upgrade |
+|---|---|---|---| | <strong>Claude Pro</strong> | $20/month | Projects,
+larger context, priority access during high demand. Enough for most
+acquisition work. | You are evaluating 5-10 targets per month, running
+deal memos and valuations, not hitting message limits. | You hit message
+limits mid-task or need to process 50+ targets per week. | |
+<strong>Claude Team</strong> | $30/user/month | Higher limits, shared
+Projects (team collaboration). | You are running deals with a partner or
+team and need shared workspaces. | (Same as Pro — higher limits are the
+main benefit.) | | <strong>Claude Enterprise</strong> | Custom pricing |
+Unlimited usage (within reason), custom integrations, priority support.
+| You are running a fund, processing hundreds of targets, or need API
+access for automation. | You outgrow Team limits or need enterprise
+features. |</p>
+<p><strong>For most solo buyers or small partnerships:</strong>
+<strong>Pro is enough</strong>. Upgrade to Team if you need shared
+Projects. Upgrade to Enterprise only if you are running institutional
+volume.</p>
+<h2 id="build-in-the-model-you-run">Build in the model you run</h2>
+<p><strong>The mistake most people make:</strong> Prototype a skill or
+prompt in a fast, cheap model (Haiku), then try to run the real task in
+Sonnet and wonder why the output is different.</p>
+<p><strong>The fix:</strong> Build your prompts and skills in
+<strong>Sonnet</strong> from the start. Test them in Sonnet, iterate in
+Sonnet, save them in Sonnet. When you run a real deal analysis, it will
+behave the same way.</p>
+<p>Exception: If a task genuinely needs Opus (complex multi-step
+reasoning, large dataset), build and test in Opus. Do not build in
+Sonnet and hope Opus works the same.</p>
+<h2 id="when-limits-mean-upgrade">When limits mean upgrade</h2>
+<p>You will know it is time to upgrade when:</p>
+<ul>
+<li><strong>You hit message limits mid-task.</strong> You are running a
+long agentic job (sourcing 20 targets, building a deal memo) and Claude
+stops because you used your daily message quota. Pro has higher limits
+than Free, but heavy users will eventually hit them.</li>
+<li><strong>You are processing volume.</strong> If you are evaluating
+50+ targets per week, scoring every one through AQ criteria, pulling
+comps, and writing memos, you will run out of messages on Pro. Upgrade
+to Team or Enterprise.</li>
+<li><strong>You need shared Projects.</strong> If you are working with a
+partner and you both need access to the same buy box, target notes, and
+deal pipeline, upgrade to Team for shared Projects.</li>
+</ul>
+<p>If you are running 5-10 deals per month, Pro is fine. If you are
+running a pipeline of 50+ active targets, you need Team or
+Enterprise.</p>
+<h2 id="what-good-looks-like-when-you-pick-the-right-plan">What good
+looks like when you pick the right plan</h2>
+<ul>
+<li>You build and test your prompts in Sonnet (the model you will run
+for real work).</li>
+<li>You are on Pro (or higher) so you have Projects, large context, and
+enough message capacity for deal volume.</li>
+<li>You upgrade only when you hit real limits (message caps, need for
+shared Projects), not preemptively.</li>
+<li>Your workflow is consistent: same model, same prompts, repeatable
+results.</li>
+</ul>
+<p>You are now through the full setup sequence. You have Claude
+configured, your Project loaded, your vocabulary solid, your prompt
+discipline in place, and your plan matched to your volume. Go run
+deals.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../setup/07-prompt-like-a-buyer.html"><span class="lbl">← Previous</span>Prompt Like a Buyer</a><a class="next" href="../lessons/00-journey-navigator.html"><span class="lbl">Next →</span>Journey Navigator</a></nav>
+</main>
+</div>
+</body>
+</html>

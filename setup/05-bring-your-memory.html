@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bring Your Memory · AI Acquisition OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:270px 1fr;max-width:1180px;margin:0 auto}
+.sidebar{border-right:1px solid var(--line);padding:26px 20px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:24px}
+.content{padding:40px 52px 80px;max-width:840px}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">AI ACQUISITION OS<small>THE SMB WEALTH BUILDER</small></a>
+<div class="group">Setup</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork & Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav active" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models & Plans</a>
+<div class="group">Skill lessons</div>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="bring-your-memory">Bring Your Memory</h1>
+<p><em>Reading time: ~7 min. Outcome: A save-as-you-go file discipline
+that prevents lost work.</em></p>
+<p>Claude is not a database. A long conversation eventually compacts and
+Claude forgets the middle. The fix is simple: save everything worth
+keeping as a file. Files survive. Chat memory does not.</p>
+<h2 id="the-one-rule">The one rule</h2>
+<p><strong>If you produced it and you want it later, save it to a
+file.</strong></p>
+<p>That applies to:</p>
+<ul>
+<li>Target notes and scorecards.</li>
+<li>Valuation models and comp analyses.</li>
+<li>Discovery call transcripts and seller questionnaires.</li>
+<li>Financing structures and term sheets.</li>
+<li>Buy-box updates and criteria changes.</li>
+</ul>
+<p>Treat the chat as a workbench. Treat files as the filing cabinet.</p>
+<h2 id="where-to-save-deal-files-the-naming-system">Where to save deal
+files (the naming system)</h2>
+<p>Use a simple folder structure so you can find targets later:</p>
+<pre><code>targets/
+  professional-services/
+    orange-county-it-consulting.md
+    riverside-accounting-firm.md
+  home-services/
+    san-diego-hvac-co.md</code></pre>
+<p>Naming pattern:
+<code>targets/&lt;vertical&gt;/&lt;business-name&gt;.md</code></p>
+<p>Each target file holds:</p>
+<ul>
+<li>The AQ scorecard (13 criteria, green/yellow/red).</li>
+<li>Key financials (revenue, SDE, asking price, multiple).</li>
+<li>Discovery notes (owner motivation, team, transition plan).</li>
+<li>Red flags and deal structure ideas.</li>
+</ul>
+<h2 id="what-to-save-in-project-knowledge-vs-local-files">What to save
+in Project knowledge vs. local files</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Save in Project knowledge</th>
+<th>Save as local files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buy box, AQ criteria, financing playbook (things you reference
+across all deals)</td>
+<td>Individual target notes, scorecards, deal memos (specific to one
+business)</td>
+</tr>
+<tr>
+<td>Your background and experience</td>
+<td>Discovery call transcripts</td>
+</tr>
+<tr>
+<td>Standard templates (LOI outline, seller questionnaire)</td>
+<td>Valuation models and comp lists</td>
+</tr>
+</tbody>
+</table></div>
+<p>The rule: if it applies to every deal, put it in the Project. If it
+applies to one deal, save it as a file outside the Project and reference
+it when needed.</p>
+<h2 id="how-to-save-during-a-conversation">How to save during a
+conversation</h2>
+<p>When Claude generates something you want to keep:</p>
+<ol type="1">
+<li>Copy the output (or use the artifact download if it is a table or
+document).</li>
+<li>Paste it into a markdown file and save locally.</li>
+<li>Name it following the
+<code>targets/&lt;vertical&gt;/&lt;business&gt;.md</code> pattern.</li>
+<li>If you are mid-task and want to keep working, tell Claude: "Save
+this target scorecard as
+<code>targets/professional-services/oc-it-consulting.md</code> and
+continue."</li>
+</ol>
+<p>Claude can write files directly (if you give the path and content),
+or you can copy and save manually. Either way, the output is now
+durable.</p>
+<h2 id="what-happens-if-you-do-not-save">What happens if you do not
+save</h2>
+<ul>
+<li>Long conversations compact. Claude forgets the middle.</li>
+<li>You lose detailed analysis and have to regenerate it (wasted time,
+wasted tokens).</li>
+<li>You cannot compare targets side by side because the notes are buried
+in different chats.</li>
+<li>When you come back a week later, the context is gone.</li>
+</ul>
+<h2 id="what-good-looks-like-when-you-bring-your-memory">What good looks
+like when you bring your memory</h2>
+<ul>
+<li>Every target you evaluate has a saved file with the AQ scorecard and
+notes.</li>
+<li>You can open any target file later, upload it to a new chat, and
+pick up where you left off.</li>
+<li>Your Project holds the method. Your local files hold the deals.</li>
+<li>Nothing important lives only in chat.</li>
+</ul>
+<p>Next: <strong>The Three Modes</strong> — quick Q&amp;A vs. deep
+analysis vs. long agentic jobs, and when to use each.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../setup/04-why-claude.html"><span class="lbl">← Previous</span>Why Claude</a><a class="next" href="../setup/06-the-three-modes.html"><span class="lbl">Next →</span>The Three Modes</a></nav>
+</main>
+</div>
+</body>
+</html>

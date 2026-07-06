@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt Like a Buyer · AI Acquisition OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:270px 1fr;max-width:1180px;margin:0 auto}
+.sidebar{border-right:1px solid var(--line);padding:26px 20px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:24px}
+.content{padding:40px 52px 80px;max-width:840px}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">AI ACQUISITION OS<small>THE SMB WEALTH BUILDER</small></a>
+<div class="group">Setup</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork & Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav active" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models & Plans</a>
+<div class="group">Skill lessons</div>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="prompt-like-a-buyer">Prompt Like a Buyer</h1>
+<p><em>Reading time: ~10 min. Outcome: Write owner-level prompts using
+RCTF — Role, Context, Task, Format.</em></p>
+<p>The difference between "Claude summarized this" and "Claude delivered
+a deal-ready analysis" is the prompt. Good prompts are specific,
+structured, and tell Claude what outcome you need. The RCTF framework
+makes this automatic.</p>
+<h2 id="rctf-role--context--task--format">RCTF: Role / Context / Task /
+Format</h2>
+<p>| Component | What it is | Why it matters | |---|---| |
+<strong>Role</strong> | Who Claude is acting as. | "You are an
+acquisition analyst" gets better results than no role. Claude reasons
+like the role you assign. | | <strong>Context</strong> | Background
+Claude needs to do the task right. | Your buy box, the AQ criteria, the
+business details. Without context, Claude guesses. | |
+<strong>Task</strong> | The specific job you want done. | "Score this
+business" is vague. "Score this business against my 13 AQ criteria and
+flag any reds" is clear. | | <strong>Format</strong> | How you want the
+output structured. | Table, bullet list, markdown file, memo sections.
+Specifying format prevents Claude from rambling. |</p>
+<h2 id="three-acquisition-examples-weak-vs-owner-level">Three
+acquisition examples: weak vs. owner-level</h2>
+<h3 id="example-1-qualifying-a-target">Example 1: Qualifying a
+target</h3>
+<p><strong>Weak prompt:</strong></p>
+<blockquote>
+<p>"Is this a good business?"</p>
+</blockquote>
+<p><strong>Why it is weak:</strong> No context (good for what?), no
+criteria (good by what standard?), no format (how should Claude
+answer?).</p>
+<p><strong>Owner-level prompt (RCTF):</strong></p>
+<blockquote>
+<p><strong>Role:</strong> You are an acquisition analyst evaluating
+small B2B businesses.<br />
+<strong>Context:</strong> My buy box: B2B professional services, $1-5M
+revenue, $300-1M SDE, owner-operated, Orange County CA. My AQ criteria:
+13 green/yellow/red checks (location, seller finance, margin, staff, own
+property, training, etc.).<br />
+<strong>Task:</strong> Score this CIM against my AQ criteria. Flag any
+reds and recommend go/no-go.<br />
+<strong>Format:</strong> Deliver as a table with 13 rows (criterion /
+score / notes), followed by a summary paragraph.</p>
+</blockquote>
+<p><strong>Why it works:</strong> Claude knows the role (analyst), has
+the criteria (AQ scorecard), knows the task (score and recommend), and
+knows the output format (table + summary). No guessing.</p>
+<hr />
+<h3 id="example-2-building-a-valuation-model">Example 2: Building a
+valuation model</h3>
+<p><strong>Weak prompt:</strong></p>
+<blockquote>
+<p>"What is this business worth?"</p>
+</blockquote>
+<p><strong>Why it is weak:</strong> No context (worth based on what
+comps?), no method (multiple of revenue? SDE? EBITDA?), no format.</p>
+<p><strong>Owner-level prompt (RCTF):</strong></p>
+<blockquote>
+<p><strong>Role:</strong> You are a valuation analyst specializing in
+small business acquisitions.<br />
+<strong>Context:</strong> This is a $2.3M revenue, $680K SDE B2B
+consulting firm in Orange County. Industry standard multiples:
+owner-operated businesses trade at 2.4x SDE, professionally managed at
+4.0x EBITDA.<br />
+<strong>Task:</strong> Build a 3-comp valuation model. Pull comparable
+sales from the web (B2B professional services, $1-3M revenue, last 24
+months). Normalize for SDE. Give me a fair-value range and explain any
+adjustments.<br />
+<strong>Format:</strong> Deliver as a markdown table with columns:
+Business / Revenue / SDE / Sale Price / Multiple / Notes. Follow with a
+summary paragraph: fair-value range, recommended offer, reasoning.</p>
+</blockquote>
+<p><strong>Why it works:</strong> Claude knows the method (SDE multiples
++ comps), knows where to source data (web search, B2B services, recent
+sales), and knows the output format (table + summary). You get a comp
+model, not a guess.</p>
+<hr />
+<h3 id="example-3-drafting-a-financing-structure">Example 3: Drafting a
+financing structure</h3>
+<p><strong>Weak prompt:</strong></p>
+<blockquote>
+<p>"How can I buy this business with no money down?"</p>
+</blockquote>
+<p><strong>Why it is weak:</strong> No context (business details? seller
+motivation?), no method (which funding strategies?), no format.</p>
+<p><strong>Owner-level prompt (RCTF):</strong></p>
+<blockquote>
+<p><strong>Role:</strong> You are a creative deal-structuring advisor
+specializing in no-money-down acquisitions.<br />
+<strong>Context:</strong> This is a $1.8M asking price B2B consulting
+firm. Owner is 68, wants to retire, open to seller financing. The
+business does $2.1M revenue, $620K SDE. I have access to the 13 EPIC
+funding strategy families (seller financing, earnouts, consulting
+offsets, pre-sale promotions, asset carveouts, etc.).<br />
+<strong>Task:</strong> Build a financing STACK using 3-5 strategies to
+get to $0 cash at closing. Include seller financing (5-year note),
+earnout (tied to revenue retention), and consulting offset (owner stays
+on as advisor, fee applied to purchase price). Show the math: how much
+each strategy covers, what the seller receives at closing vs. over
+time.<br />
+<strong>Format:</strong> Deliver as a markdown table with columns:
+Strategy / Amount / Terms / Timing. Follow with a narrative explaining
+the seller's perspective (why this structure works for them) and the
+risk mitigations.</p>
+</blockquote>
+<p><strong>Why it works:</strong> Claude knows the funding families
+(EPIC strategies), has the business details (price, SDE, owner
+motivation), knows the task (STACK to $0 cash), and knows the format
+(table + narrative). You get a real structure, not theory.</p>
+<hr />
+<h2 id="the-pattern">The pattern</h2>
+<p>Every owner-level prompt follows RCTF:</p>
+<ol type="1">
+<li><strong>Role:</strong> "You are a [acquisition analyst / valuation
+expert / deal structuring advisor]."</li>
+<li><strong>Context:</strong> Buy box, AQ criteria, business details,
+seller motivation, your constraints.</li>
+<li><strong>Task:</strong> The specific job (score, value, structure,
+research, draft).</li>
+<li><strong>Format:</strong> Table, memo, markdown file, bullet list,
+artifact.</li>
+</ol>
+<h2 id="what-good-looks-like-when-you-prompt-like-a-buyer">What good
+looks like when you prompt like a buyer</h2>
+<ul>
+<li>You get deal-ready outputs on the first try, not vague
+summaries.</li>
+<li>Claude uses your criteria (AQ scorecard, funding families, buy box)
+without you re-explaining them.</li>
+<li>The output is structured and actionable (tables, memos, scorecards),
+not rambling paragraphs.</li>
+<li>You can save the prompt as a skill and re-run it on every new
+target.</li>
+</ul>
+<p>Next: <strong>Models and Plans</strong> — how to pick the right
+Claude model tier and when to upgrade.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../setup/06-the-three-modes.html"><span class="lbl">← Previous</span>The Three Modes</a><a class="next" href="../setup/08-models-and-plans.html"><span class="lbl">Next →</span>Models & Plans</a></nav>
+</main>
+</div>
+</body>
+</html>
