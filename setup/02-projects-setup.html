@@ -161,56 +161,70 @@ left sidebar.</li>
 </ol>
 <p>You now have a persistent workspace where uploaded files and custom
 instructions stay loaded across every conversation in that Project.</p>
-<h2 id="2-write-your-buy-box-context-document">2. Write your buy-box
-context document</h2>
-<p>Your buy box is the 1-page spec that tells Claude exactly what
-businesses you want. Write this as a markdown file (call it
-<code>buy-box.md</code>) and save it locally before uploading.</p>
+<h2 id="2-your-buy-box--the-skills-write-it-for-you">2. Your buy box —
+the skills write it for you</h2>
+<p>You do <strong>not</strong> hand-write your buy box. Two skills
+produce and refine it:</p>
+<ul>
+<li><strong><code>setup-my-workspace</code></strong> writes a
+first-draft <code>buy-box.md</code> from your interview (you already
+have this if you ran it).</li>
+<li><strong><code>buy-box-builder</code></strong> turns that draft into
+the real thing: three lanes (conservative / target / aggressive),
+verticals scored on five factors, sized from the income you need, and
+stress-tested against live listings.</li>
+</ul>
+<p>So your only job here is to make sure <code>buy-box.md</code> exists,
+then add it to Context in the next step.</p>
+<blockquote>
+<p>Haven't run them yet? Open a Cowork chat and run
+<code>setup-my-workspace</code> (writes the first draft), then
+<code>buy-box-builder</code> (refines and scores it). Come back here to
+load the result into Context.</p>
+</blockquote>
+<p>For reference, this is what the buy box the skills produce
+contains:</p>
 <div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Section</th>
-<th>What to include</th>
+<th>What it holds</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td><strong>Income anchor</strong></td>
+<td>The SDE you need the business to pay you → the revenue range that
+produces it</td>
+</tr>
+<tr>
 <td><strong>Target profile</strong></td>
-<td>Industry, revenue range, profit range (e.g. "B2B service businesses,
-$1-5M revenue, $300K-1M SDE").</td>
+<td>Industry, revenue range, SDE range</td>
 </tr>
 <tr>
 <td><strong>Owner profile</strong></td>
-<td>Demographics and motivation (e.g. "baby-boomer founders 55-70,
-owner-operated, looking to retire or exit").</td>
+<td>e.g. baby-boomer founders 55-70, owner-operated, exiting</td>
 </tr>
 <tr>
 <td><strong>Geography</strong></td>
-<td>Where you want to buy (metro area, state, or national).</td>
+<td>Metro, state, or national</td>
 </tr>
 <tr>
 <td><strong>Deal structure</strong></td>
-<td>How you want to finance (e.g. "seller financing preferred, $0 out of
-pocket, equity rollover welcome").</td>
+<td>Financing preference (seller notes, $0-down, equity rollover)</td>
 </tr>
 <tr>
 <td><strong>Red flags</strong></td>
-<td>What kills the deal fast (e.g. "single-customer concentration
-&gt;40%, declining revenue, missing financials").</td>
+<td>Auto-pass criteria (customer concentration, declining revenue, no
+books)</td>
 </tr>
 <tr>
-<td><strong>Evaluation method</strong></td>
-<td>The AQ criteria or your own framework (green/yellow/red scoring on
-seller finance, margin, location, staff, etc.).</td>
+<td><strong>Top verticals</strong></td>
+<td>The 3 highest-scoring verticals from
+<code>buy-box-builder</code></td>
 </tr>
 </tbody>
 </table></div>
-<p>Example snippet:</p>
-<pre><code>Target: B2B professional services, Orange County CA
-Revenue: $1-5M top line, $300-1M SDE
-Owner: 55-70, burned out, owner-operated
-Structure: Seller financing, equity rollover, consultant transition
-Red flags: &lt;40% margin, single customer &gt;40%, no books</code></pre>
 <h2 id="3-upload-the-buy-box-file-to-your-project">3. Upload the buy-box
 file to your Project</h2>
 <ol type="1">

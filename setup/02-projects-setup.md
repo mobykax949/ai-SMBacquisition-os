@@ -41,27 +41,28 @@ Then load your files into **Context** (below) and you are set. Memory and Schedu
 
 You now have a persistent workspace where uploaded files and custom instructions stay loaded across every conversation in that Project.
 
-## 2. Write your buy-box context document
+## 2. Your buy box — the skills write it for you
 
-Your buy box is the 1-page spec that tells Claude exactly what businesses you want. Write this as a markdown file (call it `buy-box.md`) and save it locally before uploading.
+You do **not** hand-write your buy box. Two skills produce and refine it:
 
-| Section | What to include |
+- **`setup-my-workspace`** writes a first-draft `buy-box.md` from your interview (you already have this if you ran it).
+- **`buy-box-builder`** turns that draft into the real thing: three lanes (conservative / target / aggressive), verticals scored on five factors, sized from the income you need, and stress-tested against live listings.
+
+So your only job here is to make sure `buy-box.md` exists, then add it to Context in the next step.
+
+> Haven't run them yet? Open a Cowork chat and run `setup-my-workspace` (writes the first draft), then `buy-box-builder` (refines and scores it). Come back here to load the result into Context.
+
+For reference, this is what the buy box the skills produce contains:
+
+| Section | What it holds |
 |---|---|
-| **Target profile** | Industry, revenue range, profit range (e.g. "B2B service businesses, $1-5M revenue, $300K-1M SDE"). |
-| **Owner profile** | Demographics and motivation (e.g. "baby-boomer founders 55-70, owner-operated, looking to retire or exit"). |
-| **Geography** | Where you want to buy (metro area, state, or national). |
-| **Deal structure** | How you want to finance (e.g. "seller financing preferred, $0 out of pocket, equity rollover welcome"). |
-| **Red flags** | What kills the deal fast (e.g. "single-customer concentration >40%, declining revenue, missing financials"). |
-| **Evaluation method** | The AQ criteria or your own framework (green/yellow/red scoring on seller finance, margin, location, staff, etc.). |
-
-Example snippet:
-```
-Target: B2B professional services, Orange County CA
-Revenue: $1-5M top line, $300-1M SDE
-Owner: 55-70, burned out, owner-operated
-Structure: Seller financing, equity rollover, consultant transition
-Red flags: <40% margin, single customer >40%, no books
-```
+| **Income anchor** | The SDE you need the business to pay you → the revenue range that produces it |
+| **Target profile** | Industry, revenue range, SDE range |
+| **Owner profile** | e.g. baby-boomer founders 55-70, owner-operated, exiting |
+| **Geography** | Metro, state, or national |
+| **Deal structure** | Financing preference (seller notes, $0-down, equity rollover) |
+| **Red flags** | Auto-pass criteria (customer concentration, declining revenue, no books) |
+| **Top verticals** | The 3 highest-scoring verticals from `buy-box-builder` |
 
 ## 3. Upload the buy-box file to your Project
 
