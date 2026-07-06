@@ -15,13 +15,17 @@ just works" line — what the user no longer has to do by hand.*
 
 ---
 
-## Step 1 — Install the skill (one click)
-1. Download the skill folder: **[skill-name.zip](../downloads/skill-name.zip)**
-2. Unzip it. You get a folder named `skill-name` containing `SKILL.md`.
-3. In Finder press `Cmd+Shift+G`, go to `~/.claude/skills/`, and drop the folder in.
-4. In Claude Desktop (Cowork mode), type `/` — you should see `skill-name` listed.
+## Step 1 — Install the plugin (one time — gets you every skill)
+You do not install skills one at a time. They all ship in a single plugin. Install it once and every skill is available. *(Already installed the plugin? Skip to Step 2.)*
 
-**Done when:** typing `/skill-name` shows the skill.
+1. In Claude Desktop, open the plugin **Directory** and select the **Plugins** tab.
+2. Click the **+** (top-right) → **Add marketplace**, and paste: `mobykax949/ai-SMBacquisition-os`
+3. Find **smb-wealth-builder** in the list, click **Install**, and choose **User** scope.
+4. Start a **new** Cowork chat and type `/` — the skills appear (e.g. `/skill-name`).
+
+**Done when:** typing `/skill-name` in a fresh Cowork chat shows the skill.
+
+> Don't search for "marketplace" in the plugin search box — it's a source you *add* with the **+** button, not a plugin you search for.
 
 ---
 

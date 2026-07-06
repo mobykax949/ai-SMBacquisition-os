@@ -31,18 +31,20 @@ Cowork is the mode where Claude does real work and saves real files for you.
 
 ## Part 3 — Install the Plugin (3 minutes, one time)
 
-This is the step that gives you all 20 skills at once. You do NOT download them one by one.
+This step gives you all the skills at once. You do NOT download them one by one, and you do NOT need a terminal — it is all point-and-click.
 
-1. In the Claude app, open **Settings**, then click **Plugins**.
-2. Click **Add marketplace**.
-3. In the box, paste this exactly:
+Think of it as two pieces: a **marketplace** (the store) and the **plugin** (the app inside the store). You add the store, then install the app. Every skill comes inside that one app.
+
+1. In Claude Desktop, open the **Directory** — the panel with **Skills · Connectors · Plugins** tabs down the left — and click the **Plugins** tab.
+2. Click the **+** button in the **top-right corner**, then choose **Add marketplace**.
+   > ⚠️ Do NOT type "marketplace" into the search box — that only searches plugin *names* and finds nothing. The marketplace is a source you *add* with the **+** button, not something you search for.
+3. In the box, paste this exactly and confirm:
    ```
    mobykax949/ai-SMBacquisition-os
    ```
-   and confirm.
-4. You will now see a plugin called **smb-wealth-builder**. Click **Install**.
-5. **Important:** close your current chat and start a **brand-new Cowork conversation.** The skills only show up in a fresh chat.
-6. In the new chat, type a single slash **/** — you should see a list of skills appear (journey-navigator, buy-box-builder, and more).
+4. The plugin **smb-wealth-builder** now appears in the list. Click it, then click **Install**. If it asks for a scope, choose **User** (so the skills work in every chat, not just one project).
+   > Don't see it immediately? Click the **↻ refresh** icon at the top-right (next to "Filter by").
+5. Start a **brand-new Cowork conversation** and type a single slash **/**. You will see the skills — for example `/journey-navigator` and `/setup-my-workspace`.
 
 **You are done with Part 3 when:** typing **/** in a new chat shows the acquisition skills.
 
