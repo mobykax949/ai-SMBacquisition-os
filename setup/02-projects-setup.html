@@ -78,6 +78,62 @@ and loaded with context.</em></p>
 and how you evaluate businesses. Without that context, every
 conversation starts from scratch. A Project is where you load the method
 once and have it available every time.</p>
+<h2 id="the-project-brief--fill-this-out-first">The project brief — fill
+this out first</h2>
+<p>When you open your project in Cowork, the right-hand panel has
+<strong>four parts</strong>. This is your project's permanent brain:
+fill it once and every conversation in the project starts already
+knowing your situation.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What it is</th>
+<th>What an acquirer puts here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Instructions</strong></td>
+<td>Your project brief — how Claude should behave in this project</td>
+<td>Who you are, your buy box in one line, your income/SDE target, and
+the method to use (template below)</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>Facts Claude remembers as you work</td>
+<td>Your target verticals, capital on hand, deal preferences</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td>Files loaded into every chat in the project</td>
+<td><code>my-profile.md</code>, <code>buy-box.md</code>, and your deal
+notes</td>
+</tr>
+<tr>
+<td><strong>Scheduled</strong></td>
+<td>Recurring tasks</td>
+<td>e.g. a weekly <code>market-monitor</code> scan of new listings</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="fill-in-the-instructions-your-brief">Fill in the Instructions
+(your brief)</h3>
+<p>This is the field the app asks you to complete when you create the
+project. Click the <strong>Instructions</strong> pencil (top-right of
+the panel) and paste the text below, filled in with your details. The
+<code>setup-my-workspace</code> skill writes this for you as
+<code>project-instructions.md</code> — just paste that in.</p>
+<pre><code>I am [name]. I am acquiring [buy box in one line: industry, size, geography].
+I need this business to pay me about [target SDE] per year; my 5-year goal is [net-worth or income goal].
+
+How to help me in this project:
+- Use the EPIC / Frasier method. Score deals against the 13 AQ criteria, value on SDE/EBITDA multiples, structure creative financing (seller notes, earnouts, $0-down stacks), and enforce the 70% Rule — kill weak deals fast.
+- Always read my-profile.md and buy-box.md in Context before advising.
+- Ask me for the deal facts before giving advice — no guessing.
+- You are my method coach and analyst, not a lawyer or CPA. Flag when I need to hire one.</code></pre>
+<p>Then load your files into <strong>Context</strong> (below) and you
+are set. Memory and Scheduled are optional — add to them as you go.</p>
 <h2 id="1-create-your-acquisition-project">1. Create your acquisition
 Project</h2>
 <ol type="1">
@@ -144,8 +200,10 @@ Red flags: &lt;40% margin, single customer &gt;40%, no books</code></pre>
 file to your Project</h2>
 <ol type="1">
 <li>Open your acquisition Project.</li>
-<li>Click <strong>Add content</strong> at the top.</li>
-<li>Upload <code>buy-box.md</code>.</li>
+<li>In the right-hand panel, click the <strong>+</strong> next to
+<strong>Context</strong>.</li>
+<li>Upload <code>buy-box.md</code> (and
+<code>my-profile.md</code>).</li>
 </ol>
 <p>Claude now sees this context in every conversation inside this
 Project. You do not need to re-explain your criteria.</p>

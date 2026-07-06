@@ -24,7 +24,7 @@ This is the front door. You just installed the plugin and you have the full skil
 
 3. **Get your three files.** Claude writes `my-profile.md` (who you are), `buy-box.md` (what you are hunting), and `project-instructions.md` (the paste-once memory). Done when all three files are in your Acquisitions folder.
 
-4. **Install your memory into a Project (Prompt 2 guides you).** Open Claude's Projects, create one called "My Acquisitions," paste the contents of `project-instructions.md` into the Project's custom instructions, and upload `my-profile.md` and `buy-box.md` to the Project's knowledge. Done when your Project has instructions set and both files uploaded.
+4. **Install your memory into a Project (Prompt 2 guides you).** Open Claude's Projects, create one called "My Acquisitions," paste the contents of `project-instructions.md` into the project's **Instructions** (the project brief), and add `my-profile.md` and `buy-box.md` to the project's **Context**. Done when your Instructions are set and both files are in Context.
 
 5. **Get your next step.** Claude reads your profile and tells you which skill to run next and why. Done when you know your journey stage and the name of the next skill to open.
 
@@ -56,7 +56,7 @@ Then tell me my journey stage and which skill to run next.
 **Prompt 2: Turn It Into Permanent Memory**
 
 ```
-Walk me through setting up my Claude Project step by step, as if I have never used Projects before. Tell me exactly what to click, what to name it, where to paste the project-instructions.md text, and how to upload my-profile.md and buy-box.md so you see them in every conversation. Keep it to plain numbered steps.
+Walk me through setting up my Cowork project step by step, as if I have never used projects before. Tell me exactly how to create it, what to name it, how to paste project-instructions.md into the project's Instructions (the project brief), and how to add my-profile.md and buy-box.md to the project's Context so you see them in every conversation. Keep it to plain numbered steps.
 ```
 
 ## The Loop

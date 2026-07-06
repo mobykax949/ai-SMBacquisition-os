@@ -4,6 +4,34 @@
 
 Your deal work depends on Claude remembering what you are looking for and how you evaluate businesses. Without that context, every conversation starts from scratch. A Project is where you load the method once and have it available every time.
 
+## The project brief — fill this out first
+
+When you open your project in Cowork, the right-hand panel has **four parts**. This is your project's permanent brain: fill it once and every conversation in the project starts already knowing your situation.
+
+| Part | What it is | What an acquirer puts here |
+|---|---|---|
+| **Instructions** | Your project brief — how Claude should behave in this project | Who you are, your buy box in one line, your income/SDE target, and the method to use (template below) |
+| **Memory** | Facts Claude remembers as you work | Your target verticals, capital on hand, deal preferences |
+| **Context** | Files loaded into every chat in the project | `my-profile.md`, `buy-box.md`, and your deal notes |
+| **Scheduled** | Recurring tasks | e.g. a weekly `market-monitor` scan of new listings |
+
+### Fill in the Instructions (your brief)
+
+This is the field the app asks you to complete when you create the project. Click the **Instructions** pencil (top-right of the panel) and paste the text below, filled in with your details. The `setup-my-workspace` skill writes this for you as `project-instructions.md` — just paste that in.
+
+```
+I am [name]. I am acquiring [buy box in one line: industry, size, geography].
+I need this business to pay me about [target SDE] per year; my 5-year goal is [net-worth or income goal].
+
+How to help me in this project:
+- Use the EPIC / Frasier method. Score deals against the 13 AQ criteria, value on SDE/EBITDA multiples, structure creative financing (seller notes, earnouts, $0-down stacks), and enforce the 70% Rule — kill weak deals fast.
+- Always read my-profile.md and buy-box.md in Context before advising.
+- Ask me for the deal facts before giving advice — no guessing.
+- You are my method coach and analyst, not a lawyer or CPA. Flag when I need to hire one.
+```
+
+Then load your files into **Context** (below) and you are set. Memory and Scheduled are optional — add to them as you go.
+
 ## 1. Create your acquisition Project
 
 1. In the Claude desktop app, click **Projects** in the left sidebar.
@@ -38,8 +66,8 @@ Red flags: <40% margin, single customer >40%, no books
 ## 3. Upload the buy-box file to your Project
 
 1. Open your acquisition Project.
-2. Click **Add content** at the top.
-3. Upload `buy-box.md`.
+2. In the right-hand panel, click the **+** next to **Context**.
+3. Upload `buy-box.md` (and `my-profile.md`).
 
 Claude now sees this context in every conversation inside this Project. You do not need to re-explain your criteria.
 
