@@ -4,6 +4,8 @@
 
 The difference between "Claude summarized this" and "Claude delivered a deal-ready analysis" is the prompt. Good prompts are specific, structured, and tell Claude what outcome you need. The RCTF framework makes this automatic.
 
+> **Good news: the skills already do this for you.** Every skill in the pack is a fully-formed RCTF prompt under the hood — so most of the time you just invoke it (`/aq-analyzer`, `/valuation`) instead of writing one. Learn RCTF for when you go *off-script*: an ad-hoc question, or steering a skill with extra specifics.
+
 ## RCTF: Role / Context / Task / Format
 
 | Component | What it is | Why it matters |

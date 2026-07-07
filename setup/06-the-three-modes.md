@@ -4,6 +4,8 @@
 
 Not every task needs the same level of effort. A quick definition takes 5 seconds. A full deal analysis takes 20 minutes. Knowing which mode to use saves time and gets better results.
 
+> **Not to be confused with the app's tabs.** These three "modes" are *levels of effort* — how much work you're asking Claude to do. They are separate from the Claude Desktop **Chat / Cowork / Code** tabs. You run all three effort levels inside **Cowork** (the tab you set up in Guide 01b).
+
 ## The three modes
 
 | Mode | When to use | How long it takes | Example prompt |
