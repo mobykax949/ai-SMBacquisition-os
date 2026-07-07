@@ -68,15 +68,19 @@ Now make Claude yours. This one skill interviews you and sets everything up so C
 
 ---
 
-## Part 5 — Run Your First Real Skill
+## Part 5 — Confirm Your Strategy (Journey Navigator)
 
-Claude just told you your next step. For most people it is the **Journey Navigator** (confirms your strategy) then the **Buy-Box Builder** (defines what you are hunting). Just paste:
+Setup already placed you in a journey stage. Now **confirm it.** In a Cowork chat, run:
 
 ```
-Run the journey-navigator skill on me.
+/journey-navigator
 ```
 
-From here, follow the lessons in order. Each one is a skill, and each skill produces a real file you can use.
+It reads the profile setup just wrote, pressure-tests your stage against the strongest alternative, and tells you the one play to run — and the road not taken. You do not re-answer everything; it works from your profile.
+
+> **↻ Come back to this skill whenever your situation changes** — you close a deal, sell a business, raise capital, or move. Your stage is not permanent. Re-run `/journey-navigator` and it re-diagnoses and updates your profile, so every other skill stays aimed at the right target.
+
+Then follow the lessons in order. Each one is a skill, and each skill produces a real file you can use. Next up is usually the **Buy-Box Builder** (defines what you are hunting).
 
 ---
 

@@ -72,4 +72,4 @@ Interview → three files → Project set up → next skill. Re-run the intervie
 
 ## Output
 
-Three files in your Acquisitions folder — `my-profile.md`, `buy-box.md`, `project-instructions.md` — and a Claude Project set up with your instructions and knowledge loaded. From here, Claude knows who you are in every conversation. Next skill: usually `journey-navigator` to confirm your strategy, then `buy-box-builder`.
+Three files in your Acquisitions folder — `my-profile.md`, `buy-box.md`, `project-instructions.md` — and a Claude Project set up with your instructions and knowledge loaded. From here, Claude knows who you are in every conversation. Next skill: `journey-navigator` to confirm your stage and see the road not taken, then `buy-box-builder`. **Re-run `journey-navigator` whenever your situation changes** (a close, a sale, new capital, a move) — your stage is not permanent.
