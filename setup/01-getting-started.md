@@ -2,6 +2,8 @@
 
 *Reading time: ~10 min. Outcome: Claude open, configured, and ready to run deal work.*
 
+> **This is a deep-dive on one setup step** (getting Claude + Pro). New here? The [Start Here walkthrough](00-start-here-newbie.html) covers the whole setup fast and in order — use these numbered guides when you want more depth on a step.
+
 Whether you are coming from ChatGPT or starting fresh, this gets Claude set up as your acquisition workspace. One subscription, a few settings, and you are operational.
 
 ## 1. Create your account and subscribe to Pro

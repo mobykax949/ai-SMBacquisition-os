@@ -2,6 +2,8 @@
 
 *Reading time: ~8 min. Outcome: Cowork mode active, the SMB Wealth Builder plugin installed, the full skill pack available.*
 
+> **This is a deep-dive on one setup step** (Cowork + installing the plugin). New here? The [Start Here walkthrough](00-start-here-newbie.html) covers the whole setup fast and in order — use these numbered guides when you want more depth on a step.
+
 Cowork is the mode that turns Claude from a chat window into something that does the work on your own machine. It reads your files, runs the skills, and hands you finished documents (a deal dashboard, an investor report, a valuation) instead of text you copy out. This is where you run the acquisition system.
 
 You do **not** download skills one by one. Every skill ships as a single **plugin**. You install it once, and every skill becomes available in your next Cowork conversation. No per-skill downloads, no dragging files into folders.
@@ -47,6 +49,10 @@ Start with the front door, `setup-my-workspace`. In Cowork, paste:
 > Run the setup-my-workspace skill. Interview me one question at a time, then write my profile, my draft buy box, and my Project instructions, and place me in my journey stage.
 
 Answer honestly. When it finishes, it writes `my-profile.md`, `buy-box.md`, and `project-instructions.md` into your folder — real files you can open. That is the difference: Cowork produced documents, not just a reply.
+
+**Then confirm your strategy.** Run `/journey-navigator` — it reads the profile you just wrote and pressure-tests your stage against the strongest alternative (no re-interview).
+
+> **Your skill run-order:** `setup-my-workspace` (front door) → `journey-navigator` (confirm) → `buy-box-builder` (refine) → then the deal skills. Everything else reads the profile and buy box these three produce. This is the one order that matters — every guide follows it.
 
 ## Safety while you learn (read once)
 - Keep **"Ask before acting"** on until you trust the flow. Review each plan before you approve it.

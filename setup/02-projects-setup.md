@@ -2,6 +2,8 @@
 
 *Reading time: ~8 min. Outcome: Your acquisition Project created and loaded with context.*
 
+> **This is a deep-dive on one setup step** (your Project + buy box in Context). New here? The [Start Here walkthrough](00-start-here-newbie.html) covers the whole setup fast and in order — use these numbered guides when you want more depth on a step.
+
 Your deal work depends on Claude remembering what you are looking for and how you evaluate businesses. Without that context, every conversation starts from scratch. A Project is where you load the method once and have it available every time.
 
 ## The project brief — fill this out first
@@ -50,7 +52,7 @@ You do **not** hand-write your buy box. Two skills produce and refine it:
 
 So your only job here is to make sure `buy-box.md` exists, then add it to Context in the next step.
 
-> Haven't run them yet? Open a Cowork chat and run `setup-my-workspace` (writes the first draft), then `buy-box-builder` (refines and scores it). Come back here to load the result into Context.
+> Haven't run them yet? In a Cowork chat, run `setup-my-workspace` (writes the first-draft buy box), confirm your strategy with `journey-navigator`, then `buy-box-builder` (refines and scores it). That is the run-order — the same one every guide follows. Come back here to load the result into Context.
 
 For reference, this is what the buy box the skills produce contains:
 

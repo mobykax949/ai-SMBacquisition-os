@@ -1,6 +1,6 @@
 # Start Here — The Complete Newbie Walkthrough
 
-*Never used Claude before? This is the only page you need to go from zero to your first deal analysis. Follow it top to bottom. Total time: about 20 minutes.*
+*Never used Claude before? This is the only page you need to go from zero to your first deal analysis. Follow it top to bottom. Total time: about 20 minutes. (Guides 01–08 zoom into individual steps if you want more depth on any one — but you don't need them to finish this page.)*
 
 You do not need to know how to code. You do not need a "developer" anything. If you can install an app and copy-paste, you can do this.
 
