@@ -5,7 +5,7 @@
 Whether you are coming from ChatGPT or starting fresh, this gets Claude set up as your acquisition workspace. One subscription, a few settings, and you are operational.
 
 ## 1. Create your account and subscribe to Pro
-1. Go to claude.ai and create an account.
+1. Go to claude.com and create an account.
 2. Subscribe to **Claude Pro ($20/month)**. Pro is required for the features this system depends on: Projects, larger context, and the ability to run longer agentic jobs without hitting limits mid-task.
 3. Install the **Claude desktop app** (Mac or Windows). The desktop app is where you will do the real work — it holds your Projects and skills in one place.
 
@@ -25,4 +25,4 @@ Whether you are coming from ChatGPT or starting fresh, this gets Claude set up a
 - Web search on.
 - You know where your files live.
 
-Next: **Projects Setup** — loading your buy box and method so Claude runs acquisitions with full context.
+Next: **Turn On Cowork & Install (01b)** — switch on the mode that runs the skills, then install the plugin. After that, Projects Setup.

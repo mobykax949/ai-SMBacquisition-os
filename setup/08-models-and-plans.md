@@ -17,7 +17,7 @@ Claude offers multiple model tiers and subscription plans. For acquisition work,
 ## The subscription plans (Pro vs. higher tiers)
 
 | Plan | Cost | What you get | When it is enough | When to upgrade |
-|---|---|---|---|
+|---|---|---|---|---|
 | **Claude Pro** | $20/month | Projects, larger context, priority access during high demand. Enough for most acquisition work. | You are evaluating 5-10 targets per month, running deal memos and valuations, not hitting message limits. | You hit message limits mid-task or need to process 50+ targets per week. |
 | **Claude Team** | $30/user/month | Higher limits, shared Projects (team collaboration). | You are running deals with a partner or team and need shared workspaces. | (Same as Pro — higher limits are the main benefit.) |
 | **Claude Enterprise** | Custom pricing | Unlimited usage (within reason), custom integrations, priority support. | You are running a fund, processing hundreds of targets, or need API access for automation. | You outgrow Team limits or need enterprise features. |

@@ -7,7 +7,7 @@ The difference between "Claude summarized this" and "Claude delivered a deal-rea
 ## RCTF: Role / Context / Task / Format
 
 | Component | What it is | Why it matters |
-|---|---|
+|---|---|---|
 | **Role** | Who Claude is acting as. | "You are an acquisition analyst" gets better results than no role. Claude reasons like the role you assign. |
 | **Context** | Background Claude needs to do the task right. | Your buy box, the AQ criteria, the business details. Without context, Claude guesses. |
 | **Task** | The specific job you want done. | "Score this business" is vague. "Score this business against my 13 AQ criteria and flag any reds" is clear. |
