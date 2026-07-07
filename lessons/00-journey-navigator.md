@@ -92,4 +92,4 @@ Using my-profile.md, run the buy-box-builder skill. Pre-fill my criteria from th
 
 ## Where this fits
 
-This is Skill Zero — it comes before everything. It decides whether you start on the **AI Acquisition track** (buy the next business) or the **Scalable-with-AI track** (modernize the one you own), and in what order. Next stop for most stages: **Lesson 02 — The Buy-Box Builder.**
+This runs right after `setup-my-workspace` (the front door) to confirm your stage — and again whenever your situation changes. It settles whether you're on the **AI Acquisition track** (buy the next business) or the **Scalable-with-AI track** (modernize the one you own), and in what order. Next stop for most stages: **Lesson 02 — The Buy-Box Builder.**

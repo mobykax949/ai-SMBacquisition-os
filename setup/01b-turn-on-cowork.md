@@ -42,11 +42,11 @@ Two pieces: a **marketplace** (the store) and the **plugin** (the app inside it)
 > ```
 
 ## Step 3 — Run your first skill
-Start with Skill Zero. In Cowork, paste:
+Start with the front door, `setup-my-workspace`. In Cowork, paste:
 
-> Run the journey-navigator skill. Interview me one question at a time, then write my acquirer profile to my-profile.md and recommend my strategy.
+> Run the setup-my-workspace skill. Interview me one question at a time, then write my profile, my draft buy box, and my Project instructions, and place me in my journey stage.
 
-Answer honestly. When it finishes, it writes `my-profile.md` into your folder — a real file you can open. That is the difference: Cowork produced a document, not just a reply.
+Answer honestly. When it finishes, it writes `my-profile.md`, `buy-box.md`, and `project-instructions.md` into your folder — real files you can open. That is the difference: Cowork produced documents, not just a reply.
 
 ## Safety while you learn (read once)
 - Keep **"Ask before acting"** on until you trust the flow. Review each plan before you approve it.
