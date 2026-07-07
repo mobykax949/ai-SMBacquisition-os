@@ -40,11 +40,19 @@ Already installed the plugin? Skip straight to Step 3.
 
 ## Step 3 — Run it (copy this)
 
+The skill is installed, so you just invoke it — it reads the profile `setup-my-workspace` already wrote:
+
 ```
-Run the journey-navigator skill. Interview me one question at a time, wait for my answer, then ask the next. Cover: whether I own a business now, capital available and SBA/financing readiness, my background and operating skills, my geography, hours per week, risk tolerance, and my 5-year goal. Then write my acquirer profile to my-profile.md, place me in a journey stage, and recommend my strategy with the strongest alternative and the trade-off between them.
+/journey-navigator
 ```
 
-Answer each question honestly — state the capital you *have*, not what you hope to raise. The recommendation is only as good as the inputs.
+Want to steer it? Add specifics in plain English:
+
+```
+Run the journey-navigator skill using my-profile.md. Confirm my journey stage, argue the strongest alternative and the trade-off, then give me your final call and the next skill to run.
+```
+
+*Under the hood* it reads your profile, pressure-tests your stage, and updates `my-profile.md` if anything changed — no re-interview from scratch. If your profile is missing (you skipped the front door), it will interview you first.
 
 ---
 

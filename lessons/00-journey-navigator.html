@@ -147,10 +147,15 @@ hours a week you can give this.</li>
 </ul>
 <hr />
 <h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
-<pre><code>Run the journey-navigator skill. Interview me one question at a time, wait for my answer, then ask the next. Cover: whether I own a business now, capital available and SBA/financing readiness, my background and operating skills, my geography, hours per week, risk tolerance, and my 5-year goal. Then write my acquirer profile to my-profile.md, place me in a journey stage, and recommend my strategy with the strongest alternative and the trade-off between them.</code></pre>
-<p>Answer each question honestly — state the capital you <em>have</em>,
-not what you hope to raise. The recommendation is only as good as the
-inputs.</p>
+<p>The skill is installed, so you just invoke it — it reads the profile
+<code>setup-my-workspace</code> already wrote:</p>
+<pre><code>/journey-navigator</code></pre>
+<p>Want to steer it? Add specifics in plain English:</p>
+<pre><code>Run the journey-navigator skill using my-profile.md. Confirm my journey stage, argue the strongest alternative and the trade-off, then give me your final call and the next skill to run.</code></pre>
+<p><em>Under the hood</em> it reads your profile, pressure-tests your
+stage, and updates <code>my-profile.md</code> if anything changed — no
+re-interview from scratch. If your profile is missing (you skipped the
+front door), it will interview you first.</p>
 <hr />
 <h2 id="what-claude-creates">What Claude creates</h2>
 <div class="tablewrap"><table>
