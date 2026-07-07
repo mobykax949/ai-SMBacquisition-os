@@ -260,20 +260,21 @@ claude plugin install smb-wealth-builder@smb-wealth-builder</div>
       <div class="tile"><div class="num">STAGE 4-5 · HUNTING</div><h3>Financing ready?</h3><p>Hunt the platform: the $1-5M foundation company. Then consolidate around the Acquisition Wheel: competitors, media, supply, recurring revenue.</p></div>
     </div>
     <div class="demo" style="margin-top:22px">
-      <div class="head"><h3>SKILL ZERO · The Journey Navigator</h3><span class="file">skills/journey-navigator</span></div>
+      <div class="head"><h3>CONFIRM YOUR STRATEGY · The Journey Navigator</h3><span class="file">skills/journey-navigator</span></div>
       <div class="body">
         <div>
-          <p>Run this before anything else. Claude interviews you one question at a time — ownership, capital, financing readiness, skills, geography, hours, risk — writes your acquirer profile, places you in one of five journey stages, and recommends your strategy with the strongest alternative named. Every other skill reads the profile it produces.</p>
+          <p>After <b>setup-my-workspace</b> places you in a journey stage, the Journey Navigator confirms it — it stress-tests your placement against the strongest alternative, names the trade-off, and re-diagnoses whenever your situation changes (a close, a sale, new capital). It keeps the profile every other skill reads current.</p>
           <ul class="feat">
             <li>Five journey stages, each with a different best move</li>
             <li>Bolt-on vs platform vs $0-traffic asset, trade-offs named</li>
-            <li>Writes my-profile.md — the file every skill reads</li>
+            <li>Keeps my-profile.md current — the file every skill reads</li>
             <li>Re-run it after every close, sale, or capital event</li>
           </ul>
         </div>
         <div>
-          <div class="promptbox"><span class="lbl">Run it</span>Act as an acquisition strategist running an intake interview. Ask me one question at a time: ownership status, capital, financing readiness, background, geography, hours, risk tolerance, 5-year goal. Then write my acquirer profile, place me in a journey stage, and recommend my strategy with the strongest alternative and the trade-off.</div>
-          <div class="runline"><b>Output:</b> your profile + stage + strategy. The buy box comes after this, never before.</div>
+          <div class="promptbox"><span class="lbl">Run it</span>/journey-navigator</div>
+          <div class="promptbox" style="margin-top:8px"><span class="lbl">Under the hood</span>Act as an acquisition strategist. Confirm my journey stage from my profile, argue the strongest alternative and the trade-off, then give me your final call and the next skill to run.</div>
+          <div class="runline"><b>Output:</b> your confirmed stage + strategy + the road not taken. Re-run after every close, sale, or capital event.</div>
         </div>
       </div>
     </div>

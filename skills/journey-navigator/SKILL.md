@@ -1,6 +1,6 @@
 ---
 name: journey-navigator
-description: Use when starting with the playbook, or whenever your situation changes, to build your acquirer profile and get the strategy that fits where you actually are in the journey. Run this BEFORE the buy-box builder.
+description: Use to confirm or re-diagnose your journey stage and strategy after setup-my-workspace, or whenever your situation changes (a close, a sale, new capital, a move). It stress-tests which of the five plays fits where you actually are and names the strongest alternative.
 version: 1.0.0
 ---
 
@@ -8,11 +8,11 @@ version: 1.0.0
 
 ## Overview
 
-Not every buyer should run the same play. An owner modernizing their existing business hunts differently than a first-time searcher, and a searcher chasing a platform company runs a different strategy than one collecting bolt-ons or marketing assets. This skill interviews you, writes your acquirer profile, diagnoses where you are in the journey, and recommends the strategy and skill path that fits — before you build a buy box aimed at the wrong target.
+Not every buyer should run the same play. An owner modernizing their existing business hunts differently than a first-time searcher, and a searcher chasing a platform company runs a different strategy than one collecting bolt-ons or marketing assets. `setup-my-workspace` already interviewed you and placed you in a journey stage. This skill confirms that placement: it stress-tests it against the strongest alternative, names the trade-off, and re-diagnoses whenever your situation changes — so your strategy always fits where you actually are before you commit outreach hours or capital.
 
 ## When to Use
 
-- Your first session with the playbook (run this before anything else)
+- Right after `setup-my-workspace`, to confirm your stage and see the road not taken
 - Your situation changed: you closed a deal, sold something, raised capital, or moved
 - You feel pulled between strategies and need the trade-offs named
 - You own a business and can't decide whether to modernize, bolt on, or hunt a platform

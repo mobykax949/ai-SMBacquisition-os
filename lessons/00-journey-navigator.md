@@ -1,14 +1,14 @@
 # Lesson 00 — The Journey Navigator
 
-*Run this before any other skill. It tells you which play you're actually running.*
+*Run this right after `setup-my-workspace` to confirm your stage — and re-run it whenever your situation changes.*
 
-Reading time: ~8 min · Track: Both · Prerequisite: Cowork set up (Guide 01b)
+Reading time: ~8 min · Track: Both · Prerequisite: `setup-my-workspace` (Guide 02)
 
 ---
 
 ## What this does
 
-Not every buyer should run the same play. An owner modernizing their existing business hunts differently than a first-time searcher, and a searcher chasing a platform company runs a different strategy than one collecting bolt-ons or marketing assets. The Journey Navigator interviews you, writes your acquirer profile, places you in one of five journey stages, and hands you the exact strategy and skill path that fits. Run it once and every other skill reads the profile it produces, so you stop getting generic answers and start getting answers built around your capital, your geography, and where you actually are.
+Not every buyer should run the same play. An owner modernizing their existing business hunts differently than a first-time searcher, and a searcher chasing a platform company runs a different strategy than one collecting bolt-ons or marketing assets. `setup-my-workspace` already interviewed you and placed you in a journey stage. The Journey Navigator confirms it: it stress-tests your placement against the strongest alternative, names the trade-off, and re-diagnoses whenever your situation changes — so the profile every other skill reads always fits where you actually are.
 
 **You'll walk away with:** `my-profile.md` — a saved file with your acquirer profile, your journey stage, your chosen strategy (and the strongest alternative), and the ordered list of skills to run next.
 

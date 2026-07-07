@@ -13,30 +13,32 @@ what they bought, raises the multiple, and hunts again.
 
 There are **two interviews**, at opposite ends — don't conflate them:
 
-- **`journey-navigator`** interviews *the buyer* (you) → writes your profile →
-  places you in one of 5 stages. This is the true beginning.
+- **`setup-my-workspace`** interviews *the buyer* (you) → writes your profile,
+  places you in a stage, drafts your buy box, and sets up your Project. This is
+  the single front door — the true beginning. `journey-navigator` then *confirms*
+  that stage and re-diagnoses when your situation changes.
 - **`discovery-interviewer`** interviews *the seller* (50-question deep dive,
   with a role-play simulator to rehearse). This is late-funnel.
 
-And `buy-box-builder` ("deal box") is **not** the start — you diagnose the
-person *before* you define their criteria.
+And `buy-box-builder` ("deal box") is **not** the start — the front door
+diagnoses the person *before* you refine their criteria.
 
 ---
 
-## Phase 0 — Setup *(get the tool working)*
+## Phase 0 — Setup + Orient *(the single front door)*
 
 | Skill | Does |
 |---|---|
-| `setup-my-workspace` | Run first, right after install. Interviews you and sets up your entire Claude workspace. |
+| `setup-my-workspace` | **Run first, right after install.** The front door: interviews you, writes `my-profile.md`, **places you in a journey stage**, drafts your buy box, and sets up your Project. Does setup *and* orientation in one sitting. |
 | `claude-acquisition-setup` | Creates the Project, loads the buy box as project knowledge, configures the RCTF prompt pattern. |
 
-**Exit criteria:** typing `/` shows the skills; workspace personalized.
+**Exit criteria:** typing `/` shows the skills; workspace personalized; you know your stage.
 
-## Phase 1 — Orient *(who are you, where do you start)*
+## Phase 1 — Confirm *(pressure-test the strategy)*
 
 | Skill | Does |
 |---|---|
-| `journey-navigator` | The **buyer interview**. Writes `my-profile.md`, places you in a stage, names your play *and* the road not taken. |
+| `journey-navigator` | **Confirms** the stage `setup-my-workspace` assigned: stress-tests it against the strongest alternative, names the trade-off, and re-diagnoses whenever your situation changes (a close, a sale, new capital). Run after the front door, and again whenever things shift. |
 
 **Exit criteria:** you can say in one sentence which play you're running and why.
 
@@ -129,8 +131,8 @@ Watch which pulls hardest → that node becomes the next full lesson. Demand-dri
 
 ```mermaid
 flowchart TD
-    S0["Phase 0 · Setup<br/>setup-my-workspace<br/>claude-acquisition-setup"]
-    S1["Phase 1 · Orient<br/>journey-navigator<br/>(buyer interview → your stage)"]
+    S0["Phase 0 · Setup + Orient<br/>setup-my-workspace<br/>(front door → your stage)"]
+    S1["Phase 1 · Confirm<br/>journey-navigator<br/>(pressure-test the stage)"]
     S0 --> S1
 
     S1 -->|"Stage 1<br/>Owner-Operator"| A0
