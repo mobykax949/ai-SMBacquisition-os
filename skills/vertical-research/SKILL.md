@@ -75,6 +75,7 @@ Workup → bear case → revised verdict → one-pager. Re-run the comps section
 3. **National numbers, local decision.** A great national market can be saturated or empty in your county. Weight sections 2, 3, and 5 (local structure, succession, local comps) over section 1.
 4. **Grading one vertical in isolation.** The verdict sharpens when two verticals are graded side by side with the same rubric. Run this per vertical, then compare.
 5. **Treating the report as permanent.** Comps and consolidation state move. Date the report; re-check before acting on one older than a quarter.
+6. **Grading a real-estate vertical on SDE math.** Asset-based verticals (self-storage, car washes, laundromats, RV/boat storage, mobile-home parks) price on **cap rate / NOI**, not an SDE multiple — a "low entry multiple" score is misleading because you're buying real estate, financed with SBA-504 or real-estate debt, not a $0-down seller note. Flag these explicitly: they are **1031-exchange eligible** (see the buy-box-builder 1031 dual-track), the value-add is forcing NOI (dynamic pricing, remote ops), and the clock is the 45-day identify / 180-day close rule if 1031 equity is deploying. Score and finance them as real estate with an operating overlay.
 
 ## Output
 
