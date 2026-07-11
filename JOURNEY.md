@@ -81,6 +81,7 @@ The linear acquisition funnel. ⭐ marks the strongest build-in-public teasers.
 | 1 | Define target | `buy-box-builder` (+ `vertical-research` for deep workups) | |
 | 2 | Source deals | `deal-finder` · `broker-finder` · `market-monitor` | ⭐ "AI built me a target list" |
 | 3 | Reach out | `outreach-engine` | |
+| 3b | **Owner won't sell?** | `cfe-converter` — consulting-for-equity fork | |
 | 4 | Qualify (post-contact) | `aq-analyzer` — 13-criterion AQ Score | ⭐⭐ flagship |
 | 5 | Seller deep-dive | `discovery-interviewer` — 50 questions | |
 | 6 | Value it | `valuation` — SDE/EBITDA, TTM, add-backs | ⭐⭐ "valued in 90 sec" |
@@ -88,7 +89,16 @@ The linear acquisition funnel. ⭐ marks the strongest build-in-public teasers.
 | 8 | Make the offer | `loi-drafter` | |
 | 9 | Diligence | `dd-engine` | |
 
-**Exit criteria:** signed LOI, diligence underway, path to close.
+**The fork at first contact — no outreach is wasted.** Every owner you reach lands
+in one of three outcomes (Koby's "Magic Intersection"): **acquire** (wants to sell →
+continue the funnel), **CFE / agency client** (`cfe-converter` — not ready to sell but
+the business is real and has upside, so you take permanent equity for advisory work on
+Frasier's 10/10/10 model), or **referral** (not a fit, but knows someone who is). The
+`cfe-converter` fork hangs off step 3 (`outreach-engine`) and step 5
+(`discovery-interviewer`) — wherever an owner says "not now" to selling.
+
+**Exit criteria:** signed LOI, diligence underway, path to close — OR a CFE engagement
+signed on an owner who won't sell.
 
 ---
 
@@ -146,6 +156,8 @@ flowchart TD
     subgraph B ["Branch B — Acquire"]
         direction TB
         B1["buy-box-builder<br/>(+ vertical-research)"] --> B2["deal-finder · broker-finder · market-monitor ⭐"] --> B3["outreach-engine"] --> B4["aq-analyzer ⭐⭐"] --> B5["discovery-interviewer<br/>(seller deep-dive)"] --> B6["valuation ⭐⭐"] --> B7["deal-stacker ⭐"] --> B8["loi-drafter"] --> B9["dd-engine"]
+        B3 -->|"owner won't sell"| BCFE["cfe-converter<br/>(consulting-for-equity)"]
+        B5 -->|"not ready to sell"| BCFE
     end
 
     B9 -->|"close → now an owner"| A0

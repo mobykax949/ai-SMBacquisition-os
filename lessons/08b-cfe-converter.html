@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DD Engine · SMB Wealth Builder</title>
+<title>CFE Converter · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -76,13 +76,13 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
 <a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
 <a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
-<a class="nav" href="../lessons/08b-cfe-converter.html"><span class="n">08b</span>CFE Converter</a>
+<a class="nav active" href="../lessons/08b-cfe-converter.html"><span class="n">08b</span>CFE Converter</a>
 <a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
 <a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
 <a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
 <a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
 <a class="nav" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
-<a class="nav active" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
+<a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
 <a class="nav" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
 <a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
 <a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
@@ -109,29 +109,30 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="lesson-14--the-dd-engine">Lesson 14 — The DD Engine</h1>
-<p><em>Sequential due diligence after the LOI: document requests,
-red-flag rules, and a go/renegotiate/walk decision at every
-phase.</em></p>
-<p>Reading time: ~9 min · Track: Acquire · Prerequisite: signed LOI
-(<code>loi-drafter</code>, Lesson 13)</p>
+<h1 id="lesson-08b--the-cfe-converter">Lesson 08b — The CFE
+Converter</h1>
+<p><em>The owner won't sell? Don't hang up. Turn "not ready" into
+permanent equity with consulting-for-equity.</em></p>
+<p>Reading time: ~8 min · Track: Acquire (fork) · Prerequisite: an owner
+who said "not ready to sell" (<code>outreach-engine</code> Lesson 08, or
+<code>discovery-interviewer</code> Lesson 10)</p>
 <hr />
 <h2 id="what-this-does">What this does</h2>
-<p>Due diligence is where most bad deals die — in this method roughly
-70% of deals die in DD, and that is normal, not failure. This skill runs
-the post-LOI process in five phases — financial, operational, legal,
-customer, final verification — generating the document request list for
-each, tracking findings, applying the red-flag rules (single customer
-over 30% of revenue, declining trend, unresolved liabilities, no team/no
-systems, financials that don't match tax returns), and recommending go /
-renegotiate / walk after every phase. Two Frasier principles frame the
-pace: move fast (a slow DD kills more good deals than it catches bad
-ones), and where the structure allows, use an SPV plus a break-up clause
-so parts of DD can complete shortly post-close instead of stalling the
-deal.</p>
-<p><strong>You'll walk away with:</strong> a phase-by-phase diligence
-tracker, request checklists you can send to the seller's attorney, and a
-final closing-readiness report.</p>
+<p>In the EPIC method every owner you reach lands in one of three
+outcomes, and none of them is a dead end: <strong>acquire</strong> (they
+want to sell), <strong>agency client / CFE</strong> (not ready to sell
+but the business is real and needs help), or <strong>referral</strong>
+(not a fit, but they know someone). This skill runs the middle path —
+consulting-for-equity. When an owner won't sell but has obvious untapped
+upside, you pitch advisory work in exchange for <em>permanent
+equity</em> instead of a fee, structured on Roland Frasier's default
+10/10/10 model. You become "the other eye" that sees the money already
+in front of them, then take a stake for unlocking it. It is how you make
+a "no" pay — no outreach is wasted.</p>
+<p><strong>You'll walk away with:</strong>
+<code>cfe-&lt;business&gt;-YYYY-MM-DD.md</code> — the upside levers, a
+consulting scope, a 10/10/10 equity structure with a vesting trigger,
+the tax path flagged, and a staged partnership pitch.</p>
 <hr />
 <h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
 — Install the plugin (one time, gets you every skill)</h2>
@@ -146,27 +147,28 @@ installed? Skip to Step 2.)</em></p>
 scope.</li>
 <li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<p><strong>Done when:</strong> <code>/dd-engine</code> shows in a fresh
-Cowork chat.</p>
+<p><strong>Done when:</strong> <code>/cfe-converter</code> shows in a
+fresh Cowork chat.</p>
 <hr />
 <h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
 needs</h2>
 <ul>
-<li>The signed LOI (the DD period and exclusivity clock start on signing
-day — launch Phase 1 within 48 hours).</li>
-<li>Your valuation file and AQ scorecard (DD verifies what discovery
-claimed).</li>
-<li>Professionals lined up: a CPA for the financials, an attorney for
-contracts and entity docs. Budget $5K–15K — cheap insurance against a
-$500K mistake.</li>
-<li>Access commitments from the seller: financials, contracts, customer
-data. Refusal of any category is itself a red flag.</li>
+<li>An owner who is <em>not selling</em> but runs a real, profitable
+business with visible upside they aren't capturing. (If they want to
+sell, this is the wrong skill — go to <code>aq-analyzer</code>.)</li>
+<li>Your honest read of what they're leaving on the table: no marketing
+system, manual operations, no backend offer, no acquisition or exit
+plan.</li>
+<li>What <em>you</em> bring: skills, systems, network, AI-operations
+capability, acquisitions know-how.</li>
+<li>Their rough numbers if you have them (current profit, historical
+baseline) — the equity vests off that baseline.</li>
 </ul>
 <hr />
 <h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
-<pre><code>/dd-engine</code></pre>
-<p>Or launch phase by phase:</p>
-<pre><code>Run the dd-engine skill for [business], [industry], [revenue/employees]. Start with Phase 1 (Financial): generate the document request list — required docs, nice-to-haves, red-flag indicators, and timeline — formatted as a checklist I can send to the seller&#39;s attorney today.</code></pre>
+<pre><code>/cfe-converter</code></pre>
+<p>Or frame the case directly:</p>
+<pre><code>Run the cfe-converter skill. Owner won&#39;t sell but has a real business: [name, industry, size, what they do]. What they&#39;re not capturing: [untapped upside]. What I bring: [my skills/systems/network]. Be the other eye — name the top value levers, draft a consulting scope, and structure a 10/10/10 equity deal (greater of 10% of profits or $10k/month, plus 10% of exit), performance-vested against their baseline. Flag the tax question for their CPA.</code></pre>
 <hr />
 <h2 id="what-claude-creates">What Claude creates</h2>
 <div class="tablewrap"><table>
@@ -178,80 +180,85 @@ data. Refusal of any category is itself a red flag.</li>
 </thead>
 <tbody>
 <tr>
-<td>Phase request checklists</td>
-<td>Per phase: required documents, preferred documents, red-flag
-indicators, timeline</td>
+<td>"The other eye" levers</td>
+<td>The 1–3 highest-value things this owner can't see because they're
+focused on the thing they sell — each with the transformation named</td>
 </tr>
 <tr>
-<td>Findings evaluations</td>
-<td>Your findings run against the red-flag rules, with a go /
-renegotiate / walk recommendation per phase</td>
+<td>Consulting deliverables scope</td>
+<td>What you'd advise on: business model, value ladder, marketing,
+growth, acquisitions, exit — and how you contribute</td>
 </tr>
 <tr>
-<td>Renegotiation drafts</td>
-<td>When DD uncovers issues: a professional email to the seller with the
-issues, rationale, and revised terms</td>
+<td>10/10/10 equity structure</td>
+<td>Greater of 10% of profits OR $10k/month, plus 10% of the exit price
+— permanent, at holdco level where one exists, performance-vested
+against a baseline</td>
 </tr>
 <tr>
-<td>Final DD report</td>
-<td>All findings across all five phases, final red-flag count,
-closing-readiness assessment</td>
+<td>Tax path (flagged)</td>
+<td>Profits-only interest, or a new co both parties contribute into —
+flagged for their CPA, not tax advice</td>
+</tr>
+<tr>
+<td>Partnership pitch</td>
+<td>Under 200 words, framed as "I only win when you win," staged for
+your approval</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>How it works:</strong> the phases are sequential for a reason
-— financial comes first because if the numbers are wrong nothing else
-matters (recompute TTM, re-audit add-backs, check for windfalls;
-discrepancies over 10% mean renegotiate or walk). Operational verifies
-the business runs without the owner; legal verifies clean title and no
-landmines; customer diligence computes concentration and verifies
-recurring-revenue claims; final verification is the site visit,
-key-employee interviews, and a last 30-day bank-statement check for
-sudden drop-off. Because the LOI binds only exclusivity and
-confidentiality, every phase's findings are leverage: adjust terms or
-exit penalty-free inside the period.</p>
+<p><strong>How it works:</strong> owners undervalue themselves because
+they're caught up in the thing they sell and can't see the
+transformation ladder worth far more. You supply the outside view and
+take equity for unlocking it. The equity vests off a measured baseline
+("as long as we beat X, our stake vests") so you're paid on
+outperformance — and so you don't inflate the valuation against yourself
+before you've locked your piece. And it usually stacks: equity <em>on
+top of</em> your normal fee, not instead of it.</p>
 <hr />
 <h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
 stack it</h2>
-<p><strong>Test</strong> (run a phase decision):</p>
-<pre><code>Phase 1 findings for [business]: [documents received/missing, discrepancies vs. seller claims, flags]. Apply the red-flag rules and recommend: go to Phase 2, renegotiate (specify what), or walk (explain why).</code></pre>
-<p><strong>Refine</strong> (issues found, deal still alive):</p>
-<pre><code>DD uncovered: [issues — e.g. top-3 customers are 45% of revenue, $30K undisclosed equipment lease]. Original terms: [price/structure]. Draft the renegotiation email: respectful, solution-focused, with revised terms and a reminder we&#39;re inside the DD period.</code></pre>
-<p><strong>Stack it:</strong> a clean DD closes — and the loop
-restarts.</p>
-<pre><code>All five phases green. Build my closing checklist with my attorney&#39;s punch list — and queue the modernization-audit skill for week one of ownership.</code></pre>
+<p><strong>Test</strong> (pressure-test the pitch):</p>
+<pre><code>Read my CFE pitch as the skeptical owner. Where would I balk at giving up equity? Rewrite it so the value I unlock clearly dwarfs the equity I&#39;m asking for, and add a JV bridge option if they still resist.</code></pre>
+<p><strong>Refine</strong> (tune the structure):</p>
+<pre><code>Compute the baseline from their last [N] periods: [numbers]. Set the vesting trigger off it, and show me the deal if I take equity in BOTH the core business and its monetization layer.</code></pre>
+<p><strong>Stack it:</strong> a CFE client is a warm future acquisition
+— and every "no" still has a third path.</p>
+<pre><code>This owner became a CFE client. Log them, and if they weren&#39;t a fit at all, run the outreach-engine referral path: draft the ask for who else they know in [vertical].</code></pre>
 <hr />
 <h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
 <ul>
-<li><strong>Run all five phases, even when financial looks
-great.</strong> A business with beautiful books and 60% customer
-concentration is a time bomb. Skipping phases is how buyers of lemons
-explain themselves later.</li>
-<li><strong>Apply the red-flag rules mechanically.</strong> A single 40%
-customer is a red flag no matter how much you like the business. Reprice
-the risk or walk — don't rationalize. (This system's 30%/10% thresholds
-are deliberately tighter than the playbook's exit-early triggers.)</li>
-<li><strong>Verify, never accept explanations.</strong> "Revenue dipped
-because of COVID," "that lawsuit is frivolous" — request third-party
-evidence: bank statements, court filings, appraisals. No evidence,
-assume the worst.</li>
-<li><strong>Bring professionals.</strong> Solo DD misses red flags. CPA
-on the books, attorney on the contracts, an industry operator on the ops
-if you can get one.</li>
-<li><strong>Sunk cost is not a reason to close.</strong> Forty hours in,
-attorney paid, emotionally attached — and DD finds reds. Walking away
-from a bad deal is the success case. There are other deals.</li>
+<li><strong>Take permanent equity, not a one-time JV.</strong> A JV is
+only a bridge to prove credibility when the owner won't grant equity
+yet. The goal is a permanent stake in the company — don't settle
+short.</li>
+<li><strong>Don't raise the valuation before you take equity.</strong>
+Inflate the number first and the owner needs you less and offers a
+smaller piece. Vest off a baseline; lock your stake before you drive the
+value up.</li>
+<li><strong>Stack equity on top of your fee.</strong> The move is
+usually both, not either/or. Leaving the fee behind is as much a miss as
+leaving the equity.</li>
+<li><strong>Never hand-wave the tax question.</strong> Equity in an
+existing valuable company can be taxable on receipt. Profits-only
+interest or a fresh co — and send it to their CPA.</li>
+<li><strong>Sell the transformation, not the thing.</strong> If your
+pitch is about their product or service instead of the money they're
+leaving on the table, you've missed the whole point of being the other
+eye.</li>
 </ul>
 <hr />
 <h2 id="where-this-fits">Where this fits</h2>
-<p>Branch B, step 9 — the last gate before closing. A green final report
-goes to your attorney's closing checklist; then the loop turns: you're
-an owner now, and the system routes you into Branch A — <strong>Lesson
-15 — The Modernization Audit</strong> — to raise the multiple on what
-you just bought.</p>
+<p>A fork off the outreach funnel (after Lesson 08), not a step in it.
+This is the second lane of the Magic Intersection — acquire · CFE/agency
+· referral — the reason no outreach is wasted. Owners who say "not now"
+to selling become equity stakes or, later, warm acquisition leads you
+already understand from the inside. From here you rejoin the funnel at
+<strong>Lesson 09 — The AQ Analyzer</strong> for the owners who
+<em>do</em> want to sell.</p>
 
 </article>
-<nav class="pager"><a class="prev" href="../lessons/13-loi-drafter.html"><span class="lbl">← Previous</span>LOI Drafter</a><a class="next" href="../lessons/15-modernization-audit.html"><span class="lbl">Next →</span>Modernization Audit</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/08-outreach-engine.html"><span class="lbl">← Previous</span>Outreach Engine</a><a class="next" href="../lessons/09-aq-analyzer.html"><span class="lbl">Next →</span>AQ Analyzer</a></nav>
 </main>
 </div>
 </body>

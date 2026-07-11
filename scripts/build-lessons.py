@@ -28,6 +28,7 @@ LESSONS = [
     ("06", "06-broker-finder",           "Broker Finder"),
     ("07", "07-market-monitor",          "Market Monitor"),
     ("08", "08-outreach-engine",         "Outreach Engine"),
+    ("08b","08b-cfe-converter",          "CFE Converter"),
     ("09", "09-aq-analyzer",             "AQ Analyzer"),
     ("10", "10-discovery-interviewer",   "Discovery Interviewer"),
     ("11", "11-valuation",               "Valuation & Add-Backs"),

@@ -1,6 +1,6 @@
 # Lesson 08 — The Outreach Engine
 
-*Personalized first contact across five channels and three seller archetypes — drafted by AI, sent only after you approve.*
+*Personalized first contact across six channels and three seller archetypes — drafted by AI, sent only after you approve.*
 
 Reading time: ~8 min · Track: Acquire · Prerequisite: a target list (`deal-finder`, Lesson 05)
 
@@ -8,7 +8,7 @@ Reading time: ~8 min · Track: Acquire · Prerequisite: a target list (`deal-fin
 
 ## What this does
 
-The Frasier 5-channel outreach machine. Give it a target seller and it generates first-contact drafts for warm intro, phone script, mailed letter, LinkedIn request, or social DM — each built on the verbatim EPIC scripts and matched to one of three seller archetypes: cold investor, strategic/related-business (the lowest-threat, highest-response angle), or distressed-capital-provider. Every draft is staged for your review; nothing sends automatically. The engine runs Step 1 of the EPIC 3-step sequence (personalized bulk outreach → rapport conversation → data-gathering conversation) against the benchmark funnel: 100 outreaches → 60 responses → 10 conversations → 5 offers → 1–3 deals.
+The Frasier 6-channel outreach machine. Give it a target seller and it generates first-contact drafts for warm intro, phone script, mailed letter, LinkedIn request, social DM, or cold email — each built on the verbatim EPIC scripts and matched to one of three seller archetypes: cold investor, strategic/related-business (the lowest-threat, highest-response angle), or distressed-capital-provider. The email channel uses the EPIC "puppy method" — a cute puppy/kitten image at the top, which the playbook reports tested at ~75% higher open rate (Frasier's stated result, not an independently verified benchmark), plus a curiosity subject line and "exploring opportunities" framing. Every draft is staged for your review; nothing sends automatically. The engine runs Step 1 of the EPIC 3-step sequence (personalized bulk outreach → rapport conversation → data-gathering conversation) against the benchmark funnel: 100 outreaches → 60 responses → 10 conversations → 5 offers → 1–3 deals.
 
 **You'll walk away with:** ready-to-send outreach drafts per channel, and a logged funnel you can troubleshoot with real numbers.
 
@@ -75,6 +75,11 @@ Same seller, three channels: phone script, LinkedIn request, mailed letter. Stra
 My last 20 outreaches: [N] responses. Benchmark is 60%. Diagnose: target list too cold, positioning not credible, or wrong archetype? Rewrite my worst-performing draft.
 ```
 
+**Try the puppy method** (the tested email variant):
+```
+Draft a cold email to [seller] using the EPIC puppy method: mark where a cute puppy/kitten image goes at the top, a curiosity subject line, "exploring opportunities" framing (not "I want to buy"), one line on what I do, and a 15-minute-call ask. Under 150 words, staged for my approval.
+```
+
 **Stack it:** a positive reply goes straight to the seller deep dive.
 ```
 [Seller] replied positively. Draft my one enthusiastic reply proposing a 15-minute call with my calendar link, then prep me: run the discovery-interviewer skill so I'm ready for the first call.
@@ -94,4 +99,4 @@ My last 20 outreaches: [N] responses. Benchmark is 60%. Diagnose: target list to
 
 ## Where this fits
 
-Branch B, step 3 — the bridge between sourcing (Lessons 05–07) and qualification. A responder moves to the first call, and post-contact you score them: **Lesson 09 — The AQ Analyzer**. The deep-dive call itself is **Lesson 10 — Discovery Interviewer**.
+Branch B, step 3 — the bridge between sourcing (Lessons 05–07) and qualification. A responder who wants to sell moves to the first call, and post-contact you score them: **Lesson 09 — The AQ Analyzer**; the deep-dive call itself is **Lesson 10 — Discovery Interviewer**. But no outreach is wasted: an owner who's *not ready to sell* forks to **Lesson 08b — The CFE Converter** (pitch consulting-for-equity instead of walking away), and a non-fit gets asked for a referral.

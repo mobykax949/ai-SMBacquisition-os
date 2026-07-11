@@ -94,4 +94,4 @@ The financials arrived. Run the valuation skill on [business]: TTM profit, add-b
 
 ## Where this fits
 
-Branch B, step 5 — the seller deep dive, late-funnel. (Don't confuse the two interviews: `setup-my-workspace` interviews *you*; this interviews *the seller*.) The debrief's facts flow directly into **Lesson 11 — Valuation**; a red-flagged call ends the deal politely and sends you back to the pipeline.
+Branch B, step 5 — the seller deep dive, late-funnel. (Don't confuse the two interviews: `setup-my-workspace` interviews *you*; this interviews *the seller*.) The debrief's facts flow directly into **Lesson 11 — Valuation**; a red-flagged call ends the deal politely and sends you back to the pipeline. And if the call reveals the owner is *not ready to sell* but runs a real business with upside, fork to **Lesson 08b — The CFE Converter** and pitch consulting-for-equity — no conversation is wasted.

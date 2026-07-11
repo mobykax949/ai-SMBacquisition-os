@@ -1,6 +1,6 @@
 ---
 name: outreach-engine
-description: Use when you need to generate personalized seller outreach across five channels (warm intro, phone, letter, LinkedIn, DM) and three seller archetypes, with AI drafts staged for human approval before sending.
+description: Use when you need to generate personalized seller outreach across six channels (warm intro, phone, letter, LinkedIn, DM, email) and three seller archetypes, with AI drafts staged for human approval before sending.
 version: 1.0.0
 ---
 
@@ -8,7 +8,7 @@ version: 1.0.0
 
 ## Overview
 
-The Frasier 5-channel outreach machine. This skill generates personalized first-contact messages to business sellers across five channels (warm intro request, phone script, mailed letter, LinkedIn connection request, social DM) and three seller archetypes (cold investor approach, strategic/related-business angle, distressed business). Each message follows the proven EPIC 3-step sequence (personalized bulk outreach, rapport-building conversation, data-gathering conversation) and the benchmark funnel (100 outreaches, 60 responses, 10 conversations, 5 offers, 1 to 3 deals). All drafts are staged for your review and approval. Nothing is sent automatically.
+The Frasier 6-channel outreach machine. This skill generates personalized first-contact messages to business sellers across six channels (warm intro request, phone script, mailed letter, LinkedIn connection request, social DM, cold email) and three seller archetypes (cold investor approach, strategic/related-business angle, distressed business). Each message follows the proven EPIC 3-step sequence (personalized bulk outreach, rapport-building conversation, data-gathering conversation) and the benchmark funnel (100 outreaches, 60 responses, 10 conversations, 5 offers, 1 to 3 deals). All drafts are staged for your review and approval. Nothing is sent automatically.
 
 ## When to Use
 
@@ -16,7 +16,7 @@ Run outreach-engine when you have identified a target seller (from a broker list
 
 ## Steps
 
-1. **Choose your channel.** Decide whether you want a warm intro (ask a mutual contact to connect you), a phone script (for a cold call), a mailed letter, a LinkedIn connection request, or a direct message on another social platform. If you have multiple channels available, generate drafts for all of them and pick the best fit.
+1. **Choose your channel.** Decide whether you want a warm intro (ask a mutual contact to connect you), a phone script (for a cold call), a mailed letter, a LinkedIn connection request, a direct message on another social platform, or a cold email. If you have multiple channels available, generate drafts for all of them and pick the best fit. **Cold email note — the puppy method:** the EPIC email template opens with a cute puppy/kitten image, which the playbook reports tested at a 75% higher open rate. Pair it with a curiosity-based subject line ("Quick question about [Company]") and frame the message as *exploring opportunities*, not "I want to buy." (The 75% figure is Frasier's stated test result, not an independently verified benchmark.)
 
 2. **Select the seller archetype.** Three archetypes match three scripts: (a) Cold investor (seller is unrelated to your business, you are positioning as a private investor or acquirer), (b) Strategic/related-business (seller operates in your industry or adjacent, you are positioning as a potential partner or referral source to reduce threat), (c) Distressed business (seller shows signs of financial stress or capital needs, you are positioning as a capital provider or turnaround partner). If unsure, default to strategic/related-business. It gets the highest response rate.
 
@@ -33,7 +33,7 @@ Run outreach-engine when you have identified a target seller (from a broker list
 **Prompt 1: Generate Personalized Outreach Draft**
 
 ```
-Generate a [channel: warm intro request / phone script / mailed letter / LinkedIn connection request / social DM] outreach message for this seller:
+Generate a [channel: warm intro request / phone script / mailed letter / LinkedIn connection request / social DM / cold email] outreach message for this seller:
 
 Seller details:
 - Name: [first name or full name]
@@ -67,7 +67,26 @@ Use the strategic/related-business archetype. All three messages should be consi
 [Then provide the same seller + my details as Prompt 1]
 ```
 
-**Prompt 3: Follow-Up After No Response**
+**Prompt 3: Cold Email — the Puppy Method**
+
+```
+Draft a cold outreach email to this seller using the EPIC "puppy method":
+
+Seller details: [name, business name, industry, city/state, a specific detail I noticed — reviews, longevity, reputation]
+My positioning: [private investor / owner of a related [industry] business / capital provider]
+My credibility: [companies helped, deals done, outcome I can reference]
+
+Format:
+- Curiosity-based subject line (e.g. "Quick question about [Company]").
+- Note at the top: [PLACE A CUTE PUPPY/KITTEN IMAGE HERE] — the playbook reports this tested ~75% higher open rate (Frasier's stated result, not independently verified).
+- Frame as "exploring opportunities" / "bringing on a partner or exploring an exit," NOT "I want to buy your business."
+- Reference the specific detail I noticed, state what I do in one line, and ask for a 15-minute call this week or next.
+- Optional P.S. with a case study link.
+
+Keep it under 150 words. Stage it for my approval — do not send anything.
+```
+
+**Prompt 4: Follow-Up After No Response**
 
 ```
 I sent the [channel] outreach [X days/weeks] ago and got no response. Draft a polite follow-up message that re-states the value proposition, acknowledges they are busy, and gives them an easy out if they are not interested. Keep it brief and non-pushy.
@@ -78,6 +97,8 @@ Original message sent: [paste your original outreach here]
 ## The Loop
 
 The outreach engine is Step 1 of the 3-step sequence. Your goal is to get a response. The benchmark funnel says 100 outreaches yield 60 responses. If your response rate is lower, troubleshoot: (1) Is your buy-box too narrow or your target list too cold? (2) Is your positioning believable (do you have a credible company or track record to reference)? (3) Are you using the strategic angle when available (it reliably out-responds the cold-investor angle because it reads as partnership, not acquisition)? Track every outreach in a spreadsheet. Note the channel, date sent, response received (yes/no), and outcome (moved to call / not interested / no response). After 20 outreaches, review your data and refine your approach. If a seller responds positively, move immediately to discovery-interviewer to book the first call.
+
+**No outreach is wasted — the three outcomes.** Every owner you reach lands in one of three buckets: (1) **acquire** — wants to sell, move to discovery and the AQ Score; (2) **CFE / agency client** — not ready to sell but the business is real and needs help, so pivot to `cfe-converter` and pitch consulting-for-equity instead of walking away; (3) **referral** — not a fit, but ask who else they know in your vertical. A "no" to selling is a fork, not a dead end.
 
 ## Pitfalls
 

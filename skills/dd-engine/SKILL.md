@@ -8,7 +8,7 @@ version: 1.0.0
 
 ## Overview
 
-The sequential due diligence runner. This skill guides you through the post-LOI diligence process in phases (financial, operational, legal, customer, and final verification). For each phase, it generates document requests, tracks findings in a structured format, applies red-flag rules (customer concentration above 30 percent, declining revenue trend, unresolved liabilities), and recommends a decision (go to next phase, renegotiate terms, or walk away). Due diligence is where most bad deals die — in this method roughly 70 percent of deals die in due diligence, and that is normal, not failure. Two Frasier operating principles frame the phase: move fast (a slow DD kills more good deals than it catches bad ones), and where the structure allows, use an SPV plus a break-up/out-clause so parts of DD can complete shortly post-close instead of stalling the deal. Use this skill to avoid buying a lemon.
+The sequential due diligence runner. This skill guides you through the post-LOI diligence process in phases (financial, operational, legal, customer, and final verification). For each phase, it generates document requests, tracks findings in a structured format, applies red-flag rules (customer concentration above 30 percent, declining revenue trend, unresolved liabilities), and recommends a decision (go to next phase, renegotiate terms, or walk away). A note on posture: this conservative, mostly pre-close five-phase sequence is a deliberate *softening* of Frasier's own move-fast stance (close on structure, then complete much of DD post-close behind an SPV and a break-up clause). We front-load diligence as a first-time-buyer safety choice; an experienced operator with a clean SPV structure may legitimately push more of it past the closing table. Due diligence is where most bad deals die — in this method roughly 70 percent of deals die in due diligence, and that is normal, not failure. Two Frasier operating principles frame the phase: move fast (a slow DD kills more good deals than it catches bad ones), and where the structure allows, use an SPV plus a break-up/out-clause so parts of DD can complete shortly post-close instead of stalling the deal. Use this skill to avoid buying a lemon.
 
 ## When to Use
 
@@ -63,6 +63,8 @@ Apply the red-flag rules:
 - Unresolved legal liabilities (pending lawsuits, tax liens, regulatory violations) = red flag
 - Owner is the entire business (no team, no systems, no documentation) = red flag
 - Financials do not match tax returns (>5% discrepancy) = red flag
+
+(Note: the 30% single-customer and 10% YoY-decline thresholds are deliberately tighter *house rules* than Frasier's own exit-early triggers in the playbook, which fire at >50% single-customer concentration and >20% revenue decline. We screen harder on purpose — for a first-time buyer, catching risk earlier is cheaper than discovering it at closing. Do not attribute the 30%/10% numbers to Frasier.)
 
 Recommend: Go to next phase / Renegotiate terms (specify what to change) / Walk away (explain why).
 ```

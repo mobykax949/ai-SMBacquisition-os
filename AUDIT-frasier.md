@@ -13,8 +13,10 @@ both", and the Acquisition Wheel are all stated correctly and consistently. No
 file invents AQ point values (the KB flags those as an open item), and nobody
 uses the discredited homemade "EPIC = Earnings/People/Industry/Culture" acronym.
 The findings below are the exceptions, ranked. Items marked **FIXED** were
-corrected in this pass; items marked **FLAGGED** are recommendations left for a
-judgment call.
+corrected in the first pass; items marked **RESOLVED** were actioned in the
+second pass (the earlier FLAGGED recommendations — including the CFE surface and
+the puppy-email channel — now implemented). Only the deliberate NO CHANGE items
+(#12 Acquisition Wheel, #13 minors) remain untouched, by design.
 
 ---
 
@@ -64,7 +66,7 @@ judgment call.
 - **KB source:** `epic-outreach-scripts.md`, Key operating insights.
 - **Fix applied:** removed the number, kept the directional (and true) claim.
 
-## 5. dd-engine — missing Frasier's DD philosophy — **FIXED (partial) / FLAGGED**
+## 5. dd-engine — missing Frasier's DD philosophy — **RESOLVED**
 
 - **File:** `skills/dd-engine/SKILL.md`.
 - **What was off:** the skill presented a strictly sequential, pre-close,
@@ -78,14 +80,14 @@ judgment call.
   list (line ~2494).
 - **Fix applied:** added the speed/SPV/out-clause principles and the 70%-die
   norm to the Overview.
-- **Still flagged:** the 5-phase structure doesn't map to the playbook's
-  3-stage DD (which puts the initial screen *before* the LOI — in this repo
-  that work lives in aq-analyzer/discovery, which is defensible). A judgment
-  call whether to rename phases to match; the conservative pre-close-heavy
-  posture is safer advice for first-time buyers but should perhaps be
-  labeled a deliberate softening of Frasier's move-fast stance.
+- **Resolution (2nd pass):** added a sentence to the Overview labeling the
+  conservative, mostly pre-close five-phase sequence as a *deliberate
+  softening* of Frasier's move-fast / post-close-DD stance — a first-time-buyer
+  safety choice, with a note that an experienced operator on a clean SPV
+  structure may legitimately push more DD past closing. The divergence from
+  the playbook's 3-stage DD is now honest on the page rather than silent.
 
-## 6. Red-flag thresholds — internally inconsistent, stricter than KB — **FIXED (consistency) / FLAGGED (attribution)**
+## 6. Red-flag thresholds — internally inconsistent, stricter than KB — **RESOLVED**
 
 - **Files:** `skills/dd-engine/SKILL.md`, `prompts/vault.md`,
   `skills/discovery-interviewer/SKILL.md` (all use >30% single-customer
@@ -97,10 +99,12 @@ judgment call.
   *>50%* single-customer concentration and *>20%* YoY revenue decline
   (playbook-full §Phase 3). The repo's 30%/10% thresholds are stricter house
   rules — reasonable, but nothing in the repo says so.
-- **Recommendation (flagged):** add one line where the thresholds are defined
-  (dd-engine Prompt 2) noting these are deliberately tighter than the
-  playbook's exit-early triggers (50% / 20%), so users don't attribute the
-  30%/10% numbers to Frasier.
+- **Resolution (2nd pass):** added an attribution note to dd-engine Prompt 2
+  stating that the 30% single-customer / 10% YoY-decline thresholds are
+  deliberately tighter *house rules* than Frasier's own exit-early triggers
+  (>50% concentration, >20% decline), and that users should not attribute the
+  tighter numbers to Frasier. The dd-engine lesson (Lesson 14) already carried
+  the same caveat.
 
 ## 7. Multiple landscape — house ranges presented as the method — **FIXED (labeling)**
 
@@ -137,7 +141,7 @@ judgment call.
 - **KB source:** `epic-seller-questionnaire.md`, Step 4 + Key operating insights.
 - **Fix applied:** added one sentence to Step 5.
 
-## 10. CFE (consulting-for-equity) absent from the system — **FLAGGED**
+## 10. CFE (consulting-for-equity) absent from the system — **RESOLVED**
 
 - **Files:** whole plugin / `JOURNEY.md`. CFE appears only as a teaser in
   `advisor/README.md` ("paid community edition") and one passing word in the
@@ -151,22 +155,44 @@ judgment call.
   sell" as a dead end when the method treats it as a second monetization path.
 - **KB source:** `cfe-blueprint.md`; `koby-ventures-playbooks.md` (Magic
   Intersection); `epic-kb-inventory.md` (CFE 7-module course).
-- **Recommendation:** add a `cfe-converter` (or similar) skill later, or at
-  minimum a paragraph in outreach-engine/discovery-interviewer's Loop
-  sections pointing at the CFE fallback. Left unimplemented — adding a 22nd
-  skill is beyond this pass's scope.
+- **Resolution (2nd pass):** built a full CFE surface (now a 22-skill pack).
+  - New skill `skills/cfe-converter/SKILL.md`: spots CFE candidates, runs the
+    "other eye" upside hunt, and structures the deal on the 10/10/10 model
+    (greater of 10% of profits or $10k/month, plus 10% of exit), permanent
+    holdco-level equity, performance-vested off a baseline, with the
+    tax-on-receipt workarounds (profits-only interest / new-co) flagged for a
+    CPA. Grounded strictly in `cfe-blueprint.md` and `koby-ventures-playbooks.md`.
+  - New lesson `lessons/08b-cfe-converter.md` (per `_TEMPLATE.md`), wired into
+    `scripts/build-lessons.py` between outreach (08) and aq-analyzer (09).
+  - `JOURNEY.md`: added the fork off `outreach-engine` (step 3b) and off
+    `discovery-interviewer`, plus the Magic Intersection framing (acquire /
+    CFE / referral — no outreach wasted) in the Branch B table and the mermaid
+    diagram.
+  - CFE fallback pointer added to the Loop of `outreach-engine` and
+    `discovery-interviewer` SKILL.md and both lessons.
+  - Plugin manifests (`plugin.json`, `marketplace.json`) updated 20 → 22 skills.
+  - **One open item flagged in the skill itself:** the KB inventory references a
+    higher "20/20/20" CFE variant but the downloaded materials give no terms;
+    the skill notes 10/10/10 as the documented default and says NOT to invent
+    20/20/20 numbers — confirm against source before use.
 
-## 11. Outreach — puppy-email technique missing — **FLAGGED (enrichment)**
+## 11. Outreach — puppy-email technique missing — **RESOLVED**
 
 - **File:** `skills/outreach-engine/SKILL.md`.
 - **What's off:** the playbook's cold-email chapter includes the tested
-  "puppy/kitten image" email (75% higher open rate) and email isn't one of
-  the skill's five channels (the skill mirrors the outreach-scripts PDF's
-  five channels, so this is a completeness gap vs. the wider playbook, not
+  "puppy/kitten image" email (75% higher open rate) and email wasn't one of
+  the skill's five channels (the skill mirrored the outreach-scripts PDF's
+  five channels, so this was a completeness gap vs. the wider playbook, not
   an error).
 - **KB source:** playbook-full lines 134, 259–263; `epic-acquisition-playbook.md` P2.
-- **Recommendation:** add email as a sixth channel with the puppy-method
-  variant, or note it in the lesson (the lesson for this skill mentions it).
+- **Resolution (2nd pass):** added **cold email as the sixth channel** across
+  the description, overview, Step 1, and Prompt 1 channel lists, plus a new
+  dedicated **Prompt 3 (the puppy method)**: curiosity subject line, a
+  puppy/kitten image placeholder, and "exploring opportunities" framing. The
+  75% figure is explicitly labeled as Frasier's stated test result, not an
+  independently verified benchmark (do not present it as a guarantee). The
+  outreach-engine lesson (Lesson 08) now reflects the sixth channel, the
+  puppy method, and a "try the puppy method" prompt.
 
 ## 12. Acquisition Wheel — two spoke lists exist in the KB itself — **NO CHANGE**
 
@@ -196,5 +222,6 @@ judgment call.
 
 ---
 
-*Audit run 2026-07-10 on branch `fable5/lessons-audit`. KB paths are absolute
-under `/Users/veloxp/dev/personal-brain/references/`.*
+*Audit run 2026-07-10 on branch `fable5/lessons-audit`; second pass same day
+resolved the flagged items (#5, #6, #10, #11). KB paths are absolute under
+`/Users/veloxp/dev/personal-brain/references/`.*
