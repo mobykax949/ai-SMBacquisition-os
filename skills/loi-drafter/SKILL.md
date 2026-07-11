@@ -16,7 +16,7 @@ Run loi-drafter after you have completed negotiation prep: (1) valuation is done
 
 ## Steps
 
-1. **Apply the 24-hour rule.** After the final negotiation conversation, do not send the LOI immediately. Sleep on it. Review your valuation, your financing stack, and your walk-away price. Make sure the deal still makes sense in the cold light of day. If you have any doubt, revise the terms or walk away. The 24-hour rule prevents deal fever and emotional commitments.
+1. **Apply the 24-hour rule.** Frasier's version is stated to the seller upfront: "I never make decisions on the spot — no matter how good this sounds, I always take 24 hours to think things through." It protects you from pressure tactics, FOMO manipulation, and seller urgency games; if a seller says "decide today or the deal is off," that is your cue to walk (they usually backtrack). So after the final negotiation conversation, do not send the LOI immediately. Sleep on it. Review your valuation, your financing stack, and your walk-away price. Make sure the deal still makes sense in the cold light of day. If you have any doubt, revise the terms or walk away. The 24-hour rule prevents deal fever and emotional commitments.
 
 2. **Confirm the price-vs-terms trade.** Decide which path you are taking: (A) Seller gets their asking price, you get favorable terms (long seller note, earnout, consulting offset, minimal cash at closing), or (B) Seller accepts a lower price (your dream or realistic price), you offer more seller-friendly terms (higher interest rate, shorter balloon, more cash upfront). You cannot give both a low price and seller-unfriendly terms. The seller will reject it.
 

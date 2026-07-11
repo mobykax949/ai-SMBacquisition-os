@@ -8,7 +8,7 @@ version: 1.0.0
 
 ## Overview
 
-The sequential due diligence runner. This skill guides you through the post-LOI diligence process in phases (financial, operational, legal, customer, and final verification). For each phase, it generates document requests, tracks findings in a structured format, applies red-flag rules (customer concentration above 30 percent, declining revenue trend, unresolved liabilities), and recommends a decision (go to next phase, renegotiate terms, or walk away). Due diligence is where most bad deals die. Use this skill to avoid buying a lemon.
+The sequential due diligence runner. This skill guides you through the post-LOI diligence process in phases (financial, operational, legal, customer, and final verification). For each phase, it generates document requests, tracks findings in a structured format, applies red-flag rules (customer concentration above 30 percent, declining revenue trend, unresolved liabilities), and recommends a decision (go to next phase, renegotiate terms, or walk away). Due diligence is where most bad deals die — in this method roughly 70 percent of deals die in due diligence, and that is normal, not failure. Two Frasier operating principles frame the phase: move fast (a slow DD kills more good deals than it catches bad ones), and where the structure allows, use an SPV plus a break-up/out-clause so parts of DD can complete shortly post-close instead of stalling the deal. Use this skill to avoid buying a lemon.
 
 ## When to Use
 

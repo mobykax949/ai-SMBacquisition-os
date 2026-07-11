@@ -77,7 +77,7 @@ Original message sent: [paste your original outreach here]
 
 ## The Loop
 
-The outreach engine is Step 1 of the 3-step sequence. Your goal is to get a response. The benchmark funnel says 100 outreaches yield 60 responses. If your response rate is lower, troubleshoot: (1) Is your buy-box too narrow or your target list too cold? (2) Is your positioning believable (do you have a credible company or track record to reference)? (3) Are you using the strategic angle when available (it beats cold investor by 30 percent)? Track every outreach in a spreadsheet. Note the channel, date sent, response received (yes/no), and outcome (moved to call / not interested / no response). After 20 outreaches, review your data and refine your approach. If a seller responds positively, move immediately to discovery-interviewer to book the first call.
+The outreach engine is Step 1 of the 3-step sequence. Your goal is to get a response. The benchmark funnel says 100 outreaches yield 60 responses. If your response rate is lower, troubleshoot: (1) Is your buy-box too narrow or your target list too cold? (2) Is your positioning believable (do you have a credible company or track record to reference)? (3) Are you using the strategic angle when available (it reliably out-responds the cold-investor angle because it reads as partnership, not acquisition)? Track every outreach in a spreadsheet. Note the channel, date sent, response received (yes/no), and outcome (moved to call / not interested / no response). After 20 outreaches, review your data and refine your approach. If a seller responds positively, move immediately to discovery-interviewer to book the first call.
 
 ## Pitfalls
 
