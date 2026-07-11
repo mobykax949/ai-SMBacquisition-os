@@ -139,7 +139,7 @@ You are a financial analyst. Review this P&L for [business name]. Identify legit
 ### **Run the tax-return test**
 *When: You need to verify the P&L matches the tax returns.*
 ```
-You are a forensic accountant. I am uploading [3 years of P&L] and [3 years of tax returns (Schedule C or corporate returns)] for [business name]. Compare: does the reported revenue and profit on the P&L match the tax returns? Flag any discrepancies (>10% variance). If they do not match, flag as a red (either the P&L is inflated or the owner is underreporting to the IRS — both are problems). Deliver: year-by-year comparison table + red flag summary.
+You are a forensic accountant. I am uploading [3 years of P&L] and [3 years of tax returns (Schedule C or corporate returns)] for [business name]. Compare: does the reported revenue and profit on the P&L match the tax returns? Flag any discrepancies (>5% variance). If they do not match, flag as a red (either the P&L is inflated or the owner is underreporting to the IRS — both are problems). Deliver: year-by-year comparison table + red flag summary.
 ```
 
 ---

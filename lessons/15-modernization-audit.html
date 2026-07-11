@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modernization Audit · SMB Wealth Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{border-right:1px solid var(--line);padding:28px 20px;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper)}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:18px}
+.content{padding:40px 52px 80px;max-width:900px;margin:0 auto}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
+<div class="group">Start Here</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models &amp; Plans</a>
+<a class="nav" href="../index.html#install"><span class="n">→</span>Install the Plugin</a>
+<div class="group">Skill Lessons</div>
+<a class="nav" href="../lessons/01-setup-my-workspace.html"><span class="n">01</span>Setup My Workspace</a>
+<a class="nav" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+<a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
+<a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
+<a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
+<a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
+<a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
+<a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
+<a class="nav" href="../lessons/08b-cfe-converter.html"><span class="n">08b</span>CFE Converter</a>
+<a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
+<a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
+<a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
+<a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
+<a class="nav" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
+<a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
+<a class="nav active" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
+<a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
+<a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
+<a class="nav" href="../lessons/18-margin-finder.html"><span class="n">18</span>Margin Finder</a>
+<a class="nav" href="../lessons/19-customer-engine.html"><span class="n">19</span>Customer Engine</a>
+<a class="nav" href="../lessons/20-multiple-builder.html"><span class="n">20</span>Multiple Builder</a>
+<div class="group">The System</div>
+<a class="nav" href="../index.html#journey"><span class="n">09</span>Find Your Starting Point</a>
+<a class="nav" href="../index.html#numbers"><span class="n">10</span>The Numbers Game</a>
+<a class="nav" href="../index.html#system"><span class="n">11</span>12-Part Deal Engine</a>
+<a class="nav" href="../index.html#lanes"><span class="n">12</span>Three Sourcing Lanes</a>
+<a class="nav" href="../index.html#demos"><span class="n">13</span>Skill Demos</a>
+<div class="group">Execute</div>
+<a class="nav" href="../index.html#weekone"><span class="n">14</span>Week-One Playbook</a>
+<a class="nav" href="../index.html#financing"><span class="n">15</span>216 Ways to Fund It</a>
+<a class="nav" href="../index.html#advisor"><span class="n">16</span>The Deal Advisor</a>
+<a class="nav" href="../index.html#vault"><span class="n">17</span>The Prompt Vault</a>
+<a class="nav" href="../index.html#videos"><span class="n">18</span>The Video Series</a>
+<div class="group">Go Deeper</div>
+<a class="nav" href="../index.html#community"><span class="n">19</span>The Community</a>
+<a class="nav" href="../index.html#offers"><span class="n">20</span>Ways In</a>
+<a class="nav" href="../index.html#appendix"><span class="n">21</span>Appendix</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="lesson-15--the-modernization-audit">Lesson 15 — The
+Modernization Audit</h1>
+<p><em>Your first 30 days as an owner: inventory what only the old owner
+knew, rank the quick wins, touch nothing customer-facing in week
+one.</em></p>
+<p>Reading time: ~8 min · Track: Modernize · Prerequisite: you own the
+business (post-close), or you're a Stage 1 owner-operator starting
+Branch A</p>
+<hr />
+<h2 id="what-this-does">What this does</h2>
+<p>The post-acquisition AI modernization planner. It starts by
+inventorying every owner-dependent task (what dies if the owner leaves),
+sorts them into four buckets — automate immediately, automate after
+stabilization, delegate to team, keep as-is for now — and ranks the
+immediate bucket by margin impact versus disruption risk. Then it
+generates a week-by-week 30-day roadmap under the cardinal rule: nothing
+touches customer-facing relationships in week one. You stabilize first,
+modernize second. This is the first move of the Scalable-with-AI track —
+the "professionalize it" step on the path from a 2.4x owner-operated
+multiple toward 4.0x.</p>
+<p><strong>You'll walk away with:</strong> a categorized
+owner-dependency inventory, a top-5 quick-win list, and a 30-day
+week-by-week implementation roadmap with success metrics.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
+<ol type="1">
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
+</ol>
+<p><strong>Done when:</strong> <code>/modernization-audit</code> shows
+in a fresh Cowork chat.</p>
+<hr />
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
+<ul>
+<li>Operational access: run this in the first week of ownership, after
+meeting the team and starting the seller handoff — not before closing
+(pre-close recommendations are speculation).</li>
+<li>The owner's documented task list from shadowing them during
+transition: task, frequency, time required, who else can do it,
+customer-facing yes/no, tool used.</li>
+<li>The team's answer to one question: "What breaks if the owner is
+unavailable for a week?"</li>
+<li>The current tool inventory: what software the business actually runs
+on.</li>
+</ul>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/modernization-audit</code></pre>
+<p>Or start with the inventory:</p>
+<pre><code>I just acquired this business. Here is the owner&#39;s task list from the transition: [paste — task, frequency, time, backup, customer-facing y/n, tool]. Inventory the owner dependencies, categorize into the four buckets (automate now / automate after stabilization / delegate / keep as-is), rank Bucket A by margin impact vs. disruption risk, and give me the top 5 quick wins.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dependency inventory</td>
+<td>Every owner task rated: critical y/n, customer-facing y/n,
+automatable y/n, disruption risk, time saved per week</td>
+</tr>
+<tr>
+<td>Four buckets</td>
+<td>A: automate immediately (low risk, high ROI, no customer contact) ·
+B: automate after stabilization · C: delegate · D: keep as-is for month
+one</td>
+</tr>
+<tr>
+<td>Top-5 quick wins</td>
+<td>Bucket A ranked by margin impact vs. disruption risk</td>
+</tr>
+<tr>
+<td>30-day roadmap</td>
+<td>Week 1 stabilize and observe · Week 2 top 2 quick wins · Week 3 next
+3 + team training · Week 4 measure and plan month two — with actions,
+deliverables, tools, and success metrics per week</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> week one exists because customers
+don't know you and the team doesn't trust you yet — change how orders or
+support work on day three and you burn both at once. The quick-win
+ranking keeps month one honest: five changes maximum, each measured
+(time saved, cost, net benefit), each with a rollback if it breaks.
+Month two graduates to Bucket B and revenue-lifting experiments, once
+stability has bought you credibility.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (pressure-test the bucket sort):</p>
+<pre><code>Challenge your own categorization: which Bucket A item is most likely to blow up in my face, and why? Which Bucket D item could actually move to B sooner? Re-rank if needed.</code></pre>
+<p><strong>Refine</strong> (day 30 review):</p>
+<pre><code>30-day results: [what worked, what failed, time saved, team and customer feedback]. Generate the month-two roadmap: refinements, Bucket B rollout, permanent delegations, and one growth experiment. Month two should lift revenue or margin, not just cut costs.</code></pre>
+<p><strong>Stack it:</strong> the inventory feeds the deeper audits.</p>
+<pre><code>Run the owner-dependency-audit skill next — a full week-in-the-life interview to catch the dependencies the task list missed, especially tribal knowledge.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Nothing customer-facing in week one.</strong> The most
+expensive mistake a new owner makes. Week one is observation and
+documentation; week four is the earliest customer-touching change.</li>
+<li><strong>Every automation ships with training.</strong> A new tool
+without a 30-minute session and a written SOP gets ignored — or used
+wrong. Ask the team "what part of your job is repetitive and annoying?"
+and automate that first; they'll champion it.</li>
+<li><strong>Five quick wins, not twenty.</strong> Three simultaneous
+broken automations can't be diagnosed. Test, measure, stabilize, then
+add.</li>
+<li><strong>Balance cost cuts with revenue lifts.</strong> Automating
+the owner's admin saves hours; automating lead follow-up and win-back
+lifts the top line. Month one can be cost-focused; month two shouldn't
+be.</li>
+<li><strong>Measure or you're guessing.</strong> Track every change:
+tool, time saved, cost, net benefit. A negative sum at day 30 means you
+over-automated — the data tells you which one to roll back.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>The entry point to Branch A — for Stage 1 owner-operators and every
+buyer post-close. The full Branch A chain: modernization-audit →
+<strong>Lesson 16 — Owner Dependency Audit</strong> → sop-extractor →
+margin-finder → customer-engine → multiple-builder. This is the loop
+that turns a 2.4x business into a 4.0x one.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../lessons/14-dd-engine.html"><span class="lbl">← Previous</span>DD Engine</a><a class="next" href="../lessons/16-owner-dependency-audit.html"><span class="lbl">Next →</span>Owner Dependency Audit</a></nav>
+</main>
+</div>
+</body>
+</html>

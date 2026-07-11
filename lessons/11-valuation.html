@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Valuation & Add-Backs · SMB Wealth Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{border-right:1px solid var(--line);padding:28px 20px;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper)}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:18px}
+.content{padding:40px 52px 80px;max-width:900px;margin:0 auto}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
+<div class="group">Start Here</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models &amp; Plans</a>
+<a class="nav" href="../index.html#install"><span class="n">→</span>Install the Plugin</a>
+<div class="group">Skill Lessons</div>
+<a class="nav" href="../lessons/01-setup-my-workspace.html"><span class="n">01</span>Setup My Workspace</a>
+<a class="nav" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+<a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
+<a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
+<a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
+<a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
+<a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
+<a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
+<a class="nav" href="../lessons/08b-cfe-converter.html"><span class="n">08b</span>CFE Converter</a>
+<a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
+<a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
+<a class="nav active" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
+<a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
+<a class="nav" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
+<a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
+<a class="nav" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
+<a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
+<a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
+<a class="nav" href="../lessons/18-margin-finder.html"><span class="n">18</span>Margin Finder</a>
+<a class="nav" href="../lessons/19-customer-engine.html"><span class="n">19</span>Customer Engine</a>
+<a class="nav" href="../lessons/20-multiple-builder.html"><span class="n">20</span>Multiple Builder</a>
+<div class="group">The System</div>
+<a class="nav" href="../index.html#journey"><span class="n">09</span>Find Your Starting Point</a>
+<a class="nav" href="../index.html#numbers"><span class="n">10</span>The Numbers Game</a>
+<a class="nav" href="../index.html#system"><span class="n">11</span>12-Part Deal Engine</a>
+<a class="nav" href="../index.html#lanes"><span class="n">12</span>Three Sourcing Lanes</a>
+<a class="nav" href="../index.html#demos"><span class="n">13</span>Skill Demos</a>
+<div class="group">Execute</div>
+<a class="nav" href="../index.html#weekone"><span class="n">14</span>Week-One Playbook</a>
+<a class="nav" href="../index.html#financing"><span class="n">15</span>216 Ways to Fund It</a>
+<a class="nav" href="../index.html#advisor"><span class="n">16</span>The Deal Advisor</a>
+<a class="nav" href="../index.html#vault"><span class="n">17</span>The Prompt Vault</a>
+<a class="nav" href="../index.html#videos"><span class="n">18</span>The Video Series</a>
+<div class="group">Go Deeper</div>
+<a class="nav" href="../index.html#community"><span class="n">19</span>The Community</a>
+<a class="nav" href="../index.html#offers"><span class="n">20</span>Ways In</a>
+<a class="nav" href="../index.html#appendix"><span class="n">21</span>Appendix</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="lesson-11--valuation--add-backs">Lesson 11 — Valuation &amp;
+Add-Backs</h1>
+<p><em>SDE or EBITDA, the TTM method, the add-back audit that stops you
+overpaying, and your three prices before the room.</em></p>
+<p>Reading time: ~9 min · Track: Acquire · Prerequisite: seller
+financials in hand (<code>discovery-interviewer</code>, Lesson 10)</p>
+<hr />
+<h2 id="what-this-does">What this does</h2>
+<p>The EPIC valuation method, end to end. It chooses the right profit
+metric (SDE for owner-operated, EBITDA for professionally managed),
+computes trailing-twelve-month profit from the actual statements, then
+runs the audit that matters most: for every add-back the seller claims,
+it subtracts the true cost to replace the owner's role — the discipline
+that prevents the classic 20–40% overpay. It anchors the multiple on
+Frasier's landscape — owner-operated 2.4x SDE, professionally managed
+4.0x EBITDA, private equity 10.8x, public markets 18.7x (buy at the low
+boxes, sell toward PE) — and ends with your three prices: walk-away,
+realistic, dream. A tax-return sanity test confirms the P&amp;L matches
+Schedule C or the corporate return before you trust any of it.</p>
+<p><strong>You'll walk away with:</strong> adjusted TTM profit, a
+recommended multiple with rationale, enterprise value, and your
+walk-away / realistic / dream prices documented before negotiation.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
+<ol type="1">
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
+</ol>
+<p><strong>Done when:</strong> <code>/valuation</code> shows in a fresh
+Cowork chat.</p>
+<hr />
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
+<ul>
+<li>The real documents: three years of P&amp;L, balance sheet, cash flow
+statement, and ideally tax returns. Do not attempt valuation from a
+teaser or broker summary — if you lack these, go back to discovery and
+request them.</li>
+<li>TTM revenue, COGS, operating expenses, owner compensation, and the
+seller's claimed add-backs, itemized.</li>
+<li>The business profile: the owner's actual daily role, team, and
+whether processes are documented (this decides SDE vs EBITDA).</li>
+</ul>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/valuation</code></pre>
+<p>Or feed it the numbers:</p>
+<pre><code>Value this business with the EPIC method. TTM: revenue $[X], COGS $[Y], opex $[Z], owner comp $[W]. Seller&#39;s claimed add-backs: [list each with amount]. Owner role: [daily CEO / absentee]. Team: [n employees, key roles]. Choose SDE or EBITDA, compute TTM profit, audit every add-back against true replacement cost, recommend a multiple from the landscape, and give me walk-away / realistic / dream prices.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metric choice + TTM profit</td>
+<td>SDE or EBITDA, computed from the last 12 months — never the seller's
+claimed number</td>
+</tr>
+<tr>
+<td>Add-back audit</td>
+<td>Each claimed add-back vs. the true cost to replace the function; the
+adjusted profit that survives</td>
+</tr>
+<tr>
+<td>Multiple + enterprise value</td>
+<td>The recommended multiple with rationale, anchored on 2.4x / 4.0x /
+10.8x / 18.7x; equity value if net debt is known</td>
+</tr>
+<tr>
+<td>Three prices</td>
+<td>Walk-away (the maximum — high end of the range; above it you walk),
+realistic (mid — where you expect to land), dream (low end or
+below)</td>
+</tr>
+<tr>
+<td>Tax-return sanity test</td>
+<td>P&amp;L vs. Schedule C / 1120 within 5% — or a flag that the books
+are unreliable</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> the add-back audit is where the money
+is. A seller claims their $200K salary as an add-back; if replacing what
+they actually do costs $100K, only $100K of it is real profit lift —
+accept the claim at face value at a 3x multiple and you just overpaid by
+$300K. The three-price frame then locks discipline before emotion:
+negotiate toward dream, land at realistic, never cross walk-away.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (sensitivity):</p>
+<pre><code>My realistic valuation is $[X] at [Y]x adjusted SDE. Show the valuation if: the multiple drops 0.5x, profit drops 10% in the transition year, and I find another $20K of owner expenses. Recompute my three prices for each scenario.</code></pre>
+<p><strong>Refine</strong> (diligence changes the number):</p>
+<pre><code>DD uncovered: [new fact — hidden cost, extra add-back, customer concentration]. Re-run the valuation with this, and tell me if my walk-away price changes. If the valuation dropped more than 20% from the original, say so plainly.</code></pre>
+<p><strong>Stack it:</strong> the number goes to financing design.</p>
+<pre><code>Valuation locked: realistic $[X], TTM SDE $[Y]. Run the deal-stacker skill: assets are [FF&amp;E, inventory, real estate y/n], seller motivation is [retirement/...]. Propose three financing stacks.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Never accept add-backs without the audit.</strong> The most
+expensive mistake in the whole funnel. Ask "what does it cost to replace
+this function?" for every single claim.</li>
+<li><strong>Match the metric to the business.</strong> Valuing an
+owner-operated business on EBITDA ignores the cost of replacing the
+owner — you overpay. Valuing a managed business on SDE lowballs — the
+seller walks.</li>
+<li><strong>Don't apply a PE multiple to a single-location service
+business.</strong> 10.8x is for institutionalized, recurring-revenue,
+multi-location businesses. The anchors exist to keep your fantasy in
+check.</li>
+<li><strong>Run the tax-return test before you close.</strong> P&amp;L
+says $500K, return says $300K? Either hidden income or an inflated
+P&amp;L — both are your problem. No reconciliation, no deal.</li>
+<li><strong>Three prices, always.</strong> One number in your head means
+the seller's anchor controls the room. Walk-away, realistic, dream —
+documented before the conversation.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 6 — the number that everything downstream depends on.
+Feeds <strong>Lesson 12 — Deal Stacker</strong> (financing the price)
+and <strong>Lesson 13 — LOI Drafter</strong> (offering it). Re-run after
+every material discovery in diligence.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../lessons/10-discovery-interviewer.html"><span class="lbl">← Previous</span>Discovery Interviewer</a><a class="next" href="../lessons/12-deal-stacker.html"><span class="lbl">Next →</span>Deal Stacker</a></nav>
+</main>
+</div>
+</body>
+</html>

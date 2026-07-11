@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acquisition Setup · SMB Wealth Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{border-right:1px solid var(--line);padding:28px 20px;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper)}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:18px}
+.content{padding:40px 52px 80px;max-width:900px;margin:0 auto}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
+<div class="group">Start Here</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models &amp; Plans</a>
+<a class="nav" href="../index.html#install"><span class="n">→</span>Install the Plugin</a>
+<div class="group">Skill Lessons</div>
+<a class="nav" href="../lessons/01-setup-my-workspace.html"><span class="n">01</span>Setup My Workspace</a>
+<a class="nav active" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+<a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
+<a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
+<a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
+<a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
+<a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
+<a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
+<a class="nav" href="../lessons/08b-cfe-converter.html"><span class="n">08b</span>CFE Converter</a>
+<a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
+<a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
+<a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
+<a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
+<a class="nav" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
+<a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
+<a class="nav" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
+<a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
+<a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
+<a class="nav" href="../lessons/18-margin-finder.html"><span class="n">18</span>Margin Finder</a>
+<a class="nav" href="../lessons/19-customer-engine.html"><span class="n">19</span>Customer Engine</a>
+<a class="nav" href="../lessons/20-multiple-builder.html"><span class="n">20</span>Multiple Builder</a>
+<div class="group">The System</div>
+<a class="nav" href="../index.html#journey"><span class="n">09</span>Find Your Starting Point</a>
+<a class="nav" href="../index.html#numbers"><span class="n">10</span>The Numbers Game</a>
+<a class="nav" href="../index.html#system"><span class="n">11</span>12-Part Deal Engine</a>
+<a class="nav" href="../index.html#lanes"><span class="n">12</span>Three Sourcing Lanes</a>
+<a class="nav" href="../index.html#demos"><span class="n">13</span>Skill Demos</a>
+<div class="group">Execute</div>
+<a class="nav" href="../index.html#weekone"><span class="n">14</span>Week-One Playbook</a>
+<a class="nav" href="../index.html#financing"><span class="n">15</span>216 Ways to Fund It</a>
+<a class="nav" href="../index.html#advisor"><span class="n">16</span>The Deal Advisor</a>
+<a class="nav" href="../index.html#vault"><span class="n">17</span>The Prompt Vault</a>
+<a class="nav" href="../index.html#videos"><span class="n">18</span>The Video Series</a>
+<div class="group">Go Deeper</div>
+<a class="nav" href="../index.html#community"><span class="n">19</span>The Community</a>
+<a class="nav" href="../index.html#offers"><span class="n">20</span>Ways In</a>
+<a class="nav" href="../index.html#appendix"><span class="n">21</span>Appendix</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="lesson-02--claude-acquisition-setup">Lesson 02 — Claude
+Acquisition Setup</h1>
+<p><em>Turn Claude into your 24/7 deal analyst: a dedicated Project,
+your buy box as permanent knowledge, and the RCTF prompting
+frame.</em></p>
+<p>Reading time: ~7 min · Track: Both · Prerequisite:
+<code>setup-my-workspace</code> (Lesson 01)</p>
+<hr />
+<h2 id="what-this-does">What this does</h2>
+<p>This is the plumbing lesson. It configures Claude Desktop + Pro for
+deal work: a dedicated Project that holds your buy box and the
+13-criterion AQ Score as persistent knowledge, a files-not-chat-memory
+rule so no analysis ever evaporates, and the RCTF pattern (Role /
+Context / Task / Format) that makes every ad-hoc prompt land. Run it
+once; from then on every conversation inside the Project already knows
+your criteria without you pasting anything.</p>
+<p><strong>You'll walk away with:</strong> a working "Acquisition
+Engine" Project with <code>buy-box.md</code> and
+<code>aq-score.md</code> loaded, a deal-analysis file template, and a
+weekly scan workflow.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin — install once and
+everything is available. <em>(Already installed? Skip to Step
+2.)</em></p>
+<ol type="1">
+<li>In Claude Desktop, click <strong>Customize</strong> in the left
+sidebar and open the <strong>Plugins</strong> tab.</li>
+<li>Click the <strong>+</strong> (top-right) → <strong>Add
+marketplace</strong>, and paste:
+<code>mobykax949/ai-SMBacquisition-os</code>
+<blockquote>
+<p>It's a source you <em>add</em> with the <strong>+</strong> button,
+not a plugin you search for.</p>
+</blockquote></li>
+<li>Find <strong>smb-wealth-builder</strong>, click
+<strong>Install</strong>, choose <strong>User</strong> scope.</li>
+<li>Start a NEW Cowork chat and type <code>/</code> — the skills
+appear.</li>
+</ol>
+<p><strong>Done when:</strong> typing
+<code>/claude-acquisition-setup</code> in a fresh Cowork chat shows the
+skill.</p>
+<hr />
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
+<ul>
+<li>The files from Lesson 01: <code>my-profile.md</code> and
+<code>buy-box.md</code>. If you skipped Lesson 01, this skill will have
+you write a buy box from scratch — but the front door is the better
+path.</li>
+<li>A Claude Pro (or higher) subscription and Claude Desktop
+installed.</li>
+<li>Ten minutes to click through Projects once, guided.</li>
+</ul>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/claude-acquisition-setup</code></pre>
+<p>It walks you through: create the Project, upload
+<code>buy-box.md</code> and <code>aq-score.md</code> (the 13 criteria —
+location, seller finance, broker, long listing, margin, history,
+FF&amp;E, multiple, leased space, own property, staff, inventory,
+training — each defined green / yellow / red), then test that the upload
+took. Steer it if you want:</p>
+<pre><code>Walk me through setting up my Acquisition Engine Project step by step: create it, upload my buy box and the 13-criterion AQ Score as project knowledge, establish the rule that all deal analyses are saved as markdown files I can download, and teach me the RCTF prompt structure with one worked example from my verticals.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The <strong>Acquisition Engine</strong> Project</td>
+<td>Persistent knowledge across every chat inside it — no re-pasting
+criteria</td>
+</tr>
+<tr>
+<td><code>buy-box.md</code> (uploaded)</td>
+<td>Your criteria: geography, revenue, SDE, verticals, financing —
+referenced automatically</td>
+</tr>
+<tr>
+<td><code>aq-score.md</code> (uploaded)</td>
+<td>The 13 AQ criteria with green/yellow/red definitions, ready for
+every scoring run</td>
+</tr>
+<tr>
+<td><code>deal-analysis-template.md</code></td>
+<td>The standard file format: AQ table, financial summary, go/pass/dig
+verdict, first-call questions</td>
+</tr>
+<tr>
+<td>A weekly workflow</td>
+<td>The 5-step Monday checklist: search listings → screen against buy
+box → AQ-score the best 3 → rank → save as
+<code>weekly-scan-YYYY-MM-DD.md</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> Projects hold knowledge; chats inside
+them read it. The RCTF frame — Role ("you are a deal analyst"), Context
+(the listing, your buy box), Task ("run the AQ Score"), Format ("return
+a table with a verdict") — is how you talk to the setup when you go
+off-script. Every skill in the pack is a fully-formed RCTF prompt under
+the hood, so most days you just type <code>/skill-name</code>.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (confirm the knowledge is live):</p>
+<pre><code>You are my acquisition analyst. Review the uploaded buy box and AQ Score files. Confirm: what geography am I targeting, what revenue range, and what are the 13 AQ criteria? If you cannot find these files, say so.</code></pre>
+<p><strong>Refine</strong> (when criteria change):</p>
+<pre><code>I am updating my buy box: [what changed]. Rewrite buy-box.md with the change and remind me to re-upload it to Project Knowledge so every future chat uses the new version.</code></pre>
+<p><strong>Stack it:</strong> confirm your stage before hunting.</p>
+<pre><code>Run the journey-navigator skill using my-profile.md in this Project. Confirm my stage and my next skill.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Upload markdown, not PDFs.</strong> Claude reads markdown
+fastest. If your buy box is a PDF, copy the text into a plain
+<code>.md</code> file first.</li>
+<li><strong>Check which Project you're in.</strong> A chat started
+outside the Acquisition Engine Project cannot see your buy box or AQ
+criteria. Glance at the Project name before any deal analysis.</li>
+<li><strong>Keep Project Knowledge lean.</strong> Buy box, AQ Score, and
+templates only. Don't upload every listing you find — Claude slows down
+past ~50 files.</li>
+<li><strong>Version your buy box outside Claude.</strong> If you lose
+account access, an un-backed-up buy box is gone. Keep
+<code>buy-box.md</code> in Dropbox, Drive, or a local folder too.</li>
+<li><strong>Never trust chat memory with deal data.</strong> Claude
+cannot recall a conversation from three weeks ago. Every analysis gets
+saved as a downloadable file, filed like
+<code>acquisitions/targets/&lt;vertical&gt;/&lt;business&gt;.md</code>.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Phase 0, right after the front door. Lesson 01 wrote your files; this
+lesson makes them permanent infrastructure. Next: <strong>Lesson 00 —
+Journey Navigator</strong> confirms your stage, then the funnel starts
+at <strong>Lesson 03 — Buy-Box Builder</strong>.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../lessons/01-setup-my-workspace.html"><span class="lbl">← Previous</span>Setup My Workspace</a><a class="next" href="../lessons/00-journey-navigator.html"><span class="lbl">Next →</span>Journey Navigator</a></nav>
+</main>
+</div>
+</body>
+</html>

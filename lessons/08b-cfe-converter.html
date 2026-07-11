@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CFE Converter · SMB Wealth Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{border-right:1px solid var(--line);padding:28px 20px;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper)}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:18px}
+.content{padding:40px 52px 80px;max-width:900px;margin:0 auto}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
+<div class="group">Start Here</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models &amp; Plans</a>
+<a class="nav" href="../index.html#install"><span class="n">→</span>Install the Plugin</a>
+<div class="group">Skill Lessons</div>
+<a class="nav" href="../lessons/01-setup-my-workspace.html"><span class="n">01</span>Setup My Workspace</a>
+<a class="nav" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+<a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
+<a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
+<a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
+<a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
+<a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
+<a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
+<a class="nav active" href="../lessons/08b-cfe-converter.html"><span class="n">08b</span>CFE Converter</a>
+<a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
+<a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
+<a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
+<a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
+<a class="nav" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
+<a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
+<a class="nav" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
+<a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
+<a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
+<a class="nav" href="../lessons/18-margin-finder.html"><span class="n">18</span>Margin Finder</a>
+<a class="nav" href="../lessons/19-customer-engine.html"><span class="n">19</span>Customer Engine</a>
+<a class="nav" href="../lessons/20-multiple-builder.html"><span class="n">20</span>Multiple Builder</a>
+<div class="group">The System</div>
+<a class="nav" href="../index.html#journey"><span class="n">09</span>Find Your Starting Point</a>
+<a class="nav" href="../index.html#numbers"><span class="n">10</span>The Numbers Game</a>
+<a class="nav" href="../index.html#system"><span class="n">11</span>12-Part Deal Engine</a>
+<a class="nav" href="../index.html#lanes"><span class="n">12</span>Three Sourcing Lanes</a>
+<a class="nav" href="../index.html#demos"><span class="n">13</span>Skill Demos</a>
+<div class="group">Execute</div>
+<a class="nav" href="../index.html#weekone"><span class="n">14</span>Week-One Playbook</a>
+<a class="nav" href="../index.html#financing"><span class="n">15</span>216 Ways to Fund It</a>
+<a class="nav" href="../index.html#advisor"><span class="n">16</span>The Deal Advisor</a>
+<a class="nav" href="../index.html#vault"><span class="n">17</span>The Prompt Vault</a>
+<a class="nav" href="../index.html#videos"><span class="n">18</span>The Video Series</a>
+<div class="group">Go Deeper</div>
+<a class="nav" href="../index.html#community"><span class="n">19</span>The Community</a>
+<a class="nav" href="../index.html#offers"><span class="n">20</span>Ways In</a>
+<a class="nav" href="../index.html#appendix"><span class="n">21</span>Appendix</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="lesson-08b--the-cfe-converter">Lesson 08b — The CFE
+Converter</h1>
+<p><em>The owner won't sell? Don't hang up. Turn "not ready" into
+permanent equity with consulting-for-equity.</em></p>
+<p>Reading time: ~8 min · Track: Acquire (fork) · Prerequisite: an owner
+who said "not ready to sell" (<code>outreach-engine</code> Lesson 08, or
+<code>discovery-interviewer</code> Lesson 10)</p>
+<hr />
+<h2 id="what-this-does">What this does</h2>
+<p>In the EPIC method every owner you reach lands in one of three
+outcomes, and none of them is a dead end: <strong>acquire</strong> (they
+want to sell), <strong>agency client / CFE</strong> (not ready to sell
+but the business is real and needs help), or <strong>referral</strong>
+(not a fit, but they know someone). This skill runs the middle path —
+consulting-for-equity. When an owner won't sell but has obvious untapped
+upside, you pitch advisory work in exchange for <em>permanent
+equity</em> instead of a fee, structured on Roland Frasier's default
+10/10/10 model. You become "the other eye" that sees the money already
+in front of them, then take a stake for unlocking it. It is how you make
+a "no" pay — no outreach is wasted.</p>
+<p><strong>You'll walk away with:</strong>
+<code>cfe-&lt;business&gt;-YYYY-MM-DD.md</code> — the upside levers, a
+consulting scope, a 10/10/10 equity structure with a vesting trigger,
+the tax path flagged, and a staged partnership pitch.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
+<ol type="1">
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
+</ol>
+<p><strong>Done when:</strong> <code>/cfe-converter</code> shows in a
+fresh Cowork chat.</p>
+<hr />
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
+<ul>
+<li>An owner who is <em>not selling</em> but runs a real, profitable
+business with visible upside they aren't capturing. (If they want to
+sell, this is the wrong skill — go to <code>aq-analyzer</code>.)</li>
+<li>Your honest read of what they're leaving on the table: no marketing
+system, manual operations, no backend offer, no acquisition or exit
+plan.</li>
+<li>What <em>you</em> bring: skills, systems, network, AI-operations
+capability, acquisitions know-how.</li>
+<li>Their rough numbers if you have them (current profit, historical
+baseline) — the equity vests off that baseline.</li>
+</ul>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/cfe-converter</code></pre>
+<p>Or frame the case directly:</p>
+<pre><code>Run the cfe-converter skill. Owner won&#39;t sell but has a real business: [name, industry, size, what they do]. What they&#39;re not capturing: [untapped upside]. What I bring: [my skills/systems/network]. Be the other eye — name the top value levers, draft a consulting scope, and structure a 10/10/10 equity deal (greater of 10% of profits or $10k/month, plus 10% of exit), performance-vested against their baseline. Flag the tax question for their CPA.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"The other eye" levers</td>
+<td>The 1–3 highest-value things this owner can't see because they're
+focused on the thing they sell — each with the transformation named</td>
+</tr>
+<tr>
+<td>Consulting deliverables scope</td>
+<td>What you'd advise on: business model, value ladder, marketing,
+growth, acquisitions, exit — and how you contribute</td>
+</tr>
+<tr>
+<td>10/10/10 equity structure</td>
+<td>Greater of 10% of profits OR $10k/month, plus 10% of the exit price
+— permanent, at holdco level where one exists, performance-vested
+against a baseline</td>
+</tr>
+<tr>
+<td>Tax path (flagged)</td>
+<td>Profits-only interest, or a new co both parties contribute into —
+flagged for their CPA, not tax advice</td>
+</tr>
+<tr>
+<td>Partnership pitch</td>
+<td>Under 200 words, framed as "I only win when you win," staged for
+your approval</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> owners undervalue themselves because
+they're caught up in the thing they sell and can't see the
+transformation ladder worth far more. You supply the outside view and
+take equity for unlocking it. The equity vests off a measured baseline
+("as long as we beat X, our stake vests") so you're paid on
+outperformance — and so you don't inflate the valuation against yourself
+before you've locked your piece. And it usually stacks: equity <em>on
+top of</em> your normal fee, not instead of it.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (pressure-test the pitch):</p>
+<pre><code>Read my CFE pitch as the skeptical owner. Where would I balk at giving up equity? Rewrite it so the value I unlock clearly dwarfs the equity I&#39;m asking for, and add a JV bridge option if they still resist.</code></pre>
+<p><strong>Refine</strong> (tune the structure):</p>
+<pre><code>Compute the baseline from their last [N] periods: [numbers]. Set the vesting trigger off it, and show me the deal if I take equity in BOTH the core business and its monetization layer.</code></pre>
+<p><strong>Stack it:</strong> a CFE client is a warm future acquisition
+— and every "no" still has a third path.</p>
+<pre><code>This owner became a CFE client. Log them, and if they weren&#39;t a fit at all, run the outreach-engine referral path: draft the ask for who else they know in [vertical].</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Take permanent equity, not a one-time JV.</strong> A JV is
+only a bridge to prove credibility when the owner won't grant equity
+yet. The goal is a permanent stake in the company — don't settle
+short.</li>
+<li><strong>Don't raise the valuation before you take equity.</strong>
+Inflate the number first and the owner needs you less and offers a
+smaller piece. Vest off a baseline; lock your stake before you drive the
+value up.</li>
+<li><strong>Stack equity on top of your fee.</strong> The move is
+usually both, not either/or. Leaving the fee behind is as much a miss as
+leaving the equity.</li>
+<li><strong>Never hand-wave the tax question.</strong> Equity in an
+existing valuable company can be taxable on receipt. Profits-only
+interest or a fresh co — and send it to their CPA.</li>
+<li><strong>Sell the transformation, not the thing.</strong> If your
+pitch is about their product or service instead of the money they're
+leaving on the table, you've missed the whole point of being the other
+eye.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>A fork off the outreach funnel (after Lesson 08), not a step in it.
+This is the second lane of the Magic Intersection — acquire · CFE/agency
+· referral — the reason no outreach is wasted. Owners who say "not now"
+to selling become equity stakes or, later, warm acquisition leads you
+already understand from the inside. From here you rejoin the funnel at
+<strong>Lesson 09 — The AQ Analyzer</strong> for the owners who
+<em>do</em> want to sell.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../lessons/08-outreach-engine.html"><span class="lbl">← Previous</span>Outreach Engine</a><a class="next" href="../lessons/09-aq-analyzer.html"><span class="lbl">Next →</span>AQ Analyzer</a></nav>
+</main>
+</div>
+</body>
+</html>

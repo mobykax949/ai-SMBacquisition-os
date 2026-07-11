@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LOI Drafter · SMB Wealth Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAF8F5;--ink:#2D2926;--gold:#C4A35A;--copper:#B87333;--line:#E4DDD2;--muted:#6B6459;--card:#FFFFFF;--dark:#211E1B;--mono:'JetBrains Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,sans-serif;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{border-right:1px solid var(--line);padding:28px 20px;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper)}
+.brand{display:block;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.brand small{display:block;color:var(--copper);font-weight:400;margin-top:2px;font-size:10px;letter-spacing:.16em}
+.group{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+a.nav{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:3px;font-size:13px;text-decoration:none;color:#443f38}
+a.nav:hover{background:rgba(196,163,90,.1)}
+a.nav.active{background:rgba(196,163,90,.16);color:var(--ink);font-weight:600}
+a.nav .n{font-family:var(--mono);font-size:10.5px;color:var(--copper);min-width:18px}
+.content{padding:40px 52px 80px;max-width:900px;margin:0 auto}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.crumb a{text-decoration:none;color:var(--muted)}
+article h1{font-size:31px;line-height:1.2;margin:0 0 10px}
+article h2{font-size:21px;margin:38px 0 10px}
+article h3{font-size:16.5px;margin:26px 0 8px}
+article h1 em,article h2 em{font-style:normal;color:var(--copper)}
+article p,article li{font-size:15.5px;color:#3a352f}
+article a{color:var(--copper)}
+article strong{color:var(--ink)}
+article code{font-family:var(--mono);font-size:13px;background:rgba(184,115,51,.09);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+article pre{background:var(--dark);color:#f3ede2;border-radius:5px;padding:16px 18px;overflow-x:auto}
+article pre code{background:none;border:none;color:inherit;padding:0;font-size:13px;line-height:1.6}
+article blockquote{margin:16px 0;padding:8px 18px;border-left:3px solid var(--gold);background:rgba(196,163,90,.07);color:#4a443c}
+article blockquote p{margin:6px 0}
+.tablewrap{overflow-x:auto;margin:18px 0}
+article table{border-collapse:collapse;width:100%;font-size:14px}
+article th,article td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+article th{background:rgba(184,115,51,.06);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article ul,article ol{padding-left:22px}
+article li{margin:5px 0}
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+.pager a{flex:1;max-width:48%;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:12px 16px;font-size:13px;color:var(--ink)}
+.pager a:hover{border-color:var(--gold)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.content{padding:26px 20px 60px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
+<div class="group">Start Here</div>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
+<a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
+<a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
+<a class="nav" href="../setup/03-the-vocabulary.html"><span class="n">03</span>The Vocabulary</a>
+<a class="nav" href="../setup/04-why-claude.html"><span class="n">04</span>Why Claude</a>
+<a class="nav" href="../setup/05-bring-your-memory.html"><span class="n">05</span>Bring Your Memory</a>
+<a class="nav" href="../setup/06-the-three-modes.html"><span class="n">06</span>The Three Modes</a>
+<a class="nav" href="../setup/07-prompt-like-a-buyer.html"><span class="n">07</span>Prompt Like a Buyer</a>
+<a class="nav" href="../setup/08-models-and-plans.html"><span class="n">08</span>Models &amp; Plans</a>
+<a class="nav" href="../index.html#install"><span class="n">→</span>Install the Plugin</a>
+<div class="group">Skill Lessons</div>
+<a class="nav" href="../lessons/01-setup-my-workspace.html"><span class="n">01</span>Setup My Workspace</a>
+<a class="nav" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
+<a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
+<a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
+<a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
+<a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
+<a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
+<a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
+<a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
+<a class="nav" href="../lessons/08b-cfe-converter.html"><span class="n">08b</span>CFE Converter</a>
+<a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
+<a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
+<a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
+<a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
+<a class="nav active" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
+<a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
+<a class="nav" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
+<a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
+<a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
+<a class="nav" href="../lessons/18-margin-finder.html"><span class="n">18</span>Margin Finder</a>
+<a class="nav" href="../lessons/19-customer-engine.html"><span class="n">19</span>Customer Engine</a>
+<a class="nav" href="../lessons/20-multiple-builder.html"><span class="n">20</span>Multiple Builder</a>
+<div class="group">The System</div>
+<a class="nav" href="../index.html#journey"><span class="n">09</span>Find Your Starting Point</a>
+<a class="nav" href="../index.html#numbers"><span class="n">10</span>The Numbers Game</a>
+<a class="nav" href="../index.html#system"><span class="n">11</span>12-Part Deal Engine</a>
+<a class="nav" href="../index.html#lanes"><span class="n">12</span>Three Sourcing Lanes</a>
+<a class="nav" href="../index.html#demos"><span class="n">13</span>Skill Demos</a>
+<div class="group">Execute</div>
+<a class="nav" href="../index.html#weekone"><span class="n">14</span>Week-One Playbook</a>
+<a class="nav" href="../index.html#financing"><span class="n">15</span>216 Ways to Fund It</a>
+<a class="nav" href="../index.html#advisor"><span class="n">16</span>The Deal Advisor</a>
+<a class="nav" href="../index.html#vault"><span class="n">17</span>The Prompt Vault</a>
+<a class="nav" href="../index.html#videos"><span class="n">18</span>The Video Series</a>
+<div class="group">Go Deeper</div>
+<a class="nav" href="../index.html#community"><span class="n">19</span>The Community</a>
+<a class="nav" href="../index.html#offers"><span class="n">20</span>Ways In</a>
+<a class="nav" href="../index.html#appendix"><span class="n">21</span>Appendix</a>
+</aside>
+<main class="content">
+<div class="crumb"><a href="../index.html">← Home</a></div>
+<article>
+<h1 id="lesson-13--the-loi-drafter">Lesson 13 — The LOI Drafter</h1>
+<p><em>The written offer — built on your financing stack, disciplined by
+the 24-hour rule and "price OR terms, not both."</em></p>
+<p>Reading time: ~8 min · Track: Acquire · Prerequisite:
+<code>deal-stacker</code> stack chosen (Lesson 12)</p>
+<hr />
+<h2 id="what-this-does">What this does</h2>
+<p>Generates a complete, properly structured Letter of Intent once price
+and terms are settled: parties, purchase price, payment terms (your
+financing stack, line by line), earnout provisions, seller transition
+and training, due diligence period, exclusivity, closing conditions —
+with the binding sections (only exclusivity and confidentiality) clearly
+marked. Two Frasier disciplines govern the draft. The 24-hour rule: you
+never commit on the spot — you state upfront that you always take 24
+hours, which defuses pressure tactics before they start. And the trade:
+"You can have your price OR your terms, not both" — the seller gets
+their asking price only in exchange for favorable terms (long seller
+note, earnout, consulting offset), or accepts your lower price with
+seller-friendlier terms.</p>
+<p><strong>You'll walk away with:</strong> a ready-for-attorney-review
+LOI with your stack integrated as Section 3, plus a counteroffer
+evaluation framework.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
+<ol type="1">
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
+</ol>
+<p><strong>Done when:</strong> <code>/loi-drafter</code> shows in a
+fresh Cowork chat.</p>
+<hr />
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
+<ul>
+<li>Your documented walk-away / realistic / dream prices (Lesson
+11).</li>
+<li>The chosen financing stack (Lesson 12) — every component with
+amounts, timing, interest, and security.</li>
+<li>The seller's priorities from discovery: certainty vs. speed vs.
+maximum dollars vs. legacy.</li>
+<li>A decision on the price-vs-terms path: their price with your terms,
+or your price with their terms. Not both.</li>
+</ul>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/loi-drafter</code></pre>
+<p>Or specify the deal:</p>
+<pre><code>Draft a Letter of Intent. Buyer: [me/entity]. Seller: [name]. Target: [business, entity type, state]. Price: $[X]. Payment structure: [paste the stack line by line — e.g. $X cash at closing, $Y seller note at Z% over N years with balloon, $A earnout tied to year-2 SDE &gt; $B, $C/year consulting for 3 years]. Transition: [training weeks, consulting period, non-compete radius/duration]. DD period: [30/45/60] days. Exclusivity matching. Mark binding vs non-binding sections clearly.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The LOI document</td>
+<td>Ten standard sections with signature blocks: parties, price, payment
+terms, earnout, transition, DD period, exclusivity, closing conditions,
+confidentiality, non-binding clause</td>
+</tr>
+<tr>
+<td>Binding/non-binding markings</td>
+<td>Only exclusivity and confidentiality bind; everything else stays
+negotiable through DD</td>
+</tr>
+<tr>
+<td>Counteroffer evaluator</td>
+<td>When the seller counters, it checks the counter against your
+walk-away and recommends accept / counter back / walk</td>
+</tr>
+<tr>
+<td>Contingency clauses on request</td>
+<td>E.g. an SBA financing contingency with a good-faith requirement and
+a defined out</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> the stack becomes Section 3 line
+items, each with amount, timing, rate, security, and default remedies —
+vague terms ("$500K seller financing") are what create closing-table
+disputes. The LOI is morally (sometimes legally) weighty: only sign for
+deals you intend to close, because walking after signature costs
+reputation, even though the document itself leaves you free to
+renegotiate on DD findings.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (evaluate a counter):</p>
+<pre><code>The seller countered: [changes — more cash at closing, lower earnout threshold, shorter non-compete]. My walk-away is $[X] and [terms]. Does the counter cross it? Recommend accept, counter back (with what), or walk.</code></pre>
+<p><strong>Refine</strong> (add protection):</p>
+<pre><code>Add an SBA 7(a) financing contingency: if I cannot secure financing on acceptable terms within [X] days, I can terminate without penalty and recover earnest money. Keep the effort good-faith — no indefinite out.</code></pre>
+<p><strong>Stack it:</strong> signature starts the clock.</p>
+<pre><code>The seller signed the LOI today. Run the dd-engine skill: set up the diligence tracker and generate the Phase 1 (financial) document request list — I want it sent within 48 hours.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Honor the 24-hour rule even under pressure.</strong> Deal
+fever after a long negotiation is real. If a seller demands a same-day
+decision — "decide today or the deal is off" — that is itself a red
+flag; hold the line (they usually backtrack).</li>
+<li><strong>Never give both price and terms.</strong> Their $2M asking
+price with $1.5M cash at closing and a short note means you overpaid and
+surrendered all leverage. The trade is the discipline.</li>
+<li><strong>Specify every payment term.</strong> Interest rate,
+amortization shape, security, default remedies, prepayment. "Seller
+financing of $500K" is a dispute waiting for a closing table.</li>
+<li><strong>Size the DD period to the deal.</strong> 30 days suits clean
+single-location books; complex businesses need 45–60. Compressing
+diligence to please a seller is how red flags get missed.</li>
+<li><strong>Attorney before the seller sees it.</strong> State law
+varies on LOI enforceability and earnout language. The <span
+class="math inline">500–</span>1,500 review is the cheapest insurance in
+the whole process.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 8 — the offer. Acceptance starts the diligence clock:
+<strong>Lesson 14 — The DD Engine</strong>. A counter loops you back
+through your three prices; a rejection is information — ask why, then
+revise or walk.</p>
+
+</article>
+<nav class="pager"><a class="prev" href="../lessons/12-deal-stacker.html"><span class="lbl">← Previous</span>Deal Stacker</a><a class="next" href="../lessons/14-dd-engine.html"><span class="lbl">Next →</span>DD Engine</a></nav>
+</main>
+</div>
+</body>
+</html>
