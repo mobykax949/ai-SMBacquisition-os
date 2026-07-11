@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>Buy-Box Builder · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -70,7 +70,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/01-setup-my-workspace.html"><span class="n">01</span>Setup My Workspace</a>
 <a class="nav" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
 <a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
-<a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
+<a class="nav active" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
 <a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
 <a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
 <a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
@@ -108,148 +108,149 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-03--the-buy-box-builder">Lesson 03 — The Buy-Box
+Builder</h1>
+<p><em>Define exactly what you buy and what you pass — anchored on the
+income you need, stress-tested against real listings.</em></p>
+<p>Reading time: ~9 min · Track: Acquire · Prerequisite:
+<code>journey-navigator</code> (Lesson 00)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>A vague filter ("I want to buy a small business") wastes months. This
+skill builds a disciplined one. It starts from the number that matters —
+the annual SDE you need the business to pay you — and reverse-engineers
+the revenue range that produces it (the EPIC move: the box is built
+backward from your required number, not forward from a listing you
+liked). Then it defines criteria across three lanes (conservative /
+target / aggressive), scores 8–10 verticals on five factors, and
+stress-tests the finished box against ten real listings so you know it
+is tight enough to kill bad deals and wide enough to feed the
+funnel.</p>
+<p><strong>You'll walk away with:</strong> a ranked vertical list with
+composite scores, a 1-page <code>buy-box.md</code>, and a stress-test
+table showing how many of 10 real listings pass.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/buy-box-builder</code> shows in a
+fresh Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li>In Project knowledge: <code>my-profile.md</code> (it pre-fills your
+capital, geography, hours) and the draft <code>buy-box.md</code> from
+Lesson 01.</li>
+<li>Have ready: the SDE you need per year, your 5-year net-worth goal,
+8–10 candidate verticals (or let Claude propose them), and any hard
+passes (businesses you would never touch).</li>
+<li>If you have 1031 exchange equity, know the amount — it forces a
+separate real-estate track with a hard clock.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/buy-box-builder</code></pre>
+<p>Or steer it with your specifics:</p>
+<pre><code>Build my acquisition buy box. Income I need it to pay me: $[X] SDE/year, 5-year net-worth goal $[Y]. Capital: $[Z] plus SBA 7(a). Geography: [area]. Industries I&#39;m drawn to: [list]; would never buy: [list]. Anchor the size on my income number, build the three lanes, then score these verticals against the box: [8-10 verticals].</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Three-lane criteria table</td>
+<td>Conservative (take today) / target (ideal) / aggressive (stretch),
+across 8 rows: geography, revenue, SDE, employees, age, owner profile,
+financing, vertical focus</td>
+</tr>
+<tr>
+<td>Vertical scorecard</td>
+<td>8–10 verticals scored 1–5 on recurring revenue, fragmentation,
+boomer ownership, AI-modernization upside, and entry multiple — times
+your personal interest multiplier</td>
+</tr>
+<tr>
+<td><code>buy-box.md</code></td>
+<td>The 1-pager: geography, revenue range, SDE floor, age, owner
+profile, financing, top 3 verticals, 3 auto-pass criteria</td>
+</tr>
+<tr>
+<td>Stress-test table</td>
+<td>10 real listings run through the box, pass/fail with reasons</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> the income anchor sets the floor (need
+<span
+class="math inline">300<em>K</em><em>S</em><em>D</em><em>E</em><em>w</em><em>h</em><em>e</em><em>r</em><em>e</em><em>o</em><em>w</em><em>n</em><em>e</em><em>r</em><em>s</em><em>e</em><em>a</em><em>r</em><em>n</em> </span>150K
+per $1M revenue? You are hunting $3M+ businesses, not $1M — or a
+higher-margin vertical). The five-factor scoring finds verticals where
+the odds stack in your favor: contracted revenue, hundreds of small
+operators, retirement-age owners, automatable back offices, and entry
+multiples near the 2.4x owner-op anchor rather than 4x+. The stress-test
+then proves the box exists in the real market: 3–5 of 10 listings
+passing is the healthy zone.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (stress the box against live listings):</p>
+<pre><code>Web search [BizBuySell] for &quot;[top vertical] [geography] for sale&quot;. Pull 10 active listings with revenue, asking price, and SDE where disclosed. Run each through my buy box and return a pass/fail table with reasons. If under 3 pass, tell me which criterion to loosen.</code></pre>
+<p><strong>Refine</strong> (every 2–3 weeks as you learn real
+pricing):</p>
+<pre><code>Market data update: I keep seeing [vertical] deals at [X]x SDE, not the [Y]x my box assumes. Re-score my verticals with the new multiple data and update buy-box.md.</code></pre>
+<p><strong>Stack it:</strong> deep-grade the winner, then hunt.</p>
+<pre><code>Run the vertical-research skill on my #1 vertical: [vertical] in [geography]. I want the full investor-ready workup before I commit outreach hours.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Don't build the box around one cool deal you saw.</strong>
+Score verticals objectively first, then filter deals. A box
+reverse-engineered from a single listing is a rationalization, not a
+filter.</li>
+<li><strong>Never skip the stress-test.</strong> It catches impossible
+boxes — criteria no real listing can satisfy — before you burn weeks of
+outreach on deals that don't exist.</li>
+<li><strong>Set the SDE floor from the market, not just your
+needs.</strong> If you need $300K but your vertical pays owners $150K,
+the answer is bigger revenue or a different vertical — not wishful
+screening.</li>
+<li><strong>Remember the 70% Rule.</strong> Frasier's discipline: you
+should be able to kill 70% of bad deals in the first conversation. If
+everything sounds interesting, your box is too loose — tighten until 7
+of 10 listings are obvious passes.</li>
+<li><strong>Keep 1031 money on its own track.</strong> Like-kind rules
+force 1031 equity into real-estate-based businesses (car wash,
+laundromat, storage) on a hard 45-day identification / 180-day close
+clock. Mix the tracks and you'll miss the window chasing operating
+businesses it can't buy.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>First step of the acquisition funnel (Branch B, step 1). The
+navigator told you <em>which</em> play; this defines <em>what</em> you
+hunt. <code>buy-box.md</code> feeds every downstream skill —
+deal-finder, market-monitor, aq-analyzer. Next: <strong>Lesson 04 —
+Vertical Research</strong> for the deep workup, or straight to
+<strong>Lesson 05 — Deal Finder</strong> to source targets.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/00-journey-navigator.html"><span class="lbl">← Previous</span>Journey Navigator</a><a class="next" href="../lessons/04-vertical-research.html"><span class="lbl">Next →</span>Vertical Research</a></nav>
 </main>
 </div>
 </body>

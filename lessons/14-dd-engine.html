@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>DD Engine · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -81,7 +81,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
 <a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
 <a class="nav" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
-<a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
+<a class="nav active" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
 <a class="nav" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
 <a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
 <a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
@@ -108,148 +108,149 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-14--the-dd-engine">Lesson 14 — The DD Engine</h1>
+<p><em>Sequential due diligence after the LOI: document requests,
+red-flag rules, and a go/renegotiate/walk decision at every
+phase.</em></p>
+<p>Reading time: ~9 min · Track: Acquire · Prerequisite: signed LOI
+(<code>loi-drafter</code>, Lesson 13)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>Due diligence is where most bad deals die — in this method roughly
+70% of deals die in DD, and that is normal, not failure. This skill runs
+the post-LOI process in five phases — financial, operational, legal,
+customer, final verification — generating the document request list for
+each, tracking findings, applying the red-flag rules (single customer
+over 30% of revenue, declining trend, unresolved liabilities, no team/no
+systems, financials that don't match tax returns), and recommending go /
+renegotiate / walk after every phase. Two Frasier principles frame the
+pace: move fast (a slow DD kills more good deals than it catches bad
+ones), and where the structure allows, use an SPV plus a break-up clause
+so parts of DD can complete shortly post-close instead of stalling the
+deal.</p>
+<p><strong>You'll walk away with:</strong> a phase-by-phase diligence
+tracker, request checklists you can send to the seller's attorney, and a
+final closing-readiness report.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/dd-engine</code> shows in a fresh
+Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li>The signed LOI (the DD period and exclusivity clock start on signing
+day — launch Phase 1 within 48 hours).</li>
+<li>Your valuation file and AQ scorecard (DD verifies what discovery
+claimed).</li>
+<li>Professionals lined up: a CPA for the financials, an attorney for
+contracts and entity docs. Budget $5K–15K — cheap insurance against a
+$500K mistake.</li>
+<li>Access commitments from the seller: financials, contracts, customer
+data. Refusal of any category is itself a red flag.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/dd-engine</code></pre>
+<p>Or launch phase by phase:</p>
+<pre><code>Run the dd-engine skill for [business], [industry], [revenue/employees]. Start with Phase 1 (Financial): generate the document request list — required docs, nice-to-haves, red-flag indicators, and timeline — formatted as a checklist I can send to the seller&#39;s attorney today.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase request checklists</td>
+<td>Per phase: required documents, preferred documents, red-flag
+indicators, timeline</td>
+</tr>
+<tr>
+<td>Findings evaluations</td>
+<td>Your findings run against the red-flag rules, with a go /
+renegotiate / walk recommendation per phase</td>
+</tr>
+<tr>
+<td>Renegotiation drafts</td>
+<td>When DD uncovers issues: a professional email to the seller with the
+issues, rationale, and revised terms</td>
+</tr>
+<tr>
+<td>Final DD report</td>
+<td>All findings across all five phases, final red-flag count,
+closing-readiness assessment</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> the phases are sequential for a reason
+— financial comes first because if the numbers are wrong nothing else
+matters (recompute TTM, re-audit add-backs, check for windfalls;
+discrepancies over 10% mean renegotiate or walk). Operational verifies
+the business runs without the owner; legal verifies clean title and no
+landmines; customer diligence computes concentration and verifies
+recurring-revenue claims; final verification is the site visit,
+key-employee interviews, and a last 30-day bank-statement check for
+sudden drop-off. Because the LOI binds only exclusivity and
+confidentiality, every phase's findings are leverage: adjust terms or
+exit penalty-free inside the period.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (run a phase decision):</p>
+<pre><code>Phase 1 findings for [business]: [documents received/missing, discrepancies vs. seller claims, flags]. Apply the red-flag rules and recommend: go to Phase 2, renegotiate (specify what), or walk (explain why).</code></pre>
+<p><strong>Refine</strong> (issues found, deal still alive):</p>
+<pre><code>DD uncovered: [issues — e.g. top-3 customers are 45% of revenue, $30K undisclosed equipment lease]. Original terms: [price/structure]. Draft the renegotiation email: respectful, solution-focused, with revised terms and a reminder we&#39;re inside the DD period.</code></pre>
+<p><strong>Stack it:</strong> a clean DD closes — and the loop
+restarts.</p>
+<pre><code>All five phases green. Build my closing checklist with my attorney&#39;s punch list — and queue the modernization-audit skill for week one of ownership.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Run all five phases, even when financial looks
+great.</strong> A business with beautiful books and 60% customer
+concentration is a time bomb. Skipping phases is how buyers of lemons
+explain themselves later.</li>
+<li><strong>Apply the red-flag rules mechanically.</strong> A single 40%
+customer is a red flag no matter how much you like the business. Reprice
+the risk or walk — don't rationalize. (This system's 30%/10% thresholds
+are deliberately tighter than the playbook's exit-early triggers.)</li>
+<li><strong>Verify, never accept explanations.</strong> "Revenue dipped
+because of COVID," "that lawsuit is frivolous" — request third-party
+evidence: bank statements, court filings, appraisals. No evidence,
+assume the worst.</li>
+<li><strong>Bring professionals.</strong> Solo DD misses red flags. CPA
+on the books, attorney on the contracts, an industry operator on the ops
+if you can get one.</li>
+<li><strong>Sunk cost is not a reason to close.</strong> Forty hours in,
+attorney paid, emotionally attached — and DD finds reds. Walking away
+from a bad deal is the success case. There are other deals.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 9 — the last gate before closing. A green final report
+goes to your attorney's closing checklist; then the loop turns: you're
+an owner now, and the system routes you into Branch A — <strong>Lesson
+15 — The Modernization Audit</strong> — to raise the multiple on what
+you just bought.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/13-loi-drafter.html"><span class="lbl">← Previous</span>LOI Drafter</a><a class="next" href="../lessons/15-modernization-audit.html"><span class="lbl">Next →</span>Modernization Audit</a></nav>
 </main>
 </div>
 </body>

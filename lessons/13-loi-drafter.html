@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>LOI Drafter · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -80,7 +80,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
 <a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
 <a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
-<a class="nav" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
+<a class="nav active" href="../lessons/13-loi-drafter.html"><span class="n">13</span>LOI Drafter</a>
 <a class="nav" href="../lessons/14-dd-engine.html"><span class="n">14</span>DD Engine</a>
 <a class="nav" href="../lessons/15-modernization-audit.html"><span class="n">15</span>Modernization Audit</a>
 <a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
@@ -108,148 +108,141 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-13--the-loi-drafter">Lesson 13 — The LOI Drafter</h1>
+<p><em>The written offer — built on your financing stack, disciplined by
+the 24-hour rule and "price OR terms, not both."</em></p>
+<p>Reading time: ~8 min · Track: Acquire · Prerequisite:
+<code>deal-stacker</code> stack chosen (Lesson 12)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>Generates a complete, properly structured Letter of Intent once price
+and terms are settled: parties, purchase price, payment terms (your
+financing stack, line by line), earnout provisions, seller transition
+and training, due diligence period, exclusivity, closing conditions —
+with the binding sections (only exclusivity and confidentiality) clearly
+marked. Two Frasier disciplines govern the draft. The 24-hour rule: you
+never commit on the spot — you state upfront that you always take 24
+hours, which defuses pressure tactics before they start. And the trade:
+"You can have your price OR your terms, not both" — the seller gets
+their asking price only in exchange for favorable terms (long seller
+note, earnout, consulting offset), or accepts your lower price with
+seller-friendlier terms.</p>
+<p><strong>You'll walk away with:</strong> a ready-for-attorney-review
+LOI with your stack integrated as Section 3, plus a counteroffer
+evaluation framework.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/loi-drafter</code> shows in a
+fresh Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li>Your documented walk-away / realistic / dream prices (Lesson
+11).</li>
+<li>The chosen financing stack (Lesson 12) — every component with
+amounts, timing, interest, and security.</li>
+<li>The seller's priorities from discovery: certainty vs. speed vs.
+maximum dollars vs. legacy.</li>
+<li>A decision on the price-vs-terms path: their price with your terms,
+or your price with their terms. Not both.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/loi-drafter</code></pre>
+<p>Or specify the deal:</p>
+<pre><code>Draft a Letter of Intent. Buyer: [me/entity]. Seller: [name]. Target: [business, entity type, state]. Price: $[X]. Payment structure: [paste the stack line by line — e.g. $X cash at closing, $Y seller note at Z% over N years with balloon, $A earnout tied to year-2 SDE &gt; $B, $C/year consulting for 3 years]. Transition: [training weeks, consulting period, non-compete radius/duration]. DD period: [30/45/60] days. Exclusivity matching. Mark binding vs non-binding sections clearly.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The LOI document</td>
+<td>Ten standard sections with signature blocks: parties, price, payment
+terms, earnout, transition, DD period, exclusivity, closing conditions,
+confidentiality, non-binding clause</td>
+</tr>
+<tr>
+<td>Binding/non-binding markings</td>
+<td>Only exclusivity and confidentiality bind; everything else stays
+negotiable through DD</td>
+</tr>
+<tr>
+<td>Counteroffer evaluator</td>
+<td>When the seller counters, it checks the counter against your
+walk-away and recommends accept / counter back / walk</td>
+</tr>
+<tr>
+<td>Contingency clauses on request</td>
+<td>E.g. an SBA financing contingency with a good-faith requirement and
+a defined out</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> the stack becomes Section 3 line
+items, each with amount, timing, rate, security, and default remedies —
+vague terms ("$500K seller financing") are what create closing-table
+disputes. The LOI is morally (sometimes legally) weighty: only sign for
+deals you intend to close, because walking after signature costs
+reputation, even though the document itself leaves you free to
+renegotiate on DD findings.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (evaluate a counter):</p>
+<pre><code>The seller countered: [changes — more cash at closing, lower earnout threshold, shorter non-compete]. My walk-away is $[X] and [terms]. Does the counter cross it? Recommend accept, counter back (with what), or walk.</code></pre>
+<p><strong>Refine</strong> (add protection):</p>
+<pre><code>Add an SBA 7(a) financing contingency: if I cannot secure financing on acceptable terms within [X] days, I can terminate without penalty and recover earnest money. Keep the effort good-faith — no indefinite out.</code></pre>
+<p><strong>Stack it:</strong> signature starts the clock.</p>
+<pre><code>The seller signed the LOI today. Run the dd-engine skill: set up the diligence tracker and generate the Phase 1 (financial) document request list — I want it sent within 48 hours.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Honor the 24-hour rule even under pressure.</strong> Deal
+fever after a long negotiation is real. If a seller demands a same-day
+decision — "decide today or the deal is off" — that is itself a red
+flag; hold the line (they usually backtrack).</li>
+<li><strong>Never give both price and terms.</strong> Their $2M asking
+price with $1.5M cash at closing and a short note means you overpaid and
+surrendered all leverage. The trade is the discipline.</li>
+<li><strong>Specify every payment term.</strong> Interest rate,
+amortization shape, security, default remedies, prepayment. "Seller
+financing of $500K" is a dispute waiting for a closing table.</li>
+<li><strong>Size the DD period to the deal.</strong> 30 days suits clean
+single-location books; complex businesses need 45–60. Compressing
+diligence to please a seller is how red flags get missed.</li>
+<li><strong>Attorney before the seller sees it.</strong> State law
+varies on LOI enforceability and earnout language. The <span
+class="math inline">500–</span>1,500 review is the cheapest insurance in
+the whole process.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 8 — the offer. Acceptance starts the diligence clock:
+<strong>Lesson 14 — The DD Engine</strong>. A counter loops you back
+through your three prices; a rejection is information — ask why, then
+revise or walk.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/12-deal-stacker.html"><span class="lbl">← Previous</span>Deal Stacker</a><a class="next" href="../lessons/14-dd-engine.html"><span class="lbl">Next →</span>DD Engine</a></nav>
 </main>
 </div>
 </body>

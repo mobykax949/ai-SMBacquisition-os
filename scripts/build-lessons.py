@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import subprocess, pathlib, sys
 
-ROOT = pathlib.Path("/Users/veloxp/dev/epic-ai-acquisition")
+ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 # Flat, ordered walkthrough. dir/slug -> output at <dir>/<slug>.html
 SETUP = [
@@ -16,8 +16,30 @@ SETUP = [
     ("07",  "07-prompt-like-a-buyer","Prompt Like a Buyer"),
     ("08",  "08-models-and-plans",  "Models & Plans"),
 ]
+# Journey order (JOURNEY.md): Phase 0 -> Phase 1 -> Branch B -> Branch A.
+# journey-navigator keeps its original "00" but sits third, after Phase 0.
 LESSONS = [
-    ("00", "00-journey-navigator", "Journey Navigator"),
+    ("01", "01-setup-my-workspace",      "Setup My Workspace"),
+    ("02", "02-claude-acquisition-setup","Acquisition Setup"),
+    ("00", "00-journey-navigator",       "Journey Navigator"),
+    ("03", "03-buy-box-builder",         "Buy-Box Builder"),
+    ("04", "04-vertical-research",       "Vertical Research"),
+    ("05", "05-deal-finder",             "Deal Finder"),
+    ("06", "06-broker-finder",           "Broker Finder"),
+    ("07", "07-market-monitor",          "Market Monitor"),
+    ("08", "08-outreach-engine",         "Outreach Engine"),
+    ("09", "09-aq-analyzer",             "AQ Analyzer"),
+    ("10", "10-discovery-interviewer",   "Discovery Interviewer"),
+    ("11", "11-valuation",               "Valuation & Add-Backs"),
+    ("12", "12-deal-stacker",            "Deal Stacker"),
+    ("13", "13-loi-drafter",             "LOI Drafter"),
+    ("14", "14-dd-engine",               "DD Engine"),
+    ("15", "15-modernization-audit",     "Modernization Audit"),
+    ("16", "16-owner-dependency-audit",  "Owner Dependency Audit"),
+    ("17", "17-sop-extractor",           "SOP Extractor"),
+    ("18", "18-margin-finder",           "Margin Finder"),
+    ("19", "19-customer-engine",         "Customer Engine"),
+    ("20", "20-multiple-builder",        "Multiple Builder"),
 ]
 
 pages = []
@@ -115,6 +137,8 @@ NAV = [
     ("07",  "Prompt Like a Buyer",   "setup/07-prompt-like-a-buyer.html"),
     ("08",  "Models &amp; Plans",    "setup/08-models-and-plans.html"),
     ("→",   "Install the Plugin",    "index.html#install"),
+    ("group", "Skill Lessons", None),
+    # generated from LESSONS below (journey order)
     ("group", "The System", None),
     ("09", "Find Your Starting Point", "index.html#journey"),
     ("10", "The Numbers Game",         "index.html#numbers"),
@@ -132,6 +156,10 @@ NAV = [
     ("20", "Ways In",       "index.html#offers"),
     ("21", "Appendix",      "index.html#appendix"),
 ]
+
+# splice the lesson entries (journey order) into NAV under "Skill Lessons"
+_li = next(i for i, (n, l, h) in enumerate(NAV) if n == "group" and l == "Skill Lessons") + 1
+NAV[_li:_li] = [(num, short, f"lessons/{slug}.html") for num, slug, short in LESSONS]
 
 def sidebar_for(cur):
     out = []

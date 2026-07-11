@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>AQ Analyzer · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -76,7 +76,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
 <a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
 <a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
-<a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
+<a class="nav active" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
 <a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
 <a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
 <a class="nav" href="../lessons/12-deal-stacker.html"><span class="n">12</span>Deal Stacker</a>
@@ -108,148 +108,142 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-09--the-aq-analyzer">Lesson 09 — The AQ Analyzer</h1>
+<p><em>The 13-criterion go/no-go screen — Roland Frasier's canonical
+filter, run in minutes instead of an afternoon.</em></p>
+<p>Reading time: ~8 min · Track: Acquire · Prerequisite: first contact
+made (<code>outreach-engine</code>, Lesson 08) or a listing in hand</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>The Acquisition Qualification Score is the fast filter that decides
+whether a deal deserves more of your time — run <em>before</em> deep
+valuation, not after. This skill scores a business on the 13 AQ criteria
+— location, seller finance, broker, long listing, margin, history,
+FF&amp;E, multiple, leased space, own property, staff, inventory,
+training — rating each green (confirmed favorable), yellow (unknown — an
+information gap to close, not a no), or red (confirmed unfavorable). It
+returns a go / pass / dig-deeper verdict plus the two highest-leverage
+questions for the next seller call. Note the honest limit: the source
+material teaches the scoreboard by demonstration, not with a numeric
+point table — green-heavy means pursue; red on a dealbreaker criterion
+(margin, owner-dependence, books) means pass.</p>
+<p><strong>You'll walk away with:</strong>
+<code>aq-score-&lt;business&gt;-YYYY-MM-DD.md</code> — the 13-row
+scorecard, verdict, and your two next-call questions.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/aq-analyzer</code> shows in a
+fresh Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li><code>aq-score.md</code> in Project knowledge (from Lesson 02) so
+the criteria definitions are loaded.</li>
+<li>Everything you know about the business: location, revenue or asking
+price, years operating, broker-listed or not, days on market,
+profitability estimate, property ownership, employee count, seller
+training offered. Gaps are fine — they score yellow and become your
+follow-up questions.</li>
+<li>If deal-finder pre-scored 6 criteria, bring that file; this run
+completes the other 7.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/aq-analyzer</code></pre>
+<p>Or paste the facts:</p>
+<pre><code>AQ-score this target: [business name / everything you know — location, revenue, asking price, years in business, broker y/n, days listed, SDE estimate, property owned, employees, training offered]. Score all 13 criteria green/yellow/red with evidence, give me the go / pass / dig-deeper verdict, and the two highest-leverage questions for the next seller call.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13-row AQ table</td>
+<td>Criterion, rating, evidence, note — the full traffic-light
+scoreboard</td>
+</tr>
+<tr>
+<td>Verdict</td>
+<td>Go (pursue), pass (walk now), or dig deeper (close the yellows
+first) — with the biggest risk and biggest opportunity named</td>
+</tr>
+<tr>
+<td>Two next-call questions</td>
+<td>The questions most likely to turn yellows green or red, or to
+confirm dealbreakers early</td>
+</tr>
+<tr>
+<td><code>aq-score-&lt;business&gt;-YYYY-MM-DD.md</code></td>
+<td>The dated scorecard — your growing deal library</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> the scoreboard front-loads the kill
+decision. Red on margin (unprofitable), history (young or declining),
+multiple (asking 5x+ SDE), or staff (100% owner-dependent) are the
+serious flags; one red is a risk to price, three reds is usually a pass.
+Yellow is the workhorse rating — "they didn't tell us the EBITDA yet" is
+a yellow, and the two follow-up questions exist to resolve exactly
+those. Re-run after each call: deals migrate from yellow-heavy to
+green-heavy (pursue) or to red (exit), and the date-stamped versions
+show you how the deal evolved.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (rank a batch):</p>
+<pre><code>I have 5 warm leads: [paste one-line summaries]. Run a quick AQ pass on each and rank them by deal quality so I know where my next 5 hours go.</code></pre>
+<p><strong>Refine</strong> (after the next call):</p>
+<pre><code>Update the AQ score for [business]: the seller answered our two questions — [answers]. Re-rate the affected criteria, update the verdict, and save a new dated version.</code></pre>
+<p><strong>Stack it:</strong> a "go" moves to the deep dive.</p>
+<pre><code>[Business] scored go. Run the discovery-interviewer skill: build my prioritized 50-question guide for the deep-dive call, flagging the 3 dealbreaker questions.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Don't rate everything yellow to avoid deciding.</strong>
+Yellow means you genuinely don't know. "We're barely breaking even" is a
+red, not a yellow. Honest ratings or the filter is theater.</li>
+<li><strong>One red is not an automatic pass.</strong> A short lease
+(red on leased space) with greens elsewhere is a negotiating point —
+make the extension a condition. Three reds, or a red on a non-negotiable
+(margin, history, multiple), is when you walk.</li>
+<li><strong>Don't guess the seller-side criteria before the first
+call.</strong> Six criteria are pre-scoreable from public data; the
+other seven need a conversation. Mark them yellow and ask.</li>
+<li><strong>Save every score outside Claude.</strong> Ten scores in one
+chat with no files means ten scores lost. The dated files also stop you
+re-evaluating the same deal three months later.</li>
+<li><strong>Use the follow-up questions.</strong> A "dig deeper" verdict
+without asking the two priority questions on the next call wastes the
+whole analysis.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 4 — the flagship qualification gate, run post-contact
+(or on any listing worth a look). It embodies the 70% Rule: most deals
+should die here, fast, so your hours go to the green few. A "go" feeds
+<strong>Lesson 10 — Discovery Interviewer</strong>; the completed
+scorecard later feeds <strong>Lesson 11 — Valuation</strong>.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/08-outreach-engine.html"><span class="lbl">← Previous</span>Outreach Engine</a><a class="next" href="../lessons/10-discovery-interviewer.html"><span class="lbl">Next →</span>Discovery Interviewer</a></nav>
 </main>
 </div>
 </body>

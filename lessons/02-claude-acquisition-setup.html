@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>Acquisition Setup · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -68,7 +68,7 @@ article li{margin:5px 0}
 <a class="nav" href="../index.html#install"><span class="n">→</span>Install the Plugin</a>
 <div class="group">Skill Lessons</div>
 <a class="nav" href="../lessons/01-setup-my-workspace.html"><span class="n">01</span>Setup My Workspace</a>
-<a class="nav" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
+<a class="nav active" href="../lessons/02-claude-acquisition-setup.html"><span class="n">02</span>Acquisition Setup</a>
 <a class="nav" href="../lessons/00-journey-navigator.html"><span class="n">00</span>Journey Navigator</a>
 <a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
 <a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
@@ -108,148 +108,154 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-02--claude-acquisition-setup">Lesson 02 — Claude
+Acquisition Setup</h1>
+<p><em>Turn Claude into your 24/7 deal analyst: a dedicated Project,
+your buy box as permanent knowledge, and the RCTF prompting
+frame.</em></p>
+<p>Reading time: ~7 min · Track: Both · Prerequisite:
+<code>setup-my-workspace</code> (Lesson 01)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
-<ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
-</ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<h2 id="what-this-does">What this does</h2>
+<p>This is the plumbing lesson. It configures Claude Desktop + Pro for
+deal work: a dedicated Project that holds your buy box and the
+13-criterion AQ Score as persistent knowledge, a files-not-chat-memory
+rule so no analysis ever evaporates, and the RCTF pattern (Role /
+Context / Task / Format) that makes every ad-hoc prompt land. Run it
+once; from then on every conversation inside the Project already knows
+your criteria without you pasting anything.</p>
+<p><strong>You'll walk away with:</strong> a working "Acquisition
+Engine" Project with <code>buy-box.md</code> and
+<code>aq-score.md</code> loaded, a deal-analysis file template, and a
+weekly scan workflow.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin — install once and
+everything is available. <em>(Already installed? Skip to Step
+2.)</em></p>
 <ol type="1">
 <li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
+sidebar and open the <strong>Plugins</strong> tab.</li>
+<li>Click the <strong>+</strong> (top-right) → <strong>Add
+marketplace</strong>, and paste:
+<code>mobykax949/ai-SMBacquisition-os</code>
 <blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
+<p>It's a source you <em>add</em> with the <strong>+</strong> button,
+not a plugin you search for.</p>
 </blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
+<li>Find <strong>smb-wealth-builder</strong>, click
+<strong>Install</strong>, choose <strong>User</strong> scope.</li>
+<li>Start a NEW Cowork chat and type <code>/</code> — the skills
+appear.</li>
 </ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
+<p><strong>Done when:</strong> typing
+<code>/claude-acquisition-setup</code> in a fresh Cowork chat shows the
+skill.</p>
 <hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li>The files from Lesson 01: <code>my-profile.md</code> and
+<code>buy-box.md</code>. If you skipped Lesson 01, this skill will have
+you write a buy box from scratch — but the front door is the better
+path.</li>
+<li>A Claude Pro (or higher) subscription and Claude Desktop
+installed.</li>
+<li>Ten minutes to click through Projects once, guided.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/claude-acquisition-setup</code></pre>
+<p>It walks you through: create the Project, upload
+<code>buy-box.md</code> and <code>aq-score.md</code> (the 13 criteria —
+location, seller finance, broker, long listing, margin, history,
+FF&amp;E, multiple, leased space, own property, staff, inventory,
+training — each defined green / yellow / red), then test that the upload
+took. Steer it if you want:</p>
+<pre><code>Walk me through setting up my Acquisition Engine Project step by step: create it, upload my buy box and the 13-criterion AQ Score as project knowledge, establish the rule that all deal analyses are saved as markdown files I can download, and teach me the RCTF prompt structure with one worked example from my verticals.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The <strong>Acquisition Engine</strong> Project</td>
+<td>Persistent knowledge across every chat inside it — no re-pasting
+criteria</td>
+</tr>
+<tr>
+<td><code>buy-box.md</code> (uploaded)</td>
+<td>Your criteria: geography, revenue, SDE, verticals, financing —
+referenced automatically</td>
+</tr>
+<tr>
+<td><code>aq-score.md</code> (uploaded)</td>
+<td>The 13 AQ criteria with green/yellow/red definitions, ready for
+every scoring run</td>
+</tr>
+<tr>
+<td><code>deal-analysis-template.md</code></td>
+<td>The standard file format: AQ table, financial summary, go/pass/dig
+verdict, first-call questions</td>
+</tr>
+<tr>
+<td>A weekly workflow</td>
+<td>The 5-step Monday checklist: search listings → screen against buy
+box → AQ-score the best 3 → rank → save as
+<code>weekly-scan-YYYY-MM-DD.md</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> Projects hold knowledge; chats inside
+them read it. The RCTF frame — Role ("you are a deal analyst"), Context
+(the listing, your buy box), Task ("run the AQ Score"), Format ("return
+a table with a verdict") — is how you talk to the setup when you go
+off-script. Every skill in the pack is a fully-formed RCTF prompt under
+the hood, so most days you just type <code>/skill-name</code>.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (confirm the knowledge is live):</p>
+<pre><code>You are my acquisition analyst. Review the uploaded buy box and AQ Score files. Confirm: what geography am I targeting, what revenue range, and what are the 13 AQ criteria? If you cannot find these files, say so.</code></pre>
+<p><strong>Refine</strong> (when criteria change):</p>
+<pre><code>I am updating my buy box: [what changed]. Rewrite buy-box.md with the change and remind me to re-upload it to Project Knowledge so every future chat uses the new version.</code></pre>
+<p><strong>Stack it:</strong> confirm your stage before hunting.</p>
+<pre><code>Run the journey-navigator skill using my-profile.md in this Project. Confirm my stage and my next skill.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Upload markdown, not PDFs.</strong> Claude reads markdown
+fastest. If your buy box is a PDF, copy the text into a plain
+<code>.md</code> file first.</li>
+<li><strong>Check which Project you're in.</strong> A chat started
+outside the Acquisition Engine Project cannot see your buy box or AQ
+criteria. Glance at the Project name before any deal analysis.</li>
+<li><strong>Keep Project Knowledge lean.</strong> Buy box, AQ Score, and
+templates only. Don't upload every listing you find — Claude slows down
+past ~50 files.</li>
+<li><strong>Version your buy box outside Claude.</strong> If you lose
+account access, an un-backed-up buy box is gone. Keep
+<code>buy-box.md</code> in Dropbox, Drive, or a local folder too.</li>
+<li><strong>Never trust chat memory with deal data.</strong> Claude
+cannot recall a conversation from three weeks ago. Every analysis gets
+saved as a downloadable file, filed like
+<code>acquisitions/targets/&lt;vertical&gt;/&lt;business&gt;.md</code>.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Phase 0, right after the front door. Lesson 01 wrote your files; this
+lesson makes them permanent infrastructure. Next: <strong>Lesson 00 —
+Journey Navigator</strong> confirms your stage, then the funnel starts
+at <strong>Lesson 03 — Buy-Box Builder</strong>.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/01-setup-my-workspace.html"><span class="lbl">← Previous</span>Setup My Workspace</a><a class="next" href="../lessons/00-journey-navigator.html"><span class="lbl">Next →</span>Journey Navigator</a></nav>
 </main>
 </div>
 </body>

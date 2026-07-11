@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>Market Monitor · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -74,7 +74,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
 <a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
 <a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
-<a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
+<a class="nav active" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
 <a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
 <a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
 <a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
@@ -108,148 +108,141 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-07--the-market-monitor">Lesson 07 — The Market
+Monitor</h1>
+<p><em>A 30-minute Monday scan of on-market listings: your pricing-comps
+engine and deal safety net.</em></p>
+<p>Reading time: ~7 min · Track: Acquire · Prerequisite:
+<code>buy-box-builder</code> (Lesson 03)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>On-market is not your primary hunting ground — off-market and broker
+relationships are — but ignoring it costs you two things: valuation
+comps and the occasional good deal everyone else missed. This skill runs
+a weekly web-search scan of BizBuySell, BizQuest, and local broker sites
+filtered by your buy box, computes asking multiples where SDE is
+disclosed, flags outliers and motivated sellers (90+ days listed, price
+cuts, seller financing mentioned), and tells you which 2–3 listings
+deserve an AQ Score this week. After 4–8 weeks of saved scans, you own a
+pricing trend dataset to anchor negotiations.</p>
+<p><strong>You'll walk away with:</strong>
+<code>market-monitor-YYYY-MM-DD.md</code> — the weekly filtered table
+with asking multiples and 2–3 flagged listings — and, over time, a comps
+library.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/market-monitor</code> shows in a
+fresh Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li><code>buy-box.md</code> in Project knowledge (geography, revenue,
+SDE, top 3 verticals).</li>
+<li>A recurring Monday calendar block, 30 minutes, named "Weekly Market
+Monitor." The discipline is the product — skip three weeks and you lose
+the trend line.</li>
+<li>A folder for the scans:
+<code>acquisitions/market-scans/</code>.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/market-monitor</code></pre>
+<p>Or scope the scan:</p>
+<pre><code>Run the market-monitor skill. Web search BizBuySell, BizQuest, and [region] broker sites for listings in my top 3 verticals, my geography, posted or updated in the last 30 days. Screen against my buy box, compute asking multiples where SDE is disclosed, and flag the top 3 worth an AQ Score this week.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Listings table</td>
+<td>Business/description, city, asking price, revenue, SDE, days listed,
+source — new in the last 30 days</td>
+</tr>
+<tr>
+<td>Buy-box screen</td>
+<td>Pass/fail per listing with the reason (revenue too low, wrong
+geography, franchise...)</td>
+</tr>
+<tr>
+<td>Asking-multiple analysis</td>
+<td>Asking ÷ SDE per listing, vertical averages, outliers flagged (20%+
+below average = potential deal; 50%+ above = will sit)</td>
+</tr>
+<tr>
+<td>Top-3 flags</td>
+<td>The listings worth an AQ Score: under 3.0x asking, 90+ days listed,
+seller financing mentioned, or real estate included</td>
+</tr>
+<tr>
+<td><code>market-monitor-YYYY-MM-DD.md</code></td>
+<td>The dated scan — your growing comps dataset</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> each scan is a snapshot; the stack of
+scans is intelligence. Rising asking multiples mean the market is
+heating; lengthening days-listed means sellers are getting realistic. A
+listing that appears in four consecutive scans with no price movement is
+an unmotivated seller; one that cuts 20% between week 2 and week 3 is a
+call-the-broker-today signal — price cuts attract offers within
+days.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (mine the multiples):</p>
+<pre><code>From this week&#39;s scan, calculate the asking multiple for every listing with disclosed SDE. What&#39;s the average per vertical? Flag anything priced 20%+ below its vertical average.</code></pre>
+<p><strong>Refine</strong> (after 4 weeks of scans):</p>
+<pre><code>Here are my last 4 weekly scans: [attach files]. What&#39;s trending — multiples, days listed, seller financing frequency? Should I adjust my buy box or shift verticals?</code></pre>
+<p><strong>Stack it:</strong> flags go straight to qualification.</p>
+<pre><code>Run the aq-analyzer skill on this week&#39;s top flagged listing: [paste listing details]. Same-day — on-market deals move fast after a price cut.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Don't make on-market your primary channel.</strong> Public
+listings are shopped to every buyer with a checkbook. This is the safety
+net and the comps engine; deal-finder and broker-finder are the
+hunt.</li>
+<li><strong>Stay inside the box.</strong> The cool $8M restaurant two
+counties over is a two-hour distraction, not a deal. The buy box exists
+to keep you disciplined.</li>
+<li><strong>Save every scan.</strong> Unsaved scans mean no trend data
+and re-evaluating deals you already passed on. Date-stamp and file every
+one.</li>
+<li><strong>Weekly, not monthly.</strong> Motivated sellers who cut
+price and add financing get offers within days. A monthly check means
+you're always too late.</li>
+<li><strong>Follow through on the flags.</strong> Flagging 3 listings a
+week and never AQ-scoring them is market research, not deal
+sourcing.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 2 — the on-market lane of the three sourcing lanes,
+and the source of the comps you'll cite in every negotiation. Next:
+<strong>Lesson 08 — Outreach Engine</strong> turns your sourced lists
+into conversations.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/06-broker-finder.html"><span class="lbl">← Previous</span>Broker Finder</a><a class="next" href="../lessons/08-outreach-engine.html"><span class="lbl">Next →</span>Outreach Engine</a></nav>
 </main>
 </div>
 </body>

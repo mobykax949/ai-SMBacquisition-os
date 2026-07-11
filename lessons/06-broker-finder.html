@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>Broker Finder · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -73,7 +73,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/03-buy-box-builder.html"><span class="n">03</span>Buy-Box Builder</a>
 <a class="nav" href="../lessons/04-vertical-research.html"><span class="n">04</span>Vertical Research</a>
 <a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
-<a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
+<a class="nav active" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
 <a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
 <a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
 <a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
@@ -108,148 +108,137 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-06--the-broker-finder">Lesson 06 — The Broker Finder</h1>
+<p><em>Get on broker lists as a credible, financed buyer — and see
+pocket listings before they go public.</em></p>
+<p>Reading time: ~8 min · Track: Acquire · Prerequisite:
+<code>buy-box-builder</code> (Lesson 03)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>Brokers are Frasier's recommended channel for getting your reps in —
+and the gold lane for pre-market deal flow. This skill finds and
+profiles the brokers who actually work your geography and verticals,
+ranks the best fits, and drafts the credible buyer introduction that
+separates you from the fifty tire-kicker emails a broker gets each week:
+who you are, exactly what you're hunting (buy box attached), and proof
+of financing (SBA pre-qualification, 1031 equity, or cash). Serious plus
+financed plus specific is what earns pocket listings.</p>
+<p><strong>You'll walk away with:</strong> a ranked list of 5 target
+brokers, an under-200-word intro email with your buy box attached, and a
+relationship tracker.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/broker-finder</code> shows in a
+fresh Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li><code>buy-box.md</code> in Project knowledge, plus a 1-page PDF
+version to attach to emails.</li>
+<li>Proof of financing to reference: an SBA pre-qualification letter,
+1031 equity amount parked with a qualified intermediary, or cash
+available. If you have none of these yet, get financing lined up before
+running this — brokers will ask on the first call.</li>
+<li>Your target geography and top 2 verticals (brokers specialize;
+narrow the search).</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/broker-finder</code></pre>
+<p>Or scope it:</p>
+<pre><code>Run the broker-finder skill. Geography: [area]. Verticals: [top 2]. Deal size: [$1-5M revenue, $200K+ SDE]. Financing: [SBA 7(a) pre-qualified / $X of 1031 equity / cash]. Find and profile brokers, rank the top 5 by fit, and draft my buyer introduction email — under 200 words, buy box attached.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Broker research table</td>
+<td>Broker, firm, contact, specialization, recent deals — pulled from
+web search and directories</td>
+</tr>
+<tr>
+<td>Ranked top 5</td>
+<td>The best fits for your size, verticals, and financing style, with a
+1–2 sentence why for each</td>
+</tr>
+<tr>
+<td>Buyer introduction email</td>
+<td>Under 200 words: who you are, what you hunt, proof of financing in
+the first 3 sentences, pocket-listing ask, 15-minute call CTA</td>
+</tr>
+<tr>
+<td>Relationship tracker</td>
+<td>Broker, firm, intro-call date, deals shared, last follow-up, next
+follow-up due</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> brokers want buyers who close. The
+email proves three things fast — you're specific (buy box attached),
+you're financed (named in the opening), and you're decisive (you want
+off-market looks and a short call). After the intro call, the
+pocket-listing question is: "What deals are you working on right now
+that match my criteria, even if they're not listed yet?" Then it's a
+cadence game: a short check-in every 2–4 weeks keeps you top-of-mind
+when the right deal walks in.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (pressure-check the email):</p>
+<pre><code>Read my broker intro email as a skeptical broker who gets 50 of these a week. What would make you ignore it? Tighten it: financing proof in the first 3 sentences, one specific ask, under 200 words.</code></pre>
+<p><strong>Refine</strong> (no responses after a week):</p>
+<pre><code>I sent the intro to 5 brokers a week ago with no responses. Diagnose: is the email the problem or the broker selection? Draft one revised email and pick 5 different brokers to try.</code></pre>
+<p><strong>Stack it:</strong> when a pocket listing arrives, qualify it
+fast.</p>
+<pre><code>A broker sent me this listing: [paste details]. Run the aq-analyzer skill on it today — brokers remember buyers who respond within 24 hours.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Never send a generic email with no buy box.</strong> Without
+specific criteria and financing proof you look like a tire-kicker, and
+brokers filter tire-kickers for a living.</li>
+<li><strong>Don't contact brokers before financing is real.</strong>
+"Are you pre-qualified?" is the first question on the intro call. If the
+answer is no, they won't send you deals — line up financing first.</li>
+<li><strong>Don't blast 50 brokers at once.</strong> Brokers in the same
+market talk. Start with 5, refine, then expand.</li>
+<li><strong>The intro call is the beginning, not the close.</strong>
+Check in every 2–4 weeks even when you're not ready to offer. Silent
+buyers get forgotten; consistent ones get the first look.</li>
+<li><strong>Never ghost a broker after they send a deal.</strong>
+Respond within 48 hours even to pass — with the reason. "Doesn't fit
+because [X], keep me in mind for [vertical]" keeps the pipeline
+alive.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 2 — the pre-market lane of the three-lane sourcing
+architecture (off-market deal-finder, broker relationships, on-market
+market-monitor). The goal is 3–5 active broker relationships feeding you
+pocket listings monthly. Next: <strong>Lesson 07 — Market
+Monitor</strong> to cover the on-market safety net.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/05-deal-finder.html"><span class="lbl">← Previous</span>Deal Finder</a><a class="next" href="../lessons/07-market-monitor.html"><span class="lbl">Next →</span>Market Monitor</a></nav>
 </main>
 </div>
 </body>

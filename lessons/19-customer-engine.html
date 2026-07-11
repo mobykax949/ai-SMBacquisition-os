@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>Customer Engine · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -86,7 +86,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/16-owner-dependency-audit.html"><span class="n">16</span>Owner Dependency Audit</a>
 <a class="nav" href="../lessons/17-sop-extractor.html"><span class="n">17</span>SOP Extractor</a>
 <a class="nav" href="../lessons/18-margin-finder.html"><span class="n">18</span>Margin Finder</a>
-<a class="nav" href="../lessons/19-customer-engine.html"><span class="n">19</span>Customer Engine</a>
+<a class="nav active" href="../lessons/19-customer-engine.html"><span class="n">19</span>Customer Engine</a>
 <a class="nav" href="../lessons/20-multiple-builder.html"><span class="n">20</span>Multiple Builder</a>
 <div class="group">The System</div>
 <a class="nav" href="../index.html#journey"><span class="n">09</span>Find Your Starting Point</a>
@@ -108,148 +108,143 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-19--the-customer-engine">Lesson 19 — The Customer
+Engine</h1>
+<p><em>Monetize the customer list you already own: reviews, win-backs,
+referrals, and follow-up that actually happens.</em></p>
+<p>Reading time: ~8 min · Track: Modernize · Prerequisite: operations
+stabilized, ~5 SOPs documented (Lessons 15–17)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>Most small businesses have revenue sitting dormant in their customer
+list: past customers gone quiet, happy customers never asked to refer,
+completed jobs with no review request, and follow-ups that live in the
+owner's head and never happen consistently. This skill builds four
+systems that run in the background — a review-generation cadence
+(request 3–7 days after job completion), a 3-email win-back campaign for
+dormant customers, a referral system with an easy form and an incentive,
+and five reusable AI-drafted nurture templates. The same rule as the
+modernization audit applies: nothing touches active customer
+relationships in week one — you build and test on past and future
+customers first.</p>
+<p><strong>You'll walk away with:</strong> four deployable systems —
+review sequence, win-back campaign, referral ask + form, and five
+nurture templates — with 30-day targets to measure against.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/customer-engine</code> shows in a
+fresh Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li>Your customer list in one place: names, emails, last purchase date,
+lifetime spend. Scattered across QuickBooks, spreadsheets, and email?
+Consolidate first.</li>
+<li>Segments counted: active (bought in 90 days), recent (3–6 months),
+dormant (6+ months), one-time-never-returned.</li>
+<li>An email tool or CRM to run the automations (Mailchimp,
+ActiveCampaign, or even manual sends to start).</li>
+<li>Works best with 100+ past customers and a repeat purchase
+cycle.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/customer-engine</code></pre>
+<p>Or build system by system:</p>
+<pre><code>Run the customer-engine skill for my business: [describe service]. My segments: [N] active, [N] recent, [N] dormant, [N] one-time. Build all four systems — review request sequence (send 3 days post-job + 7-day reminder), 3-email dormant win-back, referral request + form questions, and the 5 nurture templates. Draft everything for my approval; nothing sends until I say so.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Review sequence (2 emails)</td>
+<td>Thank-you + review link at day 3; gentle reminder at day 10, with a
+private-feedback path for unhappy customers</td>
+</tr>
+<tr>
+<td>Win-back campaign (3 emails)</td>
+<td>"We miss you" with offer → value-add tip or case study → last-chance
+with a time-limited incentive and a clean unsubscribe</td>
+</tr>
+<tr>
+<td>Referral system</td>
+<td>Warm request email to your happiest customers plus the referral form
+questions (name, contact, service needed)</td>
+</tr>
+<tr>
+<td>5 nurture templates</td>
+<td>Quote follow-up, post-purchase check-in, seasonal reminder,
+educational value-add, soft upsell/cross-sell — each under 100 words,
+reusable</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> each system monetizes trust you
+already earned. Reviews compound (10 new reviews move your local
+ranking, which moves inbound calls); dormant customers convert at a
+fraction of new-customer acquisition cost because they already know you;
+a $25 referral incentive routinely returns a customer worth <span
+class="math inline">500–</span>5,000 lifetime. The 30-day targets keep
+it honest: 10+ new reviews, 5–10% win-back response, 3+ referrals,
+10–20% nurture reply rate.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (segment safety check):</p>
+<pre><code>Before anything sends: verify my send lists. Show me who would receive the win-back campaign and confirm no one who purchased in the last 90 days is on it.</code></pre>
+<p><strong>Refine</strong> (day 30 numbers):</p>
+<pre><code>30-day results: [reviews posted, win-back responses, referrals, nurture replies]. Compare to targets, diagnose the weakest system, and revise its messaging. Should we add SMS to the review requests?</code></pre>
+<p><strong>Stack it:</strong> recurring revenue moves the multiple.</p>
+<pre><code>These systems added [X] reactivated customers and [Y]% more repeat purchases. Re-score my recurring-revenue dimension in the multiple-builder skill.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Never send win-back emails to active customers.</strong>
+Blasting "we miss you" at someone who bought last week looks
+disorganized and burns trust. Segment carefully; actives get different
+messaging.</li>
+<li><strong>Time the review ask.</strong> Same-day requests land before
+the customer experienced the result. Wait 3–7 days — 2 weeks for
+slow-outcome services like landscaping or pest control.</li>
+<li><strong>Check the inbox daily.</strong> Automated sequences plus
+ignored replies equals missed revenue. A customer who replies with a
+question gets a personal answer, not another automation.</li>
+<li><strong>Offer the referral incentive.</strong> Some customers refer
+for free; most need the nudge. The $25 gift card ROI is not a close
+call.</li>
+<li><strong>A 3% response is a system working, not failing.</strong>
+Refine the offer, run it again in 90 days. The customer whose situation
+changed since last time responds next time.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch A, step 5 — the revenue side of modernization, after
+operations are stable. The compounding output (reviews, reactivations,
+repeat purchases) feeds both the P&amp;L and your recurring-revenue
+score in <strong>Lesson 20 — The Multiple Builder</strong>, the final
+step of the track.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/18-margin-finder.html"><span class="lbl">← Previous</span>Margin Finder</a><a class="next" href="../lessons/20-multiple-builder.html"><span class="lbl">Next →</span>Multiple Builder</a></nav>
 </main>
 </div>
 </body>

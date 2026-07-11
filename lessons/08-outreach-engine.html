@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Start Here · SMB Wealth Builder</title>
+<title>Outreach Engine · SMB Wealth Builder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ article li{margin:5px 0}
 <aside class="sidebar">
 <a class="brand" href="../index.html">SMB Wealth Builder<small>ai.smbwealthbuilder.com</small></a>
 <div class="group">Start Here</div>
-<a class="nav active" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
+<a class="nav" href="../setup/00-start-here-newbie.html"><span class="n">00</span>Start Here (Newbie)</a>
 <a class="nav" href="../setup/01-getting-started.html"><span class="n">01</span>Getting Started</a>
 <a class="nav" href="../setup/01b-turn-on-cowork.html"><span class="n">01b</span>Cowork &amp; Install</a>
 <a class="nav" href="../setup/02-projects-setup.html"><span class="n">02</span>Projects Setup</a>
@@ -75,7 +75,7 @@ article li{margin:5px 0}
 <a class="nav" href="../lessons/05-deal-finder.html"><span class="n">05</span>Deal Finder</a>
 <a class="nav" href="../lessons/06-broker-finder.html"><span class="n">06</span>Broker Finder</a>
 <a class="nav" href="../lessons/07-market-monitor.html"><span class="n">07</span>Market Monitor</a>
-<a class="nav" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
+<a class="nav active" href="../lessons/08-outreach-engine.html"><span class="n">08</span>Outreach Engine</a>
 <a class="nav" href="../lessons/09-aq-analyzer.html"><span class="n">09</span>AQ Analyzer</a>
 <a class="nav" href="../lessons/10-discovery-interviewer.html"><span class="n">10</span>Discovery Interviewer</a>
 <a class="nav" href="../lessons/11-valuation.html"><span class="n">11</span>Valuation & Add-Backs</a>
@@ -108,148 +108,141 @@ article li{margin:5px 0}
 <main class="content">
 <div class="crumb"><a href="../index.html">← Home</a></div>
 <article>
-<h1 id="start-here--the-complete-newbie-walkthrough">Start Here — The
-Complete Newbie Walkthrough</h1>
-<p><em>Never used Claude before? This is the only page you need to go
-from zero to your first deal analysis. Follow it top to bottom. Total
-time: about 20 minutes. (Guides 01–08 zoom into individual steps if you
-want more depth on any one — but you don't need them to finish this
-page.)</em></p>
-<p>You do not need to know how to code. You do not need a "developer"
-anything. If you can install an app and copy-paste, you can do this.</p>
+<h1 id="lesson-08--the-outreach-engine">Lesson 08 — The Outreach
+Engine</h1>
+<p><em>Personalized first contact across five channels and three seller
+archetypes — drafted by AI, sent only after you approve.</em></p>
+<p>Reading time: ~8 min · Track: Acquire · Prerequisite: a target list
+(<code>deal-finder</code>, Lesson 05)</p>
 <hr />
-<h2 id="part-1--get-claude-5-minutes">Part 1 — Get Claude (5
-minutes)</h2>
+<h2 id="what-this-does">What this does</h2>
+<p>The Frasier 5-channel outreach machine. Give it a target seller and
+it generates first-contact drafts for warm intro, phone script, mailed
+letter, LinkedIn request, or social DM — each built on the verbatim EPIC
+scripts and matched to one of three seller archetypes: cold investor,
+strategic/related-business (the lowest-threat, highest-response angle),
+or distressed-capital-provider. Every draft is staged for your review;
+nothing sends automatically. The engine runs Step 1 of the EPIC 3-step
+sequence (personalized bulk outreach → rapport conversation →
+data-gathering conversation) against the benchmark funnel: 100
+outreaches → 60 responses → 10 conversations → 5 offers → 1–3 deals.</p>
+<p><strong>You'll walk away with:</strong> ready-to-send outreach drafts
+per channel, and a logged funnel you can troubleshoot with real
+numbers.</p>
+<hr />
+<h2 id="step-1--install-the-plugin-one-time-gets-you-every-skill">Step 1
+— Install the plugin (one time, gets you every skill)</h2>
+<p>All skills ship in the SMB Wealth Builder plugin. <em>(Already
+installed? Skip to Step 2.)</em></p>
 <ol type="1">
-<li>Go to <strong>claude.com</strong> and click <strong>Sign
-up</strong>. Choose the <strong>Pro plan ($20/month)</strong> — the free
-plan will not run these tools.</li>
-<li>Go to <strong>claude.com/download</strong> and download the
-<strong>Claude Desktop app</strong> for your computer (Mac or
-Windows).</li>
-<li>Open the app and sign in with the account you just made.</li>
+<li>In Claude Desktop: <strong>Customize</strong> →
+<strong>Plugins</strong> tab.</li>
+<li><strong>+</strong> → <strong>Add marketplace</strong> → paste
+<code>mobykax949/ai-SMBacquisition-os</code></li>
+<li>Install <strong>smb-wealth-builder</strong>, <strong>User</strong>
+scope.</li>
+<li>New Cowork chat, type <code>/</code> — the skills appear.</li>
 </ol>
-<blockquote>
-<p><strong>Mac users:</strong> you need an Apple Silicon Mac (M1 chip or
-newer, made 2020 or later). If you have an older Intel Mac, the plugin
-will not run — email us and we will help you with the browser
-version.</p>
-</blockquote>
-<p><strong>You are done with Part 1 when:</strong> the Claude app is
-open on your computer and you are signed in.</p>
+<p><strong>Done when:</strong> <code>/outreach-engine</code> shows in a
+fresh Cowork chat.</p>
 <hr />
-<h2 id="part-2--turn-on-cowork-2-minutes">Part 2 — Turn on Cowork (2
-minutes)</h2>
-<p>Cowork is the mode where Claude does real work and saves real files
-for you.</p>
-<ol type="1">
-<li>In the Claude app, find the mode switch and click
-<strong>Cowork</strong>.</li>
-<li>Go to <strong>Settings → Cowork</strong> and set permissions to
-<strong>"Ask before acting."</strong> This makes Claude check with you
-before it does anything. Keep it here while you learn.</li>
-</ol>
-<p><strong>You are done with Part 2 when:</strong> you see "Cowork"
-selected at the top of the app.</p>
-<hr />
-<h2 id="part-3--install-the-plugin-3-minutes-one-time">Part 3 — Install
-the Plugin (3 minutes, one time)</h2>
-<p>This step gives you all the skills at once. You do NOT download them
-one by one, and you do NOT need a terminal — it is all
-point-and-click.</p>
-<p>Think of it as two pieces: a <strong>marketplace</strong> (the store)
-and the <strong>plugin</strong> (the app inside the store). You add the
-store, then install the app. Every skill comes inside that one app.</p>
-<ol type="1">
-<li>In Claude Desktop, click <strong>Customize</strong> in the left
-sidebar, then open the <strong>Plugins</strong> tab.</li>
-<li>Click the <strong>+</strong> button in the <strong>top-right
-corner</strong>, then choose <strong>Add marketplace</strong>.
-<blockquote>
-<p>⚠️ Do NOT type "marketplace" into the search box — that only searches
-plugin <em>names</em> and finds nothing. The marketplace is a source you
-<em>add</em> with the <strong>+</strong> button, not something you
-search for.</p>
-</blockquote></li>
-<li>In the box, paste this exactly and confirm:
-<pre><code>mobykax949/ai-SMBacquisition-os</code></pre></li>
-<li>The plugin <strong>smb-wealth-builder</strong> now appears in the
-list. Click it, then click <strong>Install</strong>. If it asks for a
-scope, choose <strong>User</strong> (so the skills work in every chat,
-not just one project).
-<blockquote>
-<p>Don't see it immediately? Click the <strong>↻ refresh</strong> icon
-at the top-right (next to "Filter by").</p>
-</blockquote></li>
-<li>Start a <strong>brand-new Cowork conversation</strong> and type a
-single slash <strong>/</strong>. You will see the skills — for example
-<code>/journey-navigator</code> and
-<code>/setup-my-workspace</code>.</li>
-</ol>
-<p><strong>You are done with Part 3 when:</strong> typing
-<strong>/</strong> in a new chat shows the acquisition skills.</p>
-<blockquote>
-<p><strong>Nothing showed up?</strong> 99% of the time it is because you
-did not start a NEW chat. Close the chat, open a fresh one, and type
-<strong>/</strong> again.</p>
-</blockquote>
-<hr />
-<h2 id="part-4--set-up-your-workspace-10-minutes">Part 4 — Set Up Your
-Workspace (10 minutes)</h2>
-<p>Now make Claude yours. This one skill interviews you and sets
-everything up so Claude knows your situation in every future chat.</p>
-<ol type="1">
-<li>In a Cowork chat, paste this:
-<pre><code>Run the setup-my-workspace skill. Interview me one question at a time and set up my workspace.</code></pre></li>
-<li>Answer Claude's questions honestly — what you own, your budget,
-where you live, what you want. Use real numbers.</li>
-<li>When it finishes, Claude will have created three files for you and
-will walk you through saving them into a <strong>Project</strong> so it
-remembers you forever.</li>
-<li>Follow Claude's step-by-step Project instructions (it will tell you
-exactly what to click).</li>
-</ol>
-<p><strong>You are done with Part 4 when:</strong> Claude has told you
-your "journey stage" and which skill to run next.</p>
-<hr />
-<h2 id="part-5--confirm-your-strategy-journey-navigator">Part 5 —
-Confirm Your Strategy (Journey Navigator)</h2>
-<p>Setup already placed you in a journey stage. Now <strong>confirm
-it.</strong> In a Cowork chat, run:</p>
-<pre><code>/journey-navigator</code></pre>
-<p>It reads the profile setup just wrote, pressure-tests your stage
-against the strongest alternative, and tells you the one play to run —
-and the road not taken. You do not re-answer everything; it works from
-your profile.</p>
-<blockquote>
-<p><strong>↻ Come back to this skill whenever your situation
-changes</strong> — you close a deal, sell a business, raise capital, or
-move. Your stage is not permanent. Re-run
-<code>/journey-navigator</code> and it re-diagnoses and updates your
-profile, so every other skill stays aimed at the right target.</p>
-</blockquote>
-<p>Then follow the lessons in order. Each one is a skill, and each skill
-produces a real file you can use. Next up is usually the <strong>Buy-Box
-Builder</strong> (defines what you are hunting).</p>
-<hr />
-<h2 id="if-you-get-stuck">If you get stuck</h2>
+<h2 id="step-2--give-claude-what-it-needs">Step 2 — Give Claude what it
+needs</h2>
 <ul>
-<li><strong>The plugin will not install:</strong> make sure you pasted
-<code>mobykax949/ai-SMBacquisition-os</code> exactly, with no
-spaces.</li>
-<li><strong>Skills do not appear:</strong> start a NEW conversation.
-This is the #1 issue.</li>
-<li><strong>Claude forgets who I am each time:</strong> you skipped the
-Project step in Part 4. Re-run setup-my-workspace and follow the Project
-setup.</li>
-<li><strong>Still stuck:</strong> [community/support link] — send a
-screenshot and we will get you running.</li>
+<li>A real target: seller name, business name, industry, location, rough
+size. This skill writes copy for leads you already have — deal-finder
+builds the list.</li>
+<li>Any intel on motivation (retiring, distressed, strategic exit) to
+pick the archetype. Unsure? Default to strategic/related-business.</li>
+<li>Your own positioning facts: your name, your business (for the
+strategic angle), your buy box in one line.</li>
+<li>A spreadsheet or CRM to log every send.</li>
 </ul>
-<p>Welcome in. Next: <strong>Lesson 00 — The Journey
-Navigator.</strong></p>
+<hr />
+<h2 id="step-3--run-it-copy-this">Step 3 — Run it (copy this)</h2>
+<pre><code>/outreach-engine</code></pre>
+<p>Or specify the job:</p>
+<pre><code>Run the outreach-engine skill. Seller: [name], [business], [industry], [city, state], size [revenue/employees if known]. My intel: [motivation signals]. Me: [name], positioning [private investor / owner of a related [industry] business / capital provider]. Archetype: [strategic-related-business]. Generate drafts for [phone script + LinkedIn request + mailed letter], personalized, each ending with a clear call-to-action. Stage for my approval — do not send anything.</code></pre>
+<hr />
+<h2 id="what-claude-creates">What Claude creates</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File / output</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel drafts</td>
+<td>Opener, pitch, ask, next-step logistics per channel — under 150
+words for letter/DM, under 90 seconds for phone</td>
+</tr>
+<tr>
+<td>Archetype framing</td>
+<td>Cold-investor, strategic/related (reads as partnership, not
+acquisition), or distressed-capital positioning applied
+consistently</td>
+</tr>
+<tr>
+<td>Follow-up draft</td>
+<td>The polite no-response follow-up — often the message that converts,
+because it shows persistence</td>
+</tr>
+<tr>
+<td>Outreach log format</td>
+<td>Channel, date sent, response, outcome — the funnel data you review
+every 20 sends</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How it works:</strong> the EPIC scripts are templates, not
+copy-paste — the engine personalizes each with the seller's name,
+business, niche, and one specific observation, because generic bulk
+messages get reported as spam. The goal of every message is the same:
+move up-channel to a live call fast. When a seller replies, you respond
+once with enthusiasm, propose a 15-minute call, and send a calendar
+link.</p>
+<hr />
+<h2 id="step-4--test-it-refine-it-stack-it">Step 4 — Test it, refine it,
+stack it</h2>
+<p><strong>Test</strong> (multi-channel one seller):</p>
+<pre><code>Same seller, three channels: phone script, LinkedIn request, mailed letter. Strategic angle, consistent positioning, tailored to each channel&#39;s norms. Stage all three.</code></pre>
+<p><strong>Refine</strong> (the funnel tells you what's broken):</p>
+<pre><code>My last 20 outreaches: [N] responses. Benchmark is 60%. Diagnose: target list too cold, positioning not credible, or wrong archetype? Rewrite my worst-performing draft.</code></pre>
+<p><strong>Stack it:</strong> a positive reply goes straight to the
+seller deep dive.</p>
+<pre><code>[Seller] replied positively. Draft my one enthusiastic reply proposing a 15-minute call with my calendar link, then prep me: run the discovery-interviewer skill so I&#39;m ready for the first call.</code></pre>
+<hr />
+<h2 id="tips--troubleshooting">Tips &amp; troubleshooting</h2>
+<ul>
+<li><strong>Personalize or perish.</strong> Fifty identical LinkedIn
+messages get you reported for spam. Name, business, industry, and one
+specific observation — every time.</li>
+<li><strong>Match the archetype to reality.</strong> The
+distressed-capital pitch offends a healthy, profitable seller. Use it
+only with visible distress signals; otherwise default to
+strategic/related-business.</li>
+<li><strong>Move to a live call fast.</strong> Don't spend three days
+trading DMs. One warm reply, then propose the call. LinkedIn and email
+are stepping stones, not the destination.</li>
+<li><strong>Prepare for the responses before you send.</strong> 100
+outreaches can mean 60 inbound replies in days. Block response time,
+have your calendar link ready, and have the discovery script prepped
+before the batch goes out.</li>
+<li><strong>Follow up once, maybe twice — then stop.</strong> Wait 5–7
+days, send the polite follow-up. Three unanswered messages means not
+interested; move down the list.</li>
+</ul>
+<hr />
+<h2 id="where-this-fits">Where this fits</h2>
+<p>Branch B, step 3 — the bridge between sourcing (Lessons 05–07) and
+qualification. A responder moves to the first call, and post-contact you
+score them: <strong>Lesson 09 — The AQ Analyzer</strong>. The deep-dive
+call itself is <strong>Lesson 10 — Discovery Interviewer</strong>.</p>
 
 </article>
-<nav class="pager"><a class="next" href="../setup/01-getting-started.html"><span class="lbl">Next →</span>Getting Started</a></nav>
+<nav class="pager"><a class="prev" href="../lessons/07-market-monitor.html"><span class="lbl">← Previous</span>Market Monitor</a><a class="next" href="../lessons/09-aq-analyzer.html"><span class="lbl">Next →</span>AQ Analyzer</a></nav>
 </main>
 </div>
 </body>
