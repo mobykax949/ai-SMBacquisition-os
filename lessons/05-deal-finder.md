@@ -59,7 +59,7 @@ Run the deal-finder skill: [vertical] in [city]. Web search for 30+ businesses, 
 | AQ pre-score table | 6 of 13 criteria scored green/yellow/red before first contact: location, broker (off-market = green), history, own property, staff, inventory |
 | `deal-finder-<vertical>-<city>-YYYY-MM-DD.md` | The final ranked list — your outreach file |
 
-**How it works:** the other 7 AQ criteria (seller finance, margin, multiple, and so on) require a seller conversation, so they stay open until the first call. Pre-scoring the public 6 cuts the outreach list by 30–50% and points your limited call time at real targets. Property ownership gets checked via Street View or assessor records — a standalone building is both a financing asset and a succession signal.
+**How it works:** the other 7 AQ criteria (seller finance, margin, multiple, and so on) require a seller conversation, so they stay open until the first call. Pre-scoring the public 6 typically trims a meaningful slice of the outreach list and points your limited call time at real targets. Property ownership is one *you* check — open Google Street View or the county assessor site yourself and tell Claude what you see (Claude can't view Street View) — a standalone building is both a financing asset and a succession signal.
 
 ---
 
@@ -94,4 +94,4 @@ Take the top 5 from my deal-finder list and run the outreach-engine skill: draft
 
 ## Where this fits
 
-Branch B, step 2 — the sourcing trio's off-market lane (alongside broker-finder and market-monitor). Re-run each vertical every 2–3 months: businesses age into the succession window and circumstances change. Next: **Lesson 06 — Broker Finder** for the pocket-listing lane, then **Lesson 08 — Outreach Engine** to make contact.
+Branch B, step 2 — the sourcing trio's off-market lane (alongside broker-finder and market-monitor). Re-run each vertical every 2–3 months: businesses age into the succession window and circumstances change. Next: **Lesson 06 — Broker Finder** for the pocket-listing lane and **Lesson 07 — Market Monitor** for the on-market comps lane, then **Lesson 08 — Outreach Engine** to make contact.

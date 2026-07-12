@@ -8,7 +8,7 @@ Reading time: ~8 min · Track: Acquire · Prerequisite: a target list (`deal-fin
 
 ## What this does
 
-The Frasier 6-channel outreach machine. Give it a target seller and it generates first-contact drafts for warm intro, phone script, mailed letter, LinkedIn request, social DM, or cold email — each built on the verbatim EPIC scripts and matched to one of three seller archetypes: cold investor, strategic/related-business (the lowest-threat, highest-response angle), or distressed-capital-provider. The email channel uses the EPIC "puppy method" — a cute puppy/kitten image at the top, which the playbook reports tested at ~75% higher open rate (Frasier's stated result, not an independently verified benchmark), plus a curiosity subject line and "exploring opportunities" framing. Every draft is staged for your review; nothing sends automatically. The engine runs Step 1 of the EPIC 3-step sequence (personalized bulk outreach → rapport conversation → data-gathering conversation) against the benchmark funnel: 100 outreaches → 60 responses → 10 conversations → 5 offers → 1–3 deals.
+The Frasier 6-channel outreach machine. Give it a target seller and it generates first-contact drafts for warm intro, phone script, mailed letter, LinkedIn request, social DM, or cold email — each built on the verbatim EPIC scripts and matched to one of three seller archetypes: cold investor, strategic/related-business (the lowest-threat, highest-response angle), or distressed-capital-provider. The email channel uses the EPIC "puppy method" — a cute puppy/kitten image at the top, which the playbook reports tested at ~75% higher open rate (Frasier's stated result, not an independently verified benchmark), plus a curiosity subject line and "exploring opportunities" framing. Every draft is staged for your review; nothing sends automatically. The engine runs Step 1 of the EPIC 3-step sequence (personalized bulk outreach → rapport conversation → data-gathering conversation) against the EPIC funnel: 100 outreaches → 60 responses → 10 conversations → 5 offers → 1–3 deals. (That funnel is the EPIC course's stated benchmark, not a typical cold-outreach result — pure cold channels usually respond at a small fraction of 60%. Use the funnel as the shape of the process; judge your own numbers by their trend, not by that ceiling.)
 
 **You'll walk away with:** ready-to-send outreach drafts per channel, and a logged funnel you can troubleshoot with real numbers.
 
@@ -72,7 +72,7 @@ Same seller, three channels: phone script, LinkedIn request, mailed letter. Stra
 
 **Refine** (the funnel tells you what's broken):
 ```
-My last 20 outreaches: [N] responses. Benchmark is 60%. Diagnose: target list too cold, positioning not credible, or wrong archetype? Rewrite my worst-performing draft.
+My last 20 outreaches: [N] responses. The EPIC course benchmark is 60% but real cold channels run far lower — judge my trend, not the ceiling. Diagnose: target list too cold, positioning not credible, or wrong archetype? Rewrite my worst-performing draft.
 ```
 
 **Try the puppy method** (the tested email variant):
@@ -92,7 +92,7 @@ Draft a cold email to [seller] using the EPIC puppy method: mark where a cute pu
 - **Personalize or perish.** Fifty identical LinkedIn messages get you reported for spam. Name, business, industry, and one specific observation — every time.
 - **Match the archetype to reality.** The distressed-capital pitch offends a healthy, profitable seller. Use it only with visible distress signals; otherwise default to strategic/related-business.
 - **Move to a live call fast.** Don't spend three days trading DMs. One warm reply, then propose the call. LinkedIn and email are stepping stones, not the destination.
-- **Prepare for the responses before you send.** 100 outreaches can mean 60 inbound replies in days. Block response time, have your calendar link ready, and have the discovery script prepped before the batch goes out.
+- **Prepare for the responses before you send.** A batch of outreaches can produce a burst of inbound replies within days. Block response time, have your calendar link ready, and have the discovery script prepped before the batch goes out.
 - **Follow up once, maybe twice — then stop.** Wait 5–7 days, send the polite follow-up. Three unanswered messages means not interested; move down the list.
 
 ---

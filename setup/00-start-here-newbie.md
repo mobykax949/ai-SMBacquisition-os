@@ -91,4 +91,4 @@ Then follow the lessons in order. Each one is a skill, and each skill produces a
 - **Claude forgets who I am each time:** you skipped the Project step in Part 4. Re-run setup-my-workspace and follow the Project setup.
 - **Still stuck:** [community/support link] — send a screenshot and we will get you running.
 
-Welcome in. Next: **Lesson 00 — The Journey Navigator.**
+Welcome in. Next on the lesson track: **Lesson 01 — Set Up My Workspace** (the front door — you may have already run it in Part 4), then **Lesson 00 — The Journey Navigator** to confirm your stage.

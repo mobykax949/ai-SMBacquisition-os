@@ -14,6 +14,8 @@ The post-acquisition AI modernization planner. This skill generates a 30-day roa
 
 Run modernization-audit within the first week of ownership, after you have taken control of the business, met the team, and completed the seller transition handoff. You need a list of the business's current processes (sales, operations, customer service, accounting, marketing), the tools and software in use, and the owner's daily task list (shadowed during transition). If you run this before closing, the recommendations will be speculative. Real modernization planning requires operational access.
 
+**Long-time owners (Stage 1 — you did not just buy this business):** this skill works for you too, with two adjustments. The "task list shadowed during transition" is simply your own week log (run `owner-dependency-audit` to build it — that is the natural first step for an existing owner), and the week-one "stabilize, earn credibility" mandate relaxes because you already have the team's trust. The four-bucket triage, the customer-facing cardinal rule, and the 5-changes-per-month limit all still apply.
+
 ## Steps
 
 1. **Inventory the owner dependencies.** During the transition period, shadow the owner and document every task they perform. Note which tasks are (a) critical and customer-facing, (b) critical but internal, (c) administrative overhead, (d) strategic/growth work. Ask the team: "What will break if the owner is unavailable for a week?" Those are your dependencies. Paste this list into Prompt 1.

@@ -1,6 +1,6 @@
 # Lesson 18 — The Margin Finder
 
-*AI on your P&L: the pricing gaps, unbilled work, and stale vendor contracts hiding 10–20 points of margin.*
+*AI on your P&L: hunting the pricing gaps, unbilled work, and stale vendor contracts that can hide many points of margin.*
 
 Reading time: ~8 min · Track: Modernize · Prerequisite: 12+ months of categorized P&L data
 

@@ -43,7 +43,7 @@ The difference between "Claude summarized this" and "Claude delivered a deal-rea
 
 **Owner-level prompt (RCTF):**
 > **Role:** You are a valuation analyst specializing in small business acquisitions.  
-> **Context:** This is a $2.3M revenue, $680K SDE B2B consulting firm in Orange County. Industry standard multiples: owner-operated businesses trade at 2.4x SDE, professionally managed at 4.0x EBITDA.  
+> **Context:** This is a $2.3M revenue, $680K SDE B2B consulting firm in Orange County. Anchor multiples from the EPIC method (Frasier's landscape — this system's working anchors, not a market survey): owner-operated ~2.4x SDE, professionally managed ~4.0x EBITDA.  
 > **Task:** Build a 3-comp valuation model. Pull comparable sales from the web (B2B professional services, $1-3M revenue, last 24 months). Normalize for SDE. Give me a fair-value range and explain any adjustments.  
 > **Format:** Deliver as a markdown table with columns: Business / Revenue / SDE / Sale Price / Multiple / Notes. Follow with a summary paragraph: fair-value range, recommended offer, reasoning.
 

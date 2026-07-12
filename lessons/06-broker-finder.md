@@ -29,7 +29,7 @@ All skills ship in the SMB Wealth Builder plugin. *(Already installed? Skip to S
 
 ## Step 2 — Give Claude what it needs
 
-- `buy-box.md` in Project knowledge, plus a 1-page PDF version to attach to emails.
+- `buy-box.md` in Project knowledge, plus a 1-page PDF version to attach to emails (ask Claude to format your buy box as a one-pager, then print/save it to PDF).
 - Proof of financing to reference: an SBA pre-qualification letter, 1031 equity amount parked with a qualified intermediary, or cash available. If you have none of these yet, get financing lined up before running this — brokers will ask on the first call.
 - Your target geography and top 2 verticals (brokers specialize; narrow the search).
 

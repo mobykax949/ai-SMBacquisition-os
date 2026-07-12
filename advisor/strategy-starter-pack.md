@@ -4,6 +4,8 @@ Representative strategies from the 13 EPIC funding families. Use these to build 
 
 *Note: This is the FREE starter kit. The paid community edition includes the full 216-strategy taxonomy.*
 
+*These are financing concepts, not legal, tax, or lending advice. Several (debt assumption, credit bridges, pre-close promotions) carry real legal and tax consequences — run any structure past your attorney, CPA, and lender before you sign anything.*
+
 ---
 
 ## Family A: Earn-In / Sweat Equity

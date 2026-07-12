@@ -87,7 +87,7 @@ Run the vertical-research skill on my #1 vertical: [vertical] in [geography]. I 
 - **Never skip the stress-test.** It catches impossible boxes — criteria no real listing can satisfy — before you burn weeks of outreach on deals that don't exist.
 - **Set the SDE floor from the market, not just your needs.** If you need $300K but your vertical pays owners $150K, the answer is bigger revenue or a different vertical — not wishful screening.
 - **Remember the 70% Rule.** Frasier's discipline: you should be able to kill 70% of bad deals in the first conversation. If everything sounds interesting, your box is too loose — tighten until 7 of 10 listings are obvious passes.
-- **Keep 1031 money on its own track.** Like-kind rules force 1031 equity into real-estate-based businesses (car wash, laundromat, storage) on a hard 45-day identification / 180-day close clock. Mix the tracks and you'll miss the window chasing operating businesses it can't buy.
+- **Keep 1031 money on its own track.** Like-kind rules generally confine 1031 equity to real property — in practice, real-estate-based businesses (car wash, laundromat, storage) where the equity buys the land and building — on a hard 45-day identification / 180-day close clock. Mix the tracks and you'll miss the window chasing operating businesses it can't buy. This is tax law with real teeth: engage a Qualified Intermediary and a CPA before the clock starts — nothing here is tax advice.
 
 ---
 
