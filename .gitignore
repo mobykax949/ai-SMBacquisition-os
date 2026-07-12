@@ -4,3 +4,4 @@ node_modules/
 _dogfood/
 _handoff/
 *.zip
+.claude/worktrees/
