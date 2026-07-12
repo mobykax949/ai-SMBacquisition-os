@@ -136,6 +136,12 @@ You are a valuation expert. Explain the valuation multiple landscape for [indust
 You are a financial analyst. Review this P&L for [business name]. Identify legitimate add-backs (owner salary above replacement cost, personal expenses run through the business, one-time costs, discretionary spending) and calculate normalized SDE. Critical: subtract the cost to replace the owner's role BEFORE trusting the SDE (if owner works 60 hours/week doing sales + ops, hiring a replacement costs $X). Deliver: (1) list of add-backs with amounts, (2) normalized SDE, (3) adjusted valuation multiple if SDE changes materially.
 ```
 
+### **Value a traffic/marketing asset (ZDOT method)**
+*When: You are a Stage-3 searcher evaluating a $0-traffic asset (email list, social account, group, SEO property, show/podcast, small digital property) rather than an operating business.*
+```
+You are an acquisition analyst using the EPIC ZDOT traffic-asset method. I am evaluating this asset: [describe: type (list/social/group/SEO/show/IP), audience size, engagement, niche]. My current customer economics: [target CAC $X], [AOV $Y], [conversion assumptions if known]. Model the asset as a mini-business: Monthly Buyers = Traffic x Conversion Rate; Rev/Month = Buyers x AOV; Rev/Year = x12; Net Profit = Rev/Year - 12-month ops cost; ZDOT CAC = ops cost / buyers. Compare ZDOT CAC to my current CAC — negative delta means the asset acquires customers cheaper than I do today, and the annual savings is the value of owning it. Use ONLY numbers I provide or that we verify; label every assumption. Deliver: the per-asset value model, suggested max offer (lower of ask vs. value), and what data I still need from the seller.
+```
+
 ### **Run the tax-return test**
 *When: You need to verify the P&L matches the tax returns.*
 ```

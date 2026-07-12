@@ -8,7 +8,7 @@ Reading time: ~9 min · Track: Acquire · Prerequisite: a seller who said yes to
 
 ## What this does
 
-The discovery call is where deals are won or lost, and most buyers wing it. This skill runs the EPIC 50-question deep dive across six sections — story and motivation, operations, revenue and customers, profitability, marketing and sales, systems and documentation — behind the proven call frame: position yourself as an investor, not a broker (no fees), explain the three-phase process (discovery → valuation → offer), and close with the financials ask and the scarcity lever ("our team vets only about six percent of deals to the next phase"). Nervous? The built-in simulator role-plays a realistic retiring owner, lets you rehearse the whole call, then scores you on rapport, information extraction, and next-step clarity.
+The discovery call is where deals are won or lost, and most buyers wing it. This skill runs the EPIC 50-question deep dive across six sections — story and motivation, operations, revenue and customers, profitability, marketing and sales, systems and documentation — behind the proven call frame: position yourself as an investor, not a broker (no fees), explain the three-phase process (discovery → valuation → offer), and close with the financials ask and the scarcity lever — the EPIC script's line is "our team vets only about six percent of deals to the next phase." (That line comes from EPIC's team-scale operation. Adapt it to what is true for you — e.g., "I only take a small fraction of the deals I look at past this stage." Never state a team or a statistic you don't have; sellers check.) Nervous? The built-in simulator role-plays a realistic retiring owner, lets you rehearse the whole call, then scores you on rapport, information extraction, and next-step clarity.
 
 **You'll walk away with:** a prioritized question guide for the live call (or a scored rehearsal), and a post-call debrief with red flags and a proceed/renegotiate/walk recommendation.
 
@@ -57,7 +57,7 @@ Run the discovery-interviewer skill in live-call mode. Seller: [name], [business
 | Simulator session + scorecard | Claude plays a realistic retiring owner (62–68, values legacy, cautious); after "end simulation," you're scored on rapport, extraction, and next-step clarity |
 | Live-call question guide | 15–20 prioritized questions across the six sections, dealbreakers flagged, tailored to the seller's industry |
 | The call frame | The opening script: investor-not-broker positioning, the three-phase explanation, agenda setting |
-| Post-call debrief | Key facts summarized, rough valuation range (2.4x–4.0x by quality), red flags scanned, proceed / renegotiate / walk |
+| Post-call debrief | Key facts summarized, rough valuation range (2.4x–3.5x SDE owner-op band by quality; labeled provisional until financials verify), red flags scanned, proceed / renegotiate / walk |
 
 **How it works:** the six sections map to what valuation will need — you leave the call with revenue, profit, owner role, customer concentration, and financials availability, or you know exactly what's missing. The close is scripted for momentum: three years of financials plus balance sheet and cash flow, sent all at once, with a 5–7 day deadline; the "napkin offer" framing plants the key idea early — the better the terms, the better the offer — which steers sellers toward seller financing before you ever negotiate.
 
@@ -88,7 +88,7 @@ The financials arrived. Run the valuation skill on [business]: TTM profit, add-b
 - **Don't demand financials in minute one.** Story and motivation first; after 20–30 minutes of trust, the financials request lands as process, not interrogation.
 - **Listen for motivation above all.** "Why are you selling, and why now?" separates serious sellers (retiring, burned out, health) from market-testers. No clear motivation = a deal that drags and dies.
 - **Don't rationalize red flags because you like the business.** Concentration over 30%, declining revenue, unresolved liabilities — you can price risk, you cannot erase it. Multiple flags: walk.
-- **Never end without a commitment.** Financials by a date, a follow-up call booked, an NDA signed. "I'll think about it" is how deals die; the six-percent scarcity line and a deadline keep momentum.
+- **Never end without a commitment.** Financials by a date, a follow-up call booked, an NDA signed. "I'll think about it" is how deals die; the scarcity line (adapted to your truth) and a deadline keep momentum.
 
 ---
 

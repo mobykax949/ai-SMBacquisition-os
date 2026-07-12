@@ -1,8 +1,8 @@
-# Lesson 00 — The Journey Navigator
+# Lesson 02b — The Journey Navigator
 
 *Run this right after `setup-my-workspace` to confirm your stage — and re-run it whenever your situation changes.*
 
-Reading time: ~8 min · Track: Both · Prerequisite: `setup-my-workspace` (Guide 02)
+Reading time: ~8 min · Track: Both · Prerequisite: `setup-my-workspace` (Lesson 01)
 
 ---
 
@@ -33,7 +33,7 @@ Already installed the plugin? Skip straight to Step 3.
 ## Step 2 — Give Claude what it needs
 
 - Cowork mode selected, **"Ask before acting"** on, and a work folder authorized (e.g. `~/Acquisitions`).
-- Nothing to pre-load — this is the first skill you run, so it has no prerequisites. It creates the profile everything else depends on.
+- Your `my-profile.md` from `setup-my-workspace` (Lesson 01) — the front door you run first. If you skipped it, the navigator will interview you from scratch instead.
 - Have a few honest facts about yourself ready: your available capital, whether you own a business now, your geography, and how many hours a week you can give this.
 
 ---
@@ -100,4 +100,4 @@ Using my-profile.md, run the buy-box-builder skill. Pre-fill my criteria from th
 
 ## Where this fits
 
-This runs right after `setup-my-workspace` (the front door) to confirm your stage — and again whenever your situation changes. It settles whether you're on the **AI Acquisition track** (buy the next business) or the **Scalable-with-AI track** (modernize the one you own), and in what order. Next stop for most stages: **Lesson 02 — The Buy-Box Builder.**
+This runs right after `setup-my-workspace` (the front door) to confirm your stage — and again whenever your situation changes. It settles whether you're on the **AI Acquisition track** (buy the next business) or the **Scalable-with-AI track** (modernize the one you own), and in what order. Next stop for most stages: **Lesson 03 — The Buy-Box Builder** (Lesson 02 sets up your Claude Project first if you haven't).

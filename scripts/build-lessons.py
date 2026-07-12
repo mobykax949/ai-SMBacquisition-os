@@ -21,7 +21,7 @@ SETUP = [
 LESSONS = [
     ("01", "01-setup-my-workspace",      "Setup My Workspace"),
     ("02", "02-claude-acquisition-setup","Acquisition Setup"),
-    ("00", "00-journey-navigator",       "Journey Navigator"),
+    ("02b","02b-journey-navigator",      "Journey Navigator"),
     ("03", "03-buy-box-builder",         "Buy-Box Builder"),
     ("04", "04-vertical-research",       "Vertical Research"),
     ("05", "05-deal-finder",             "Deal Finder"),

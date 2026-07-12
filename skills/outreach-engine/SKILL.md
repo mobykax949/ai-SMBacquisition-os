@@ -8,7 +8,7 @@ version: 1.0.0
 
 ## Overview
 
-The Frasier 6-channel outreach machine. This skill generates personalized first-contact messages to business sellers across six channels (warm intro request, phone script, mailed letter, LinkedIn connection request, social DM, cold email) and three seller archetypes (cold investor approach, strategic/related-business angle, distressed business). Each message follows the proven EPIC 3-step sequence (personalized bulk outreach, rapport-building conversation, data-gathering conversation) and the benchmark funnel (100 outreaches, 60 responses, 10 conversations, 5 offers, 1 to 3 deals). All drafts are staged for your review and approval. Nothing is sent automatically.
+The Frasier 6-channel outreach machine. This skill generates personalized first-contact messages to business sellers across six channels (warm intro request, phone script, mailed letter, LinkedIn connection request, social DM, cold email) and three seller archetypes (cold investor approach, strategic/related-business angle, distressed business). Each message follows the proven EPIC 3-step sequence (personalized bulk outreach, rapport-building conversation, data-gathering conversation) and the EPIC funnel (100 outreaches, 60 responses, 10 conversations, 5 offers, 1 to 3 deals — the course's stated benchmark; treat it as the shape of the process, since pure cold channels typically respond at a small fraction of that 60%). All drafts are staged for your review and approval. Nothing is sent automatically.
 
 ## When to Use
 
@@ -96,7 +96,7 @@ Original message sent: [paste your original outreach here]
 
 ## The Loop
 
-The outreach engine is Step 1 of the 3-step sequence. Your goal is to get a response. The benchmark funnel says 100 outreaches yield 60 responses. If your response rate is lower, troubleshoot: (1) Is your buy-box too narrow or your target list too cold? (2) Is your positioning believable (do you have a credible company or track record to reference)? (3) Are you using the strategic angle when available (it reliably out-responds the cold-investor angle because it reads as partnership, not acquisition)? Track every outreach in a spreadsheet. Note the channel, date sent, response received (yes/no), and outcome (moved to call / not interested / no response). After 20 outreaches, review your data and refine your approach. If a seller responds positively, move immediately to discovery-interviewer to book the first call.
+The outreach engine is Step 1 of the 3-step sequence. Your goal is to get a response. The EPIC funnel's stated benchmark is 60 responses per 100 outreaches — expect real cold-channel numbers to run well below that, and judge your trend rather than the ceiling. If your response rate stalls or falls, troubleshoot: (1) Is your buy-box too narrow or your target list too cold? (2) Is your positioning believable (do you have a credible company or track record to reference)? (3) Are you using the strategic angle when available (it reliably out-responds the cold-investor angle because it reads as partnership, not acquisition)? Track every outreach in a spreadsheet. Note the channel, date sent, response received (yes/no), and outcome (moved to call / not interested / no response). After 20 outreaches, review your data and refine your approach. If a seller responds positively, move immediately to discovery-interviewer to book the first call.
 
 **No outreach is wasted — the three outcomes.** Every owner you reach lands in one of three buckets: (1) **acquire** — wants to sell, move to discovery and the AQ Score; (2) **CFE / agency client** — not ready to sell but the business is real and needs help, so pivot to `cfe-converter` and pitch consulting-for-equity instead of walking away; (3) **referral** — not a fit, but ask who else they know in your vertical. A "no" to selling is a fork, not a dead end.
 
@@ -110,7 +110,7 @@ The outreach engine is Step 1 of the 3-step sequence. Your goal is to get a resp
 
 4. **Sending outreach without preparing for the response.** If 100 outreaches yield 60 responses, you will need to handle 60 inbound messages within a few days. Before you hit send on a batch, make sure you have time blocked to respond quickly, a calendar link ready to share, and your discovery script prepared. Slow responses kill momentum.
 
-5. **Giving up after one message.** The follow-up message (Prompt 3) often converts better than the initial outreach because it shows persistence and seriousness. If you get no response after the first message, wait 5 to 7 days, then send a polite follow-up. Do not follow up more than twice. Three messages with no response means they are not interested.
+5. **Giving up after one message.** The follow-up message (Prompt 4) often converts better than the initial outreach because it shows persistence and seriousness. If you get no response after the first message, wait 5 to 7 days, then send a polite follow-up. Do not follow up more than twice. Three messages with no response means they are not interested.
 
 ## Output
 

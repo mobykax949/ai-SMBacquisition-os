@@ -59,7 +59,7 @@ Run the customer-engine skill for my business: [describe service]. My segments: 
 | Referral system | Warm request email to your happiest customers plus the referral form questions (name, contact, service needed) |
 | 5 nurture templates | Quote follow-up, post-purchase check-in, seasonal reminder, educational value-add, soft upsell/cross-sell — each under 100 words, reusable |
 
-**How it works:** each system monetizes trust you already earned. Reviews compound (10 new reviews move your local ranking, which moves inbound calls); dormant customers convert at a fraction of new-customer acquisition cost because they already know you; a $25 referral incentive routinely returns a customer worth $500–$5,000 lifetime. The 30-day targets keep it honest: 10+ new reviews, 5–10% win-back response, 3+ referrals, 10–20% nurture reply rate.
+**How it works:** each system monetizes trust you already earned. Reviews compound (10 new reviews move your local ranking, which moves inbound calls); dormant customers convert at a fraction of new-customer acquisition cost because they already know you; a small referral incentive (say $25) can return a customer worth many times that in lifetime value. The 30-day targets keep it honest: 10+ new reviews, 5–10% win-back response, 3+ referrals, 10–20% nurture reply rate.
 
 ---
 

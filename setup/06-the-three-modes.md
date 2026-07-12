@@ -64,7 +64,7 @@ Claude will break the task into steps, research, analyze, and deliver a complete
 
 | Mode | Prompt | Output |
 |---|---|---|
-| **Quick Q&A** | "Is a 40% EBITDA margin good for a B2B consulting firm?" | One-paragraph answer: "Yes, 40% is strong. Industry average is 20-30%. This suggests pricing power or operational efficiency. Confirm it is sustainable and not dependent on one customer." |
+| **Quick Q&A** | "Is a 40% EBITDA margin good for a B2B consulting firm?" | One-paragraph answer (illustrative — ask Claude to cite a source for any real benchmark): "Yes, 40% is strong for the category. This suggests pricing power or operational efficiency. Confirm it is sustainable and not dependent on one customer." |
 | **Deep analysis** | "Score this CIM against my AQ criteria and recommend go/no-go." | AQ scorecard (13 criteria, green/yellow/red), red flags highlighted, recommendation with reasoning. 5-10 minutes. |
 | **Long agentic job** | "Build a full deal memo: valuation, comps, financing STACK, negotiation strategy, reds, recommendation." | 8-page memo with sections: executive summary, valuation model (3 comps), AQ scorecard, financing STACK (5 strategies), negotiation range (walk-away/realistic/dream), red flags + mitigations, go/no-go. 20-30 minutes. |
 

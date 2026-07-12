@@ -16,7 +16,7 @@ Run deal-stacker after you have completed valuation and settled on a realistic p
 
 ## Steps
 
-1. **Gather the four required inputs.** Target price (or walk-away/realistic/dream range from negotiation), TTM SDE, asset breakdown (real estate owned or leased, FF&E value, inventory value, intangibles), seller motivation category (retiring owner, distressed/capital-starved, strategic exit, health/personal).
+1. **Gather the four required inputs.** Target price (or walk-away/realistic/dream range from negotiation), TTM SDE, asset breakdown (real estate owned or leased, FF&E value, inventory value, intangibles), seller motivation category (retiring owner, distressed/capital-starved, strategic exit, health/personal). Also capture the two questions that drive structure per the EPIC worksheet: **"What will you do with the money?"** and **"What does the seller ultimately want?"** — a seller who needs a retirement paycheck takes notes and consulting income; a seller who needs cash now needs the lender-heavy stack.
 
 2. **Describe the situation to Claude.** Paste the first prompt below and fill in the bracketed placeholders with your target's facts. Claude will analyze the situation and identify which of the 13 financing families apply.
 
@@ -88,6 +88,8 @@ After Claude generates the three stacks, review them against your own liquidity 
 4. **Over-reliance on pre-sale/promo funding without testing demand first.** Strategies like rev-share pre-sale tests and the 4-day cash machine require access to the target's customer list and the ability to run a promotion before closing. If the seller refuses pre-close marketing (common), these strategies are unavailable. Confirm seller willingness before including them in your stack.
 
 5. **Not pressure-testing the stack against the seller's stated priorities.** A retiring seller optimizing for certainty and legacy will reject a high-earnout, low-upfront stack even if the total price is higher. A distressed seller needing immediate liquidity will reject long-term consulting offsets. Match your stack's structure to the seller's motivation, not just the dollar target.
+
+6. **Mixing SBA money with SBA-incompatible strategies.** (US program rules, not Frasier method — confirm current rules with your SBA lender.) If an SBA 7(a) loan is in your stack: earnouts are generally prohibited in SBA change-of-ownership deals; a seller note only counts toward your required equity injection if it is on standby (no payments) per the lender's terms; and the SBA requires a personal guaranty from 20%+ owners — which also constrains how co-investor equity is sliced. Design the stack around these rules from the start, or the lender will unwind it at the eleventh hour. On personal guaranties generally: PG exposure is a term to negotiate, not an afterthought — the EPIC materials include a "17 Ways to Avoid a Personal Guaranty" resource; ask your attorney and lender what applies to your structure.
 
 ## Output
 

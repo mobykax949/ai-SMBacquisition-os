@@ -24,7 +24,7 @@ Run discovery-interviewer after a seller responds positively to your outreach an
 
 4. **Conduct the live discovery call.** Follow the frame script to open the call (introduce yourself, explain the three-phase process, position yourself as investor not broker, set the agenda). Then work through the six sections: (1) Story and motivation (why selling, why now, what next), (2) Operations (employees, owner role, hours per week, vacation test), (3) Revenue and customers (top line, growth trend, customer concentration, LTV, CAC, recurring revenue), (4) Profitability (net profit, owner comp, add-backs, COGS, fixed overhead), (5) Marketing and sales (channels, conversion rates, customer acquisition, database size), (6) Systems and documentation (procedures, software, bookkeeping, financials availability). Take detailed notes.
 
-5. **Close with next steps.** At the end of the call, confirm the seller will send three years of financials, balance sheet, and cash flow statement. Give them a deadline (typically 5 to 7 days). Mention that your team vets only six percent of deals to the next phase (scarcity lever). Tell them what comes back after review is the "napkin offer" — the initial spreadsheet offer built around the terms they request — and plant the seed: the better the terms, the better the offer. Thank them and schedule the follow-up call.
+5. **Close with next steps.** At the end of the call, confirm the seller will send three years of financials, balance sheet, and cash flow statement. Give them a deadline (typically 5 to 7 days). Use the scarcity lever — the EPIC script's line is "our team vets only about six percent of deals to the next phase," but adapt it to what is true for you (a solo buyer says "I only take a small fraction of deals past this stage"); never claim a team or a statistic you don't have. Tell them what comes back after review is the "napkin offer" — the initial spreadsheet offer built around the terms they request — and plant the seed: the better the terms, the better the offer. Thank them and schedule the follow-up call.
 
 6. **Debrief and flag red flags.** After the call, paste your notes into Prompt 3. Claude summarizes the key facts, computes a rough valuation estimate, and flags any red flags (customer concentration above 30 percent, declining revenue trend, seller unwilling to stay for transition, unresolved legal liabilities, financials not available). If red flags are deal-breakers, exit politely. If the deal is green, proceed to valuation.
 
@@ -78,7 +78,7 @@ I just completed a discovery call with [seller name / business name]. Here are m
 
 [Paste your call notes here. Include any facts gathered on revenue, profit, owner role, customer concentration, seller motivation, financials availability, and any concerns.]
 
-Summarize the key facts. Compute a rough valuation range (SDE method, assume 2.4x to 4.0x multiple depending on quality). Flag any red flags in these categories:
+Summarize the key facts. Compute a rough valuation range (SDE method, 2.4x-3.5x owner-operated band depending on quality; the 4.0x anchor is an EBITDA multiple for professionally managed businesses and only applies if a management team runs this without the owner). Label the range as provisional if the SDE is seller-stated and unverified. Flag any red flags in these categories:
 - Customer concentration >30%
 - Declining revenue or profit trend
 - Seller unwilling to transition or train

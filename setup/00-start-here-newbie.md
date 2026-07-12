@@ -89,6 +89,6 @@ Then follow the lessons in order. Each one is a skill, and each skill produces a
 - **The plugin will not install:** make sure you pasted `mobykax949/ai-SMBacquisition-os` exactly, with no spaces.
 - **Skills do not appear:** start a NEW conversation. This is the #1 issue.
 - **Claude forgets who I am each time:** you skipped the Project step in Part 4. Re-run setup-my-workspace and follow the Project setup.
-- **Still stuck:** [community/support link] — send a screenshot and we will get you running.
+- **Still stuck:** email us via **[maxkoby.com](https://maxkoby.com)** — send a screenshot and we will get you running.
 
-Welcome in. Next: **Lesson 00 — The Journey Navigator.**
+Welcome in. Next on the lesson track: **Lesson 01 — Set Up My Workspace** (the front door — you may have already run it in Part 4), then **Lesson 02b — The Journey Navigator** to confirm your stage.

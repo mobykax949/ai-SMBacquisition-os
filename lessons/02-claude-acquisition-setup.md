@@ -42,7 +42,7 @@ All skills ship in the SMB Wealth Builder plugin — install once and everything
 /claude-acquisition-setup
 ```
 
-It walks you through: create the Project, upload `buy-box.md` and `aq-score.md` (the 13 criteria — location, seller finance, broker, long listing, margin, history, FF&E, multiple, leased space, own property, staff, inventory, training — each defined green / yellow / red), then test that the upload took. Steer it if you want:
+It walks you through: create the Project, upload `buy-box.md` (from Lesson 01) and `aq-score.md` — a file Claude generates for you in this step using the 13 criteria (location, seller finance, broker, long listing, margin, history, FF&E, multiple, leased space, own property, staff, inventory, training), each defined green / yellow / red per the aq-analyzer skill's legend — then test that the upload took. Steer it if you want:
 
 ```
 Walk me through setting up my Acquisition Engine Project step by step: create it, upload my buy box and the 13-criterion AQ Score as project knowledge, establish the rule that all deal analyses are saved as markdown files I can download, and teach me the RCTF prompt structure with one worked example from my verticals.
@@ -87,7 +87,7 @@ Run the journey-navigator skill using my-profile.md in this Project. Confirm my 
 
 - **Upload markdown, not PDFs.** Claude reads markdown fastest. If your buy box is a PDF, copy the text into a plain `.md` file first.
 - **Check which Project you're in.** A chat started outside the Acquisition Engine Project cannot see your buy box or AQ criteria. Glance at the Project name before any deal analysis.
-- **Keep Project Knowledge lean.** Buy box, AQ Score, and templates only. Don't upload every listing you find — Claude slows down past ~50 files.
+- **Keep Project Knowledge lean.** Buy box, AQ Score, and templates only. Don't upload every listing you find — a crowded Project dilutes what Claude pays attention to.
 - **Version your buy box outside Claude.** If you lose account access, an un-backed-up buy box is gone. Keep `buy-box.md` in Dropbox, Drive, or a local folder too.
 - **Never trust chat memory with deal data.** Claude cannot recall a conversation from three weeks ago. Every analysis gets saved as a downloadable file, filed like `acquisitions/targets/<vertical>/<business>.md`.
 
@@ -95,4 +95,4 @@ Run the journey-navigator skill using my-profile.md in this Project. Confirm my 
 
 ## Where this fits
 
-Phase 0, right after the front door. Lesson 01 wrote your files; this lesson makes them permanent infrastructure. Next: **Lesson 00 — Journey Navigator** confirms your stage, then the funnel starts at **Lesson 03 — Buy-Box Builder**.
+Phase 0, right after the front door. Lesson 01 wrote your files; this lesson makes them permanent infrastructure. Next: **Lesson 02b — Journey Navigator** confirms your stage, then the funnel starts at **Lesson 03 — Buy-Box Builder**.

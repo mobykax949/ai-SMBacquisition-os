@@ -95,4 +95,4 @@ Run the journey-navigator skill using my-profile.md. Confirm my journey stage, a
 
 ## Where this fits
 
-This is the single front door of the whole system — Phase 0. It does setup *and* orientation in one sitting. From here: **Lesson 02 (claude-acquisition-setup)** wires the Project plumbing, then **Lesson 00 (journey-navigator)** pressure-tests the stage this skill assigned before you commit outreach hours or capital.
+This is the single front door of the whole system — Phase 0. It does setup *and* orientation in one sitting. From here: **Lesson 02 (claude-acquisition-setup)** wires the Project plumbing, then **Lesson 02b (journey-navigator)** pressure-tests the stage this skill assigned before you commit outreach hours or capital.
