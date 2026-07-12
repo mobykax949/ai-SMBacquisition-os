@@ -23,11 +23,11 @@ Find and profile business brokers and M&A advisors who specialize in your target
 
 2. **Ask Claude to web search for business brokers in your geography.** Prompt: "Web search for business brokers and M&A advisors in Orange County California who specialize in service businesses or small businesses under $5M. Return a list: broker name, firm name, website, phone, specialization (if disclosed), recent deals (if visible)." Claude will pull results from Google and broker association directories.
 
-3. **Profile the top 10 brokers.** For each broker, check their website for: deal size focus ($1-5M is your range), verticals they cover, whether they mention seller financing or SBA deals, and recent closed transactions. Ask Claude: "From the broker list above, which 5 brokers are the best fit for my buy box: $1-5M revenue, service businesses, Orange County, SBA 7(a) or seller financing preferred. Rank them and explain why each is a good fit."
+3. **Profile the top 10 brokers.** For each broker, check their website for: deal size focus ($1-5M is your range), verticals they cover, whether they mention seller financing or SBA deals, and recent closed transactions. Ask Claude: "From the broker list above, which 5 brokers are the best fit for my buy box: [my revenue range], [my vertical class], [my geography], [my financing]. Rank them and explain why each is a good fit."
 
 4. **Draft a credible buyer introduction.** Brokers get 50 emails a week from tire-kickers. Your intro needs to prove you are serious and financed. Use this structure: (1) who you are (experienced operator or first-time buyer with financing ready), (2) what you are looking for (attach your buy box: geography, revenue, SDE, verticals), (3) proof of financing (SBA pre-qualification letter, 1031 equity amount, or cash available), (4) why you are reaching out (looking for pocket listings before they go public), (5) call to action (15-minute intro call). Keep it under 200 words.
 
-5. **Ask Claude to generate the email.** Prompt: "You are a business acquisition professional. Draft an email to a business broker introducing me as a serious buyer. Include: I am looking to acquire a service business in Orange County, $1-5M revenue, $200K+ SDE, my top verticals are [list], I have SBA 7(a) pre-qualification [or 1031 equity of $X], I prefer off-market or pocket listings before they are publicly listed, and I would like a 15-minute call to introduce myself and share my buy box. Tone: professional, confident, concise. Under 200 words."
+5. **Ask Claude to generate the email.** Prompt: "You are a business acquisition professional. Draft an email to a business broker introducing me as a serious buyer. Include: I am looking to acquire a service business in [my geography], [my revenue range], [my SDE floor], my top verticals are [list], I have SBA 7(a) pre-qualification [or 1031 equity of $X], I prefer off-market or pocket listings before they are publicly listed, and I would like a 15-minute call to introduce myself and share my buy box. Tone: professional, confident, concise. Under 200 words."
 
 6. **Attach your buy box to the email.** Save your buy box as a 1-page PDF (geography, revenue, SDE, verticals, financing, 3 auto-pass criteria) and attach it to the email. This proves you are organized and makes it easy for the broker to know what to send you. Brokers will forward your buy box to sellers who match.
 
@@ -40,13 +40,13 @@ Find and profile business brokers and M&A advisors who specialize in your target
 ```
 Prompt 1: Web search for business brokers in target geography
 
-You are a deal sourcing strategist. I need to find business brokers and M&A advisors in Orange County California who specialize in selling small service businesses ($1-5M revenue range). Web search for brokers in this geography. Return a table: broker name, firm name, phone, website, specialization (verticals or deal size if disclosed), recent deals closed (if visible on their site or press). Prioritize brokers who mention SBA financing, seller financing, or service industry expertise.
+You are a deal sourcing strategist. I need to find business brokers and M&A advisors in [my geography, e.g. Orange County California] who specialize in selling small service businesses ([my revenue range]). Web search for brokers in this geography. Return a table: broker name, firm name, phone, website, specialization (verticals or deal size if disclosed), recent deals closed (if visible on their site or press). Prioritize brokers who mention SBA financing, seller financing, or service industry expertise.
 ```
 
 ```
 Prompt 2: Rank brokers by fit and explain why
 
-You are a broker-matching analyst. From the list above, rank the top 5 brokers who are the best fit for my buy box: $1-5M revenue, $200K+ SDE, service businesses (hood cleaning, pool service, laundromats, landscape, car wash), Orange County geography, SBA 7(a) or seller financing preferred. For each broker, write 1-2 sentences explaining why they are a good fit based on their specialization, deal size, or recent transactions.
+You are a broker-matching analyst. From the list above, rank the top 5 brokers who are the best fit for my buy box: [my revenue range], [my SDE floor], [my verticals], [my geography], [my financing, e.g. SBA 7(a) or seller financing preferred]. For each broker, write 1-2 sentences explaining why they are a good fit based on their specialization, deal size, or recent transactions.
 ```
 
 ```
@@ -54,15 +54,15 @@ Prompt 3: Draft a credible buyer introduction email
 
 You are a business acquisition professional. Draft an email to introduce me to a business broker as a serious buyer. Include these points:
 
-- I am actively looking to acquire a service business in Orange County.
-- My buy box: $1-5M revenue, $200K+ SDE, 10+ years in business, boomer owner ready to exit.
-- Top verticals: kitchen hood cleaning, pool service, laundromats, car wash, landscape maintenance.
+- I am actively looking to acquire a service business in [my geography].
+- My buy box: [my revenue range], [my SDE floor], 10+ years in business, owner ready to exit.
+- Top verticals: [my top 3-5 verticals].
 - I have SBA 7(a) pre-qualification [OR: I have $1M in 1031 exchange equity ready to deploy within 120 days].
 - I prefer off-market or pocket listings before they are publicly listed, so I can move quickly and avoid bidding wars.
 - I would like a 15-minute intro call to share my full buy box and learn about your current opportunities.
 - Attach: my 1-page buy box PDF.
 
-Tone: professional, confident, concise. Under 200 words. Subject line: Serious Buyer — Service Businesses, Orange County, Financed & Ready.
+Tone: professional, confident, concise. Under 200 words. Subject line: Serious Buyer — [Vertical Class], [My Geography], Financed & Ready.
 ```
 
 ## The Loop
