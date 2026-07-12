@@ -2,7 +2,7 @@
 
 *Define exactly what you buy and what you pass — anchored on the income you need, stress-tested against real listings.*
 
-Reading time: ~9 min · Track: Acquire · Prerequisite: `journey-navigator` (Lesson 00)
+Reading time: ~9 min · Track: Acquire · Prerequisite: `journey-navigator` (Lesson 02b)
 
 ---
 

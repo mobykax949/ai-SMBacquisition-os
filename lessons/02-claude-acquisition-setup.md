@@ -95,4 +95,4 @@ Run the journey-navigator skill using my-profile.md in this Project. Confirm my 
 
 ## Where this fits
 
-Phase 0, right after the front door. Lesson 01 wrote your files; this lesson makes them permanent infrastructure. Next: **Lesson 00 — Journey Navigator** confirms your stage, then the funnel starts at **Lesson 03 — Buy-Box Builder**.
+Phase 0, right after the front door. Lesson 01 wrote your files; this lesson makes them permanent infrastructure. Next: **Lesson 02b — Journey Navigator** confirms your stage, then the funnel starts at **Lesson 03 — Buy-Box Builder**.

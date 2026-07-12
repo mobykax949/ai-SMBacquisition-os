@@ -1,4 +1,4 @@
-# Lesson 00 — The Journey Navigator
+# Lesson 02b — The Journey Navigator
 
 *Run this right after `setup-my-workspace` to confirm your stage — and re-run it whenever your situation changes.*
 

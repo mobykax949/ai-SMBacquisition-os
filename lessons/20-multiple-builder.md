@@ -95,4 +95,4 @@ My composite crossed [35+] and the business runs without me. Re-run the journey-
 
 ## Where this fits
 
-The final step of Branch A — and the hinge of the whole loop. When the multiple is rebuilt and the business runs without you, you've completed *buy → modernize*; the system sends you back to **Lesson 00 — Journey Navigator** and **Lesson 03 — Buy-Box Builder** to hunt the next one. Buy, modernize, buy again.
+The final step of Branch A — and the hinge of the whole loop. When the multiple is rebuilt and the business runs without you, you've completed *buy → modernize*; the system sends you back to **Lesson 02b — Journey Navigator** and **Lesson 03 — Buy-Box Builder** to hunt the next one. Buy, modernize, buy again.
